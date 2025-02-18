@@ -37,10 +37,22 @@ const Navbar = () => {
                     {/* Top Bar */}
                     <div className="hidden md:flex justify-between items-center px-6 py-6 text-sm">
                         <div className="flex justify-end w-full space-x-6 text-xs px-4">
-                            <Link href="/careers">Join Our Team</Link>
-                            <Link href="/locations">Our Locations</Link>
-                            <Link href="/about">About Us</Link>
-                            <Link href="/contact">Contact Us</Link>
+                            <Link href="/careers" className="relative group">
+                                <span className="group-hover:text-blue-500 transition duration-300">Join Our Team</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                            </Link>
+                            <Link href="/locations" className="relative group">
+                                <span className="group-hover:text-blue-500 transition duration-300">Our Locations</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                            </Link>
+                            <Link href="/about" className="relative group">
+                                <span className="group-hover:text-blue-500 transition duration-300">About Us</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                            </Link>
+                            <Link href="/contact" className="relative group">
+                                <span className="group-hover:text-blue-500 transition duration-300">Contact Us</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                            </Link>
                         </div>
                         <div className="flex space-x-4 text-gray-700">
                             <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
@@ -61,9 +73,18 @@ const Navbar = () => {
                             <Dropdown title="GROUPS" links={[{ name: "Group Benefits", href: "/services/group-insurance" }, { name: "Health Insurance", href: "/services/health-insurance" }]} />
                             <Dropdown title="BUSINESS" links={[{ name: "Business Insurance", href: "/services/business-insurance" }, { name: "Commercial Auto Insurance", href: "/services/commercial-auto-insurance" }]} />
                             <Dropdown title="LIFE & FINANCIAL" links={[{ name: "Life Insurance", href: "/services/life-insurance" }, { name: "Retirement Planning", href: "/services/retirement-planning" }]} />
-                            <Link href="/travel" className="hover:underline transition duration-300">TRAVEL</Link>
-                            <Link href="/claims" className="hover:underline transition duration-300">CLAIMS</Link>
-                            <Link href="/blog" className="hover:underline transition duration-300">BLOG</Link>
+                            <Link href="/travel" className="relative group">
+                                <span className="group-hover:text-cyan-700 transition duration-300">TRAVEL</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
+                            </Link>
+                            <Link href="/claims" className="relative group">
+                                <span className="group-hover:text-cyan-700 transition duration-300">CLAIMS</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
+                            </Link>
+                            <Link href="/blog" className="relative group">
+                                <span className="group-hover:text-cyan-700 transition duration-300">BLOG</span>
+                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
+                            </Link>
                         </div>
 
                         {/* Right - Search Icon & Contact Button */}
@@ -104,9 +125,18 @@ const Navbar = () => {
                     <MobileDropdown title="GROUPS" links={[{ name: "Group Benefits", href: "/services/group-insurance" }, { name: "Health Insurance", href: "/services/health-insurance" }]} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} />
                     <MobileDropdown title="BUSINESS" links={[{ name: "Business Insurance", href: "/services/business-insurance" }, { name: "Commercial Auto Insurance", href: "/services/commercial-auto-insurance" }]} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} />
                     <MobileDropdown title="LIFE & FINANCIAL" links={[{ name: "Life Insurance", href: "/services/life-insurance" }, { name: "Retirement Planning", href: "/services/retirement-planning" }]} dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} />
-                    <Link href="/travel" className="hover:text-gray-400">Travel</Link>
-                    <Link href="/claims" className="hover:text-gray-400">Claims</Link>
-                    <Link href="/blog" className="hover:text-gray-400">Blog</Link>
+                    <Link href="/travel" className="relative group hover:text-gray-400">
+                        <span className="group-hover:text-gray-400 transition duration-300">Travel</span>
+                        <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gray-400 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                    </Link>
+                    <Link href="/claims" className="relative group hover:text-gray-400">
+                        <span className="group-hover:text-gray-400 transition duration-300">Claims</span>
+                        <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gray-400 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                    </Link>
+                    <Link href="/blog" className="relative group hover:text-gray-400">
+                        <span className="group-hover:text-gray-400 transition duration-300">Blog</span>
+                        <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gray-400 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                    </Link>
                 </nav>
 
                 {/* Contact Button (Inside Menu) */}
@@ -167,14 +197,14 @@ const Dropdown = ({ title, links }) => {
 
             {/* Dropdown Menu */}
             {open && (
-                <div className="absolute top-12 bg-white shadow-md py-6 w-48 transition duration-300 z-10">
+                <div className="absolute top-9 -left-20 rounded-lg bg-white shadow-md py-6 w-48 transition duration-300 z-10">
                     {links.map((link, index) => (
                         <Link
                             key={index}
                             href={link.href}
-                            className="block px-4 py-2 text-[10px] font-light hover:text-cyan-600 transition duration-300"
+                            className="relative group block px-4 py-2 text-[10px] font-light hover:text-cyan-700 transition duration-300"
                         >
-                            {link.name}
+                            <span className="hover:text-cyan-700 transition duration-300">{link.name}</span>
                         </Link>
                     ))}
                 </div>
@@ -194,8 +224,9 @@ const MobileDropdown = ({ title, links, dropdownOpen, toggleDropdown }) => {
             {dropdownOpen[title] && (
                 <div className="mt-2 pl-4">
                     {links.map((link, index) => (
-                        <Link key={index} href={link.href} className="block py-1 text-sm hover:text-gray-400">
-                            {link.name}
+                        <Link key={index} href={link.href} className="relative group block py-1 text-sm hover:text-gray-400">
+                            <span className="group-hover:text-gray-400 transition duration-300">{link.name}</span>
+                            <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gray-400 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </Link>
                     ))}
                 </div>
