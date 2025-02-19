@@ -75,7 +75,7 @@ const BlogSection = () => {
     <section className="py-10 px-5">
       {/* Blog Title */}
       <div className="w-full flex flex-col items-center gap-4">
-        <h2 className={`text-3xl md:text-6xl font-bold text-center ${playfairDisplay.className}`}>
+        <h2 className={`text-3xl md:text-6xl font-bold text-center`}>
           BLOG
         </h2>
         <p className="h-1 mx-auto w-1/6 mb-6 bg-[#2a80b4]"></p>

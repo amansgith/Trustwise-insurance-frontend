@@ -113,8 +113,8 @@ const Footer = () => {
             ))
         }
         {/* Sticky Call to Action */}
-      <div className="fixed z-20 bottom-0 left-0 right-0 bg-green-600 text-white py-3 text-center font-bold text-lg">
-        Call for a quote: <span className="text-black">1-866-358-2860</span>
+      <div className="fixed z-20 bottom-0 left-0 right-0 bg-green-700 text-white py-3 text-center font-bold text-2xl">
+        Call for a quote: <span className="text-white pl-3">1-866-358-2860</span>
       </div>
     </div>
   )

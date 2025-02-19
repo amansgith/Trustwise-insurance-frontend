@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-    /* @apply font-montserrat; */
+    cursor: none;
+}
+
+.custom-cursor {
+  background-color: var(--primary-color);
+  transition: transform 0.1s ease-out;
+}
+
+.custom-cursor:hover {
+  transform: scale(1.2);
 }
