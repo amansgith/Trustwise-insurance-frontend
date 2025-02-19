@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="font-montserrat shadow-md text-black">
+        <header className=" z-20 font-montserrat shadow-md text-black sticky top-0 bg-white">
             <div className={`mx-auto flex items-center pt-2 px-8 transition-transform duration-300 ${menuOpen || searchOpen ? "transform scale-95" : ""}`}>
                 {/* Mobile View - Left Section - Toggle Button */}
                 <button className="md:hidden text-2xl mr-4" onClick={() => setMenuOpen(true)}>

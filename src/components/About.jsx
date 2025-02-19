@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="bg-[#f7f7f7] py-16">
+    <div className="bg-[#f7f7f7] py-16 px-6">
       <div className='max-w-screen-2xl mx-auto flex gap-10'>
         <div className="flex flex-col justify-between">
             <div className="w-fit flex flex-col gap-4">

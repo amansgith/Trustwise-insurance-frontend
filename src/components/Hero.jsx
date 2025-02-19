@@ -1,4 +1,3 @@
-import React from 'react'
 
 const buttons = ["Auto", "Home", "Business", "Life & Financial", "Travel"];
 
@@ -20,7 +19,7 @@ const Hero = () => {
           <div className="flex gap-2 items-center text-[16px] font-bold">
             {
               buttons.map((button, index) => (
-                <button key={index} className='p-3.5 uppercase rounded bg-[#9ecb75] hover:bg-[#2a80b4] hover:text-white'>
+                <button key={index} className='p-3.5 uppercase rounded bg-[#9ecb75] hover:bg-[#2a80b4] hover:text-white transition duration-300'>
                   {button}
                 </button>
               ))
@@ -28,7 +27,7 @@ const Hero = () => {
             <p className='text-[#2cc8b3]'>+ MORE</p>
           </div>
           <div className="">
-            <button className='py-3.5 px-10 uppercase text-white bg-[#2a80b4] hover:bg-[#9ecb75] hover:text-black text-xl font-bold'>
+            <button className='py-3.5 px-10 uppercase text-white bg-[#2a80b4] hover:bg-[#9ecb75] hover:text-black text-xl font-bold transition duration-300'>
               Get a Quote
             </button>
           </div>
@@ -38,4 +37,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
