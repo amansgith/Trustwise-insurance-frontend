@@ -32,7 +32,9 @@ const Hero = () => {
             </button>
           </div>
       </div>
-      <img src="/bgHero.webp" alt="" />
+      <div className="w-full overflow-hidden">
+        <img src="/bgHero.webp" alt="" className="w-full h-auto object-cover" />
+      </div>
     </div>
   )
 }
