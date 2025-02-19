@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 body {
-    /* cursor: none; */
 }
 
 .custom-cursor {
@@ -12,5 +11,5 @@ body {
 }
 
 .custom-cursor:hover {
-  transform: scale(1.2);
+  transform: scale(2);
 }
