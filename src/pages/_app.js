@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={montserrat.variable}>
+    <div className={montserrat.className}>
       <Component {...pageProps} />
     </div>
   );

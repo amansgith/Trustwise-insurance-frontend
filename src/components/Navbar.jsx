@@ -170,6 +170,7 @@ const Navbar = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-10" onClick={() => { setMenuOpen(false); setSearchOpen(false); }}></div>
             )}
         </header>
+        
     );
 };
 
