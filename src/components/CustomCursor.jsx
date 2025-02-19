@@ -13,7 +13,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className="custom-cursor fixed w-8 h-8 bg-primary rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-50"></div>
+    <div className="custom-cursor fixed w-8 h-8 bg-primary rounded-full pointer-events-none delay-3000 transform -translate-x-1/2 -translate-y-1/2 z-50"></div>
   );
 };
 

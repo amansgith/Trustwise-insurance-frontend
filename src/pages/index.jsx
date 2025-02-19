@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import BlogSection from "@/components/BlogSection";
 import Partners from "@/components/Partners";
 import GoogleReviews from "@/components/Reviews";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
     <BlogSection/>
     <Partners/>
     <GoogleReviews/>
+    <ContactUs/>
     <Footer />
     </>
   );
