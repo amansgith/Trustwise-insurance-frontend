@@ -10,6 +10,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: '#3498db',
+        secondary: '#2ecc71',
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "sans-serif"],

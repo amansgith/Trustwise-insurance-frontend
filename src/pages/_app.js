@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,6 +12,7 @@ const montserrat = Montserrat({
 export default function App({ Component, pageProps }) {
   return (
     <div className={montserrat.className}>
+      <CustomCursor/>
       <Component {...pageProps} />
     </div>
   );
