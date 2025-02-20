@@ -1,0 +1,64 @@
+import Image from "next/image";
+
+export default function InsuranceIntro({ 
+  title, 
+  description, 
+  imageSrc, 
+  buttonText, 
+  extraContent, 
+  extraButtons // 👈 Accept extra buttons as a prop
+}) {
+  return (
+    <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        
+        {/* Left Side: Text Content */}
+        <div className="md:w-1/2 text-center md:text-left">
+          <h1 className="text-4xl font-extrabold text-blue-900 leading-snug">
+            {title}
+          </h1>
+          <p className="text-gray-700 mt-4 text-lg leading-relaxed">
+            {description}
+          </p>
+
+          {/* Conditionally Render Extra Content */}
+          {extraContent && <div className="mt-4">{extraContent}</div>}
+
+          <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
+            {buttonText}
+          </button>
+
+          {/* Extra Buttons - Auto Insurance Services */}
+          {extraButtons && (
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                + Auto Insurance Services:
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {extraButtons.map((btn, index) => (
+                  <button key={index} className="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded-md">
+                    {btn}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Right Side: Image */}
+        <div className="md:w-1/2">
+          <div className="relative w-full h-[350px] shadow-lg rounded-lg overflow-hidden">
+            <Image
+              src={imageSrc}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

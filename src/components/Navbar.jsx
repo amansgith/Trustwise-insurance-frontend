@@ -105,7 +105,7 @@ const Navbar = () => {
               <Dropdown
                 title="AUTO"
                 links={[
-                  { name: "Auto Insurance", href: "/services/auto-insurance" },
+                  { name: "Auto Insurance", href: "/auto" },
                   {
                     name: "Bundle Insurance",
                     href: "/services/bundle-insurance",
