@@ -1,4 +1,5 @@
-import { ChevronRight, Search } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { FaYoutube, FaFacebook, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 const featuredBlog = {
@@ -16,21 +17,21 @@ const sidebarBlogs = [
     title: "Want a Career in Technology? Make This Your Secret Weapon",
     category: "Technology",
     date: "June 28, 2021",
-    image: "https://via.placeholder.com/200x150",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     slug: "career-in-technology",
   },
   {
     title: "The Health Industry Is Changing Fast. Here’s How to Keep Pace",
     category: "Health",
     date: "June 28, 2021",
-    image: "https://via.placeholder.com/200x150",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     slug: "health-industry-changes",
   },
   {
     title: "Everything You Ever Wanted to Know About Technology",
     category: "Technology",
     date: "June 28, 2021",
-    image: "https://via.placeholder.com/200x150",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     slug: "everything-about-technology",
   },
 ];
@@ -72,19 +73,19 @@ const blogs = {
       title: "What Your Relationship With Stock Market Says About You",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/stock1.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "How I Learned to Stop Worrying and Love Stock Market",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/stock2.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "Why Stock Market Affects Men and Women Differently",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/stock3.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
   ],
   latestTechnology: [
@@ -92,13 +93,13 @@ const blogs = {
       title: "This Will Fundamentally Change the Way You Look at Technology",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/tech1.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "Technology Changed My Life. Here’s My Story",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/tech2.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
   ],
   politics: [
@@ -106,20 +107,20 @@ const blogs = {
       title: "The Frightening Affect of Climate Change on Government",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/politics1.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "Don’t Share This Politics Insider Secret",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/politics2.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title:
         "Automobile: All the Stats, Facts, and Data You’ll Ever Need to Know",
       date: "June 28, 2021",
       author: "akbarh",
-      image: "/images/politics3.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
   ],
   mustRead: [
@@ -128,21 +129,21 @@ const blogs = {
       category: "Must Read | Stock Market",
       date: "June 25, 2021",
       author: "akbarh",
-      image: "/images/mustread1.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "8 Powerful Habits to Master for Success in Health",
       category: "Health | Must Read",
       date: "June 25, 2021",
       author: "akbarh",
-      image: "/images/mustread2.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
     {
       title: "10 Global Trends That Will Affect Technology in 2022",
       category: "Must Read | Technology",
       date: "June 25, 2021",
       author: "akbarh",
-      image: "/images/mustread3.jpg",
+      image: "https://www.aaxel.ca/wp-content/uploads/2025/01/insurance-concept-the-auto-dealer-emphasizing-on-the-agreement-of-the-contract-for-his-client--356x220.jpg",
     },
   ],
 };
@@ -297,31 +298,19 @@ const BlogPage = () => {
           <div>
             <div className="mb-6">
               <h3 className="font-bold text-lg">Stay connected</h3>
-              <div className="flex justify-between mt-4">
-                <div className="text-center">
-                  <img
-                    src="/icons/facebook.svg"
-                    alt="Facebook"
-                    className="w-6 mx-auto"
-                  />
+              <div className="flex justify-between mt-4 items-center">
+                <div className="flex flex-col items-center">
+                  <FaFacebook/>
                   <p className="text-sm font-semibold mt-2">204,640</p>
                   <p className="text-xs text-gray-500">Fans</p>
                 </div>
-                <div className="text-center">
-                  <img
-                    src="/icons/twitter.svg"
-                    alt="Twitter"
-                    className="w-6 mx-auto"
-                  />
+                <div className="flex flex-col items-center text-blue-500">
+                  <FaTwitter/>
                   <p className="text-sm font-semibold mt-2">164,408</p>
                   <p className="text-xs text-gray-500">Followers</p>
                 </div>
-                <div className="text-center">
-                  <img
-                    src="/icons/youtube.svg"
-                    alt="YouTube"
-                    className="w-6 mx-auto"
-                  />
+                <div className="flex flex-col items-center text-red-600">
+                  <FaYoutube/>
                   <p className="text-sm font-semibold mt-2">320,228</p>
                   <p className="text-xs text-gray-500">Subscribers</p>
                 </div>

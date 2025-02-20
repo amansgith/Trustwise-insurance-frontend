@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -11,8 +11,8 @@ const reviews = [
     date: "31 January 2025",
     rating: 5,
     review:
-      "Umang was a great help that was easily reachable and provided very clear information...",
-    image: "/",
+      "Umang was a great help that was easily reachable and clear information...",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg",
   },
   {
     name: "Sharn Gill",
@@ -20,7 +20,7 @@ const reviews = [
     rating: 5,
     review:
       "Getting my Auto Insurance from Mr. Anmol Verma was an amazing experience...",
-    image: "/",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg",
   },
   {
     name: "Gilbert Reloba",
@@ -28,7 +28,7 @@ const reviews = [
     rating: 5,
     review:
       "Joy Burgos was very kind, helpful, and quick in responding to all our inquiries...",
-    image: "/",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg",
   },
   {
     name: "Harp C",
@@ -36,7 +36,7 @@ const reviews = [
     rating: 3,
     review:
       "Had a pleasant experience dealing with Amolak Dhaliwal at Aaxel Insurance...",
-    image: "/",
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg",
   },
 ];
 

@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
-import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body className={`antialiased ${montserrat.className}`}>
-        <CustomCursor />
         <Navbar />
         {children}
         <Footer />

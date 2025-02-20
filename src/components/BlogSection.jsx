@@ -19,7 +19,7 @@ const blogs = [
     title: "Life Insurance for Seniors: What You Need to Know",
     date: "02/18/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "As we age, financial security becomes more important than ever...",
   },
@@ -28,7 +28,7 @@ const blogs = [
     title: "Does Personal Insurance Cover Accidental Damage to Others’ Property?",
     date: "02/17/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "Accidents happen when we least expect them. Whether it's a slip that leads to...",
   },
@@ -37,7 +37,7 @@ const blogs = [
     title: "The Benefits of Professional Liability Insurance for Engineers",
     date: "02/16/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "In today’s competitive and highly regulated engineering industry...",
   },
@@ -46,7 +46,7 @@ const blogs = [
     title: "How to File a Property Insurance Claim After a Major Loss",
     date: "02/15/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "Experiencing a major loss due to natural disasters, theft, or accidents...",
   },
@@ -55,7 +55,7 @@ const blogs = [
     title: "Adventure Travel: Do You Need Special Travel Insurance?",
     date: "02/14/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "Adventure travel is an exhilarating way to explore the world, pushing boundaries...",
   },
@@ -64,7 +64,7 @@ const blogs = [
     title: "How to Choose the Right Insurance Broker for Your Business",
     date: "02/13/2025",
     author: "Aaxel Insurance",
-    image: "/", // Correct path
+    image: "https://www.aaxel.ca/wp-content/uploads/2025/01/asian-businesswoman-and-a-salesman-discuss-car-sales-insurance-financing-a-customer-at-a-desk-696x464.jpg", // Correct path
     excerpt:
       "Choosing the right insurance broker for your business is a critical decision...",
   },
