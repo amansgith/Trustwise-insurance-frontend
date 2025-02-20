@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = [
   {
@@ -94,7 +96,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-[#f7f7f7] px-6 pt-[30px] pb-[60px] w-full grid grid-cols-4">
-        <img src="/logo-footer.png" alt="" className="-translate-y-6" />
+        <Image src="/logo-footer.png" alt="Footer Logo" width={200} height={50} className="-translate-y-6" />
         {footerLinks.map((flinks, ind) => (
           <div
             key={ind}
@@ -102,12 +104,12 @@ const Footer = () => {
           >
             <h4 className="text-lg font-extrabold">{flinks.title}</h4>
             <div className="flex flex-col gap-2">
-              {flinks.sublinks.map((links) => (
-                <a href={links.url}>
+              {flinks.sublinks.map((links, index) => (
+                <Link key={index} href={links.url}>
                   <p className="font-medium hover:text-[#4db2ec]">
                     {links.text}
                   </p>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

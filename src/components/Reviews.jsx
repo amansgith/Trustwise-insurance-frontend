@@ -12,7 +12,7 @@ const reviews = [
     rating: 5,
     review:
       "Umang was a great help that was easily reachable and provided very clear information...",
-    image: "/user1.jpg",
+    image: "/",
   },
   {
     name: "Sharn Gill",
@@ -20,7 +20,7 @@ const reviews = [
     rating: 5,
     review:
       "Getting my Auto Insurance from Mr. Anmol Verma was an amazing experience...",
-    image: "/user2.jpg",
+    image: "/",
   },
   {
     name: "Gilbert Reloba",
@@ -28,7 +28,7 @@ const reviews = [
     rating: 5,
     review:
       "Joy Burgos was very kind, helpful, and quick in responding to all our inquiries...",
-    image: "/user3.jpg",
+    image: "/",
   },
   {
     name: "Harp C",
@@ -36,7 +36,7 @@ const reviews = [
     rating: 3,
     review:
       "Had a pleasant experience dealing with Amolak Dhaliwal at Aaxel Insurance...",
-    image: "/user4.jpg",
+    image: "/",
   },
 ];
 

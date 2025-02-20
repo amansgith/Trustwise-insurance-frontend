@@ -6,14 +6,17 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-  className: "--font-montserrat", // Add a CSS variable
+  className: "--font-montserrat",
 });
 
-export default function App({ Component, pageProps }) {
+export default function RootLayout({ children }) {
   return (
-    <div className={montserrat.className}>
-      <CustomCursor/>
-      <Component {...pageProps} />
-    </div>
+    <html lang="en">
+      <head />
+      <body className={`antialiased ${montserrat.className}`}>
+        <CustomCursor />
+        {children}
+      </body>
+    </html>
   );
 }

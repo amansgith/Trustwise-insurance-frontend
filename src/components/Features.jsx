@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaEarthAmericas, FaClockRotateLeft, FaUser } from "react-icons/fa6";
@@ -75,7 +76,6 @@ const ElectronOrbit = ({ size, duration, startAngle }) => (
     </div>
 );
 
-
 // Animated Electron (Moving on Ring)
 const Electron = ({ startAngle }) => (
     <div
@@ -87,7 +87,6 @@ const Electron = ({ startAngle }) => (
         }}
     />
 );
-
 
 // Features Data
 const features = [
