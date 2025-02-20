@@ -66,7 +66,7 @@ const footerLinks = [
       },
       {
         url: "/",
-        text: "Policy Payments",
+        text: "Policy Insurances",
       },
       {
         url: "/",
