@@ -95,8 +95,34 @@ const footerLinks = [
 const Footer = () => {
   return (
     <>
+      <div className="bg-[#f7f7f7] px-6 pt-[30px] pb-[60px] w-full flex items-center border-b-2">
+        <h4 className="text-3xl font-bold">Charity We Support</h4>
+        <div className="flex-1 flex items-center justify-around">
+          <img
+            src="https://www.aaxel.ca/wp-content/uploads/2023/03/Heart-Stroke-Foundation.png"
+            alt="img"
+            className="w-[300px] h-[70px]"
+          />
+          <img
+            src="https://www.aaxel.ca/wp-content/uploads/2023/03/Khaslsa_Aid-removebg-preview.png"
+            alt="img"
+            className="w-[300px] h-[200px]"
+          />
+          <img
+            src="https://www.aaxel.ca/wp-content/uploads/2023/03/Diabetes-Hope-Foundation.png"
+            alt="img"
+            className="w-[300px] h-[70px]"
+          />
+        </div>
+      </div>
       <div className="bg-[#f7f7f7] px-6 pt-[30px] pb-[60px] w-full grid grid-cols-4">
-        <Image src="/logo-footer.png" alt="Footer Logo" width={200} height={50} className="-translate-y-6" />
+        <Image
+          src="/logo-footer.png"
+          alt="Footer Logo"
+          width={200}
+          height={50}
+          className="-translate-y-6"
+        />
         {footerLinks.map((flinks, ind) => (
           <div
             key={ind}
@@ -123,7 +149,8 @@ const Footer = () => {
       </div>
       <div className="py-6">
         <h3 className="font-extrabold text-lg text-center mb-12">
-          © 2023 Aaxel Insurance Brokers Ltd. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Aaxel Insurance Brokers Ltd. All
+          Rights Reserved.
         </h3>
       </div>
     </>
