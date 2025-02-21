@@ -2,6 +2,7 @@ import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
+import QuoteForm from "@/components/CommonComponents/GetQuote";
 
 const {
   default: InsuranceIntro,
@@ -12,13 +13,14 @@ const ClassicCarInsurance = () => {
     <>
       <InsuranceIntro
         title="Classsic Car Insurance"
-        description={`Bundle Insurance is about you, Your Auto, Home, Investment properties and your pleasure crafts. At Aaxel Insurance, we know that each person is unique and has different needs. ${"\n\n"}One of our personal insurance brokers can help you find policies that fit your needs without any overlap of coverage, gaps, or unnecessary extra costs. Our personal insurance brokers will work with one of the best Canadian insurance companies to provide simple, affordable insurance solutions.`}
+        description={`If you own a Classic Car, you want to ensure your pride and joy is properly insured and protected. After all, there’s nothing better than taking your prize possession out for an afternoon cruise, on a beautiful sunny day. At Aaxel Insurance, we will review your needs, no matter how specific they are and then provide you with coverage to meet those needs. We are all about tailor-made policies, that ensure you, the client, can have peace of mind, knowing we are here to help around the clock. Your regular auto insurance policy does not always cover Classic Cars, so let Aaxel guide you, to ensure your classic car, vintage car, antique car, or collector car is properly protected.`}
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/Header-Compressed-Webp.webp"
         buttonText="Get a Free Quote"
       />
       <TrustBanner />
 
       {/* get quote form  */}
+      <QuoteForm/>
       <Features />
       <ContactUs />
       <FAQSection />

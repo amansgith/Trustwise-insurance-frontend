@@ -1,6 +1,7 @@
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
+import QuoteForm from "@/components/CommonComponents/GetQuote";
 import Features from "@/components/Features";
 
 const {
@@ -17,8 +18,7 @@ const BoatInsurance = () => {
         buttonText="Get a Free Quote"
       />
       <TrustBanner />
-
-      {/* get quote form  */}
+      <QuoteForm/>
       <Features/>
       <ContactUs/>
       <FAQSection/>

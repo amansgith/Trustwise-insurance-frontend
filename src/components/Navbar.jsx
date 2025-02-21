@@ -69,9 +69,9 @@ const Navbar = () => {
                 </span>
                 <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
               </Link>
-              <Link href="/locations" className="relative group">
-                <span className="group-hover:text-blue-500 transition duration-300">
+              <Link href="/our-location" className="relative group">
                   Our Locations
+                <span className="group-hover:text-blue-500 transition duration-300">
                 </span>
                 <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
               </Link>
@@ -117,20 +117,20 @@ const Navbar = () => {
                   },
                   {
                     name: "Private Client Insurance",
-                    href: "/services/private-client-insurance",
+                    href: "/auto/private-client-insurance",
                   },
                   {
                     name: "Motorcycle Insurance",
-                    href: "/services/motorcycle-insurance",
+                    href: "/auto/motorcycle-insurance",
                   },
-                  { name: "RV Insurance", href: "/services/rv-insurance" },
+                  { name: "RV Insurance", href: "/auto/rv-insurance" },
                   {
                     name: "Snowmobile Insurance",
-                    href: "/services/snowmobile-insurance",
+                    href: "/auto/snowmobile-insurance",
                   },
                   {
                     name: "Commercial Automobile Insurance",
-                    href: "/services/commercial-auto-insurance",
+                    href: "/auto/commercial-automobile-insurance",
                   },
                 ]}
               />
