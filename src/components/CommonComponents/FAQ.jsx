@@ -49,7 +49,7 @@ const FAQSection = () => {
               >
                 <h3 className="font-semibold text-lg text-gray-800">{faq}</h3>
                 <p className="text-sm text-gray-500 mt-2">
-                  Aaxel Insurance - {new Date().toLocaleDateString()}
+                  Aaxel Insurance - 21/2/2025
                 </p>
               </div>
             ))}

@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
-import TrustBanner from "@/components/CommonComponents/Banner";
 import { FaCar, FaLayerGroup } from "react-icons/fa";
 import {
   MdGavel,
@@ -15,33 +13,35 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 import { GiCarKey } from "react-icons/gi";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import TrustBanner from "@/components/CommonComponents/Banner";
 import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import ContactUs from "@/components/CommonComponents/ContactUs";
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const AutoInsurance = () => {
   return (
     <div>
       <InsuranceIntro
-        title="Auto Insurance"
-        description="You can buy Auto Insurance through various channels. It is up to you to decide if you want your Automobile Insurance needs met through insurance call centres of multi-nationals, or the option of meeting your Auto Insurance needs through a local independent insurance broker."
-        imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg"
-        buttonText="Get a Free Quote"
-        extraButtons={[
-          "CLASSIC CAR",
-          "BOAT",
-          "RV",
-          "MOTORCYCLE",
-          "BUNDLE",
-          "COMMERCIAL AUTO",
-          "PRIVATE CLIENT",
-          "SNOWMOBILE",
-          "+ MORE",
-        ]}
+      title="Auto Insurance"
+      description="You can buy Auto Insurance through various channels. It is up to you to decide if you want your Automobile Insurance needs met through insurance call centres of multi-nationals, or the option of meeting your Auto Insurance needs through a local independent insurance broker."
+      imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg"
+      buttonText="Get a Free Quote"
+      extraButtons={[
+        "CLASSIC CAR",
+        "BOAT",
+        "RV",
+        "MOTORCYCLE",
+        "BUNDLE",
+        "COMMERCIAL AUTO",
+        "PRIVATE CLIENT",
+        "SNOWMOBILE",
+        "+ MORE",
+      ]}
       />
 
-      <TrustBanner />
+      <TrustBanner/>
 
       {/* Discounts Section */}
       <DiscountsSection

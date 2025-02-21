@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import partners from "../../public/partners.jpg"; // Replace with actual path
 

@@ -1,23 +1,26 @@
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import About from "@/components/About";
-import CTA from "@/components/CTA";
-import BlogSection from "@/components/BlogSection";
-import Partners from "@/components/Partners";
-import GoogleReviews from "@/components/Reviews";
-import ContactUs from "@/components/Contact";
+"use client"
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
+const Features = dynamic(() => import("@/components/Features"), { ssr: false });
+const About = dynamic(() => import("@/components/About"), { ssr: false });
+const CTA = dynamic(() => import("@/components/CTA"), { ssr: false });
+const BlogSection = dynamic(() => import("@/components/BlogSection"), { ssr: false });
+const Partners = dynamic(() => import("@/components/Partners"), { ssr: false });
+const GoogleReviews = dynamic(() => import("@/components/Reviews"), { ssr: false });
+const ContactUs = dynamic(() => import("@/components/Contact"), { ssr: false });
 
 export default function Home() {
   return (
     <>
-    <Hero/>
-    <About/>
-    <CTA/>
-    <Features/>
-    <BlogSection/>
-    <Partners/>
-    <GoogleReviews/>
-    <ContactUs/>
+      <Hero />
+      <About />
+      <CTA />
+      <Features />
+      <BlogSection />
+      <Partners />
+      <GoogleReviews />
+      <ContactUs />
     </>
   );
 }

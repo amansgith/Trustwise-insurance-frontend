@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import ClockImage from "../../public/clock.webp"; // Adjust the path
 

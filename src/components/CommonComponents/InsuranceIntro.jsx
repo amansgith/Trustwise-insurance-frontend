@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 
 export default function InsuranceIntro({ 
@@ -6,7 +7,7 @@ export default function InsuranceIntro({
   imageSrc, 
   buttonText, 
   extraContent, 
-  extraButtons // 👈 Accept extra buttons as a prop
+  extraButtons
 }) {
   return (
     <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6 md:px-12">

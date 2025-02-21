@@ -1,4 +1,4 @@
-
+"use client"
 const buttons = ["Auto", "Home", "Business", "Life & Financial", "Travel"];
 
 const Hero = () => {
