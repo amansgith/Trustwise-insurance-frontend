@@ -275,22 +275,22 @@ const Navbar = () => {
               <Dropdown
                 title="LIFE & FINANCIAL"
                 links={[
-                  { name: "Life Insurance", href: "/services/life-insurance" },
+                  { name: "Life Insurance", href: "/life-financial" },
                   {
                     name: "Disability Insurance",
-                    href: "/services/disability-insurance",
+                    href: "/life-financial/disability-insurance",
                   },
                   {
                     name: "Critical Illness Insurance",
-                    href: "/services/critical-illness",
+                    href: "/life-financial/critical-illness-insurance",
                   },
                   {
                     name: "Mortgage Insurance",
-                    href: "/services/mortgage-insurance",
+                    href: "/life-financial/mortgage-insurance",
                   },
-                  { name: "Investments", href: "/services/investments" },
-                  { name: "Long-Term Care", href: "/services/long-term-care" },
-                  { name: "Group Benefits", href: "/services/group-benefits" },
+                  { name: "Investments", href: "/life-financial/investments" },
+                  { name: "Long-Term Care", href: "/life-financial/long-term-care" },
+                  { name: "Group Benefits", href: "/life-financial/group-benefits" },
                 ]}
               />
 
