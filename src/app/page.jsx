@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 import BlogSection from "@/components/BlogSection";
 import Partners from "@/components/Partners";
 import GoogleReviews from "@/components/Reviews";
-import ContactUs from "@/components/ContactUs";
+import ContactUs from "@/components/Contact";
 
 export default function Home() {
   return (

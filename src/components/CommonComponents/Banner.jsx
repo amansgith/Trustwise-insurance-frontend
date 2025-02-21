@@ -13,7 +13,7 @@ const TrustBanner = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {trustItems.map((item, index) => (
           <div key={index} className="flex items-center gap-4 text-gray-800">
-            <div className="text-7xl text-green-700">{item.icon}</div>
+            <div className="text-7xl text-cyan-600 hover:text-green-700 transition duration-300">{item.icon}</div>
             <p className="text-lg font-medium">{item.text}</p>
           </div>
         ))}

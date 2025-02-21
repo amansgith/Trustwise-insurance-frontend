@@ -9,7 +9,7 @@ export default function InsuranceIntro({
   extraButtons // 👈 Accept extra buttons as a prop
 }) {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 px-6 md:px-12">
+    <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         
         {/* Left Side: Text Content */}
@@ -24,7 +24,7 @@ export default function InsuranceIntro({
           {/* Conditionally Render Extra Content */}
           {extraContent && <div className="mt-4">{extraContent}</div>}
 
-          <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
+          <button className="mt-6 bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
             {buttonText}
           </button>
 

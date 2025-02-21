@@ -108,12 +108,12 @@ const Navbar = () => {
                   { name: "Auto Insurance", href: "/auto" },
                   {
                     name: "Bundle Insurance",
-                    href: "/services/bundle-insurance",
+                    href: "/auto/bundle-insurance",
                   },
-                  { name: "Boat Insurance", href: "/services/boat-insurance" },
+                  { name: "Boat Insurance", href: "/auto/boat-insurance" },
                   {
                     name: "Classic Car Insurance",
-                    href: "/services/classic-car-insurance",
+                    href: "/auto/classic-car-insurance",
                   },
                   {
                     name: "Private Client Insurance",
@@ -389,163 +389,163 @@ const Navbar = () => {
           <MobileDropdown
             title="HOME"
             links={[
-                { name: "Home Insurance", href: "/services/home-insurance" },
-                {
-                  name: "Condo Insurance",
-                  href: "/services/condo-insurance",
-                },
-                {
-                  name: "Tenant Insurance",
-                  href: "/services/tenant-insurance",
-                },
-                {
-                  name: "Cottage Insurance",
-                  href: "/services/cottage-insurance",
-                },
-                {
-                  name: "Rental Property Insurance",
-                  href: "/services/rental-property-insurance",
-                },
-                { name: "Pet Insurance", href: "/services/pet-insurance" },
-              ]}
+              { name: "Home Insurance", href: "/services/home-insurance" },
+              {
+                name: "Condo Insurance",
+                href: "/services/condo-insurance",
+              },
+              {
+                name: "Tenant Insurance",
+                href: "/services/tenant-insurance",
+              },
+              {
+                name: "Cottage Insurance",
+                href: "/services/cottage-insurance",
+              },
+              {
+                name: "Rental Property Insurance",
+                href: "/services/rental-property-insurance",
+              },
+              { name: "Pet Insurance", href: "/services/pet-insurance" },
+            ]}
             dropdownOpen={dropdownOpen}
             toggleDropdown={toggleDropdown}
           />
           <MobileDropdown
             title="GROUPS"
             links={[
-                {
-                  name: "Group Insurance",
-                  href: "/services/group-insurance",
-                },
-                {
-                  name: "Association – CHPTA",
-                  href: "/services/association-chpta",
-                },
-                {
-                  name: "Association – COPA",
-                  href: "/services/association-copa",
-                },
-                {
-                  name: "Association – emergiTEL",
-                  href: "/services/association-emergitel",
-                },
-                {
-                  name: "Association – SBPA",
-                  href: "/services/association-sbpa",
-                },
-                {
-                  name: "Association – PAU Alumni",
-                  href: "/services/association-pau",
-                },
-                {
-                  name: "Association – Pakmen Volleyball Club",
-                  href: "/services/association-pakmen",
-                },
-                {
-                  name: "Association – IIM",
-                  href: "/services/association-iim",
-                },
-                {
-                  name: "Association – CTAO",
-                  href: "/services/association-ctao",
-                },
-                {
-                  name: "Association – CASAL",
-                  href: "/services/association-casal",
-                },
-                {
-                  name: "Association – PAO",
-                  href: "/services/association-pao",
-                },
-                {
-                  name: "Charger Logistics Inc.",
-                  href: "/services/charger-logistics",
-                },
-                { name: "HRAI", href: "/services/hrai" },
-              ]}
+              {
+                name: "Group Insurance",
+                href: "/services/group-insurance",
+              },
+              {
+                name: "Association – CHPTA",
+                href: "/services/association-chpta",
+              },
+              {
+                name: "Association – COPA",
+                href: "/services/association-copa",
+              },
+              {
+                name: "Association – emergiTEL",
+                href: "/services/association-emergitel",
+              },
+              {
+                name: "Association – SBPA",
+                href: "/services/association-sbpa",
+              },
+              {
+                name: "Association – PAU Alumni",
+                href: "/services/association-pau",
+              },
+              {
+                name: "Association – Pakmen Volleyball Club",
+                href: "/services/association-pakmen",
+              },
+              {
+                name: "Association – IIM",
+                href: "/services/association-iim",
+              },
+              {
+                name: "Association – CTAO",
+                href: "/services/association-ctao",
+              },
+              {
+                name: "Association – CASAL",
+                href: "/services/association-casal",
+              },
+              {
+                name: "Association – PAO",
+                href: "/services/association-pao",
+              },
+              {
+                name: "Charger Logistics Inc.",
+                href: "/services/charger-logistics",
+              },
+              { name: "HRAI", href: "/services/hrai" },
+            ]}
             dropdownOpen={dropdownOpen}
             toggleDropdown={toggleDropdown}
           />
           <MobileDropdown
             title="BUSINESS"
             links={[
-                {
-                  name: "Business Insurance",
-                  href: "/services/business-insurance",
-                },
-                {
-                  name: "Home-Based Business Insurance",
-                  href: "/services/home-business-insurance",
-                },
-                {
-                  name: "Small Medium Business Insurance",
-                  href: "/services/smb-insurance",
-                },
-                {
-                  name: "Corporate Insurance",
-                  href: "/services/corporate-insurance",
-                },
-                {
-                  name: "Contractors Insurance",
-                  href: "/services/contractors-insurance",
-                },
-                {
-                  name: "General Liability Insurance",
-                  href: "/services/general-liability",
-                },
-                {
-                  name: "Commercial Property Insurance",
-                  href: "/services/commercial-property",
-                },
-                {
-                  name: "Account Receivable Insurance",
-                  href: "/services/account-receivable",
-                },
-                {
-                  name: "Builder’s Risk Insurance",
-                  href: "/services/builders-risk",
-                },
-                {
-                  name: "Commercial Automobile Insurance",
-                  href: "/services/commercial-auto",
-                },
-                {
-                  name: "Cyber Liability Insurance",
-                  href: "/services/cyber-liability",
-                },
-                {
-                  name: "Employee Liability Insurance",
-                  href: "/services/employee-liability",
-                },
-                {
-                  name: "Environmental Impairment Liability Insurance",
-                  href: "/services/environmental-liability",
-                },
-              ]}
+              {
+                name: "Business Insurance",
+                href: "/services/business-insurance",
+              },
+              {
+                name: "Home-Based Business Insurance",
+                href: "/services/home-business-insurance",
+              },
+              {
+                name: "Small Medium Business Insurance",
+                href: "/services/smb-insurance",
+              },
+              {
+                name: "Corporate Insurance",
+                href: "/services/corporate-insurance",
+              },
+              {
+                name: "Contractors Insurance",
+                href: "/services/contractors-insurance",
+              },
+              {
+                name: "General Liability Insurance",
+                href: "/services/general-liability",
+              },
+              {
+                name: "Commercial Property Insurance",
+                href: "/services/commercial-property",
+              },
+              {
+                name: "Account Receivable Insurance",
+                href: "/services/account-receivable",
+              },
+              {
+                name: "Builder’s Risk Insurance",
+                href: "/services/builders-risk",
+              },
+              {
+                name: "Commercial Automobile Insurance",
+                href: "/services/commercial-auto",
+              },
+              {
+                name: "Cyber Liability Insurance",
+                href: "/services/cyber-liability",
+              },
+              {
+                name: "Employee Liability Insurance",
+                href: "/services/employee-liability",
+              },
+              {
+                name: "Environmental Impairment Liability Insurance",
+                href: "/services/environmental-liability",
+              },
+            ]}
             dropdownOpen={dropdownOpen}
             toggleDropdown={toggleDropdown}
           />
           <MobileDropdown
             title="LIFE & FINANCIAL"
             links={[
-                { name: "Life Insurance", href: "/services/life-insurance" },
-                {
-                  name: "Disability Insurance",
-                  href: "/services/disability-insurance",
-                },
-                {
-                  name: "Critical Illness Insurance",
-                  href: "/services/critical-illness",
-                },
-                {
-                  name: "Mortgage Insurance",
-                  href: "/services/mortgage-insurance",
-                },
-                { name: "Investments", href: "/services/investments" },
-                { name: "Long-Term Care", href: "/services/long-term-care" },
-                { name: "Group Benefits", href: "/services/group-benefits" },
-              ]}
+              { name: "Life Insurance", href: "/services/life-insurance" },
+              {
+                name: "Disability Insurance",
+                href: "/services/disability-insurance",
+              },
+              {
+                name: "Critical Illness Insurance",
+                href: "/services/critical-illness",
+              },
+              {
+                name: "Mortgage Insurance",
+                href: "/services/mortgage-insurance",
+              },
+              { name: "Investments", href: "/services/investments" },
+              { name: "Long-Term Care", href: "/services/long-term-care" },
+              { name: "Group Benefits", href: "/services/group-benefits" },
+            ]}
             dropdownOpen={dropdownOpen}
             toggleDropdown={toggleDropdown}
           />
