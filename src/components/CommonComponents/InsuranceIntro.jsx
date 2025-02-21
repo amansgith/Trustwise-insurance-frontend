@@ -18,9 +18,9 @@ export default function InsuranceIntro({
           <h1 className="text-4xl font-extrabold text-blue-900 leading-snug">
             {title}
           </h1>
-          <p className="text-gray-700 mt-4 text-lg leading-relaxed">
+          <div className="text-gray-700 mt-4 text-lg leading-relaxed">
             {description}
-          </p>
+          </div>
 
           {/* Conditionally Render Extra Content */}
           {extraContent && <div className="mt-4">{extraContent}</div>}

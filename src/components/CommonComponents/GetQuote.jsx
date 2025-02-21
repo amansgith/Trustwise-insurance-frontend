@@ -200,7 +200,7 @@ const QuoteForm = () => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 text-lg font-semibold">
+        <button type="submit" className="w-full bg-cyan-700 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 text-lg font-semibold">
           Submit
         </button>
       </form>

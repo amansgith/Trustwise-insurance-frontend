@@ -138,24 +138,24 @@ const Navbar = () => {
               <Dropdown
                 title="HOME"
                 links={[
-                  { name: "Home Insurance", href: "/services/home-insurance" },
+                  { name: "Home Insurance", href: "/Home" },
                   {
                     name: "Condo Insurance",
-                    href: "/services/condo-insurance",
+                    href: "/Home/condo-insurance",
                   },
                   {
                     name: "Tenant Insurance",
-                    href: "/services/tenant-insurance",
+                    href: "/Home/tenant-insurance",
                   },
                   {
                     name: "Cottage Insurance",
-                    href: "/services/cottage-insurance",
+                    href: "/Home/cottage-insurance",
                   },
                   {
                     name: "Rental Property Insurance",
-                    href: "/services/rental-property-insurance",
+                    href: "/Home/rental-property-insurance",
                   },
-                  { name: "Pet Insurance", href: "/services/pet-insurance" },
+                  { name: "Pet Insurance", href: "/Home/pet-insurance" },
                 ]}
               />
 
@@ -219,55 +219,55 @@ const Navbar = () => {
                 links={[
                   {
                     name: "Business Insurance",
-                    href: "/services/business-insurance",
+                    href: "/business",
                   },
                   {
                     name: "Home-Based Business Insurance",
-                    href: "/services/home-business-insurance",
+                    href: "/business/home-business-insurance",
                   },
                   {
                     name: "Small Medium Business Insurance",
-                    href: "/services/smb-insurance",
+                    href: "/business/smb-insurance",
                   },
                   {
                     name: "Corporate Insurance",
-                    href: "/services/corporate-insurance",
+                    href: "/business/corporate-insurance",
                   },
                   {
                     name: "Contractors Insurance",
-                    href: "/services/contractors-insurance",
+                    href: "/business/contractors-insurance",
                   },
                   {
                     name: "General Liability Insurance",
-                    href: "/services/general-liability",
+                    href: "/business/general-liability-insurance",
                   },
                   {
                     name: "Commercial Property Insurance",
-                    href: "/services/commercial-property",
+                    href: "/business/commercial-property-insurance",
                   },
                   {
                     name: "Account Receivable Insurance",
-                    href: "/services/account-receivable",
+                    href: "/business/account-receivable-insurance",
                   },
                   {
                     name: "Builder’s Risk Insurance",
-                    href: "/services/builders-risk",
+                    href: "/business/builders-risk-insurance",
                   },
                   {
                     name: "Commercial Automobile Insurance",
-                    href: "/services/commercial-auto",
+                    href: "/auto/commercial-automobile-insurance",
                   },
                   {
                     name: "Cyber Liability Insurance",
-                    href: "/services/cyber-liability",
+                    href: "/business/cyber-liability-insurance",
                   },
                   {
                     name: "Employee Liability Insurance",
-                    href: "/services/employee-liability",
+                    href: "/business/employee-liability-insurance",
                   },
                   {
                     name: "Environmental Impairment Liability Insurance",
-                    href: "/services/environmental-liability",
+                    href: "/business/environmental-liability-insurance",
                   },
                 ]}
               />
