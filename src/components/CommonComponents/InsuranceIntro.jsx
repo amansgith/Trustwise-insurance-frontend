@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
+import Link from 'next/link'
 
-export default function InsuranceIntro({ 
-  title, 
-  description, 
-  imageSrc, 
-  buttonText, 
-  extraContent, 
-  extraButtons
+export default function InsuranceIntro({
+  title,
+  description,
+  imageSrc,
+  buttonText,
+  extraContent,
+  extraButtons,
 }) {
   return (
     <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        
         {/* Left Side: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 leading-snug pt-2">
@@ -25,9 +25,11 @@ export default function InsuranceIntro({
           {/* Conditionally Render Extra Content */}
           {extraContent && <div className="mt-4">{extraContent}</div>}
 
-          <button className="mt-6 bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
-            {buttonText}
-          </button>
+          <Link href="/call-back-request">
+            <button className="mt-6 bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
+              {buttonText}
+            </button>
+          </Link>
 
           {/* Extra Buttons - Auto Insurance Services */}
           {extraButtons && (
@@ -37,7 +39,10 @@ export default function InsuranceIntro({
               </h3>
               <div className="flex flex-wrap gap-3">
                 {extraButtons.map((btn, index) => (
-                  <button key={index} className="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded-md">
+                  <button
+                    key={index}
+                    className="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded-md"
+                  >
                     {btn}
                   </button>
                 ))}
@@ -58,7 +63,6 @@ export default function InsuranceIntro({
             />
           </div>
         </div>
-
       </div>
     </section>
   );

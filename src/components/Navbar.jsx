@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="z-20 font-montserrat shadow-md text-black sticky top-0 bg-white">
+    <header className="z-20 font-montserrat shadow-md text-black bg-white sticky top-0">
       <div className="mx-auto flex items-center pt-2 px-8 transition-transform duration-300">
         {/* Center Section - Logo */}
         <div className="flex-1 flex justify-center md:justify-start py-3 min-w-80 pr-4 relative overflow-hidden">
@@ -141,7 +141,14 @@ const Navbar = () => {
                   { name: "Commercial Automobile Insurance", href: "/auto/commercial-automobile-insurance" },
                   { name: "Cyber Liability Insurance", href: "/business/cyber-liability-insurance" },
                   { name: "Employee Liability Insurance", href: "/business/employee-liability-insurance" },
-                  { name: "Environmental Impairment Liability Insurance", href: "/business/environmental-liability-insurance" },
+                  { name: "Garage Insurance", href: "/business/garage-insurance" },
+                  { name: "Product Liability Insurance", href: "/business/environmental-liability-insurance" },
+                  { name: "Environmental Impairment Liability Insurance", href: "/business/product-liability-insurance" },
+                  { name: "Professional Liability Insurance", href: "/business/professional-liability-insurance" },
+                  { name: "Legal Expense Insurance", href: "/business/legal-expense-insurance" },
+                  { name: "Malpractice Insurance", href: "/business/malpractice-insurance" },
+                  { name: "Private Client Insurance", href: "/auto/private-client-insurance" },
+                  { name: "Speciality Insurance", href: "/business/speciality-insurance" },
                 ]}
               />
 

@@ -1,10 +1,11 @@
 "use client";
+import Link from "next/link"
 const buttons = ["Auto", "Home", "Business", "Life & Financial", "Travel"];
 
 const Hero = () => {
   return (
     <div className="bg-white w-full flex flex-col md:flex-row px-6 items-center">
-      <div className="flex flex-col gap-5 md:w-1/2">
+      <div className="flex flex-col gap-5 md:w-1/2 pt-20">
         <h3 className="uppercase text-[24px] md:text-[30px] font-bold leading-normal">
           Your Coverage, Your Way!
         </h3>
@@ -28,9 +29,11 @@ const Hero = () => {
           <p className="text-[#2cc8b3]">+ MORE</p>
         </div>
         <div className="">
+          <Link href="/call-back-request">
           <button className="py-2.5 md:py-3.5 px-8 md:px-10 uppercase text-white bg-[#2a80b4] hover:bg-[#9ecb75] hover:text-black text-lg md:text-xl font-bold transition duration-300">
             Get a Quote
           </button>
+          </Link>
         </div>
       </div>
       <div className="w-full md:w-1/2 overflow-hidden mt-6 md:mt-0">

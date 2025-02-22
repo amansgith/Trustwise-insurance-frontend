@@ -49,8 +49,6 @@ const AssociationCASAL = () => {
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/07/CASAL.jpeg"
-        buttonText="Get a Quote"
-        buttonLink="#"
         sectionTitle="Why Choose Our Insurance Program?"
         sectionDescription={
           <>
