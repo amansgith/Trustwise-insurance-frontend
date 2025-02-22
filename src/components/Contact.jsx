@@ -3,13 +3,13 @@
 export default function ContactUs() {
   return (
     <section className="py-12 bg-gray-100">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-4">
         {/* Section Heading */}
-        <h2 className="text-3xl font-bold mb-4">CONTACT US</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">CONTACT US</h2>
         <div className="w-16 border-b-2 border-blue-500 mx-auto mb-6"></div>
 
         {/* Contact Details */}
-        <div className="bg-white shadow-lg rounded-lg p-8 w-[90%] mx-auto">
+        <div className="bg-white shadow-lg rounded-lg p-8 w-full md:w-3/4 lg:w-1/2 mx-auto">
           <h3 className="text-2xl font-semibold mb-4">
             Aaxel Insurance Brokers Ltd.
           </h3>

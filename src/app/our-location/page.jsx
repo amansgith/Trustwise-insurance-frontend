@@ -1,23 +1,24 @@
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function OurLocation() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-[url('https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/06/07134748/2018-06-11-business-location-ThinkstockPhotos-614503922.jpg')] bg-cover text-white py-40 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="text-7xl font-bold mb-4">Our Locations</h1>
-            <p className="text-3xl mb-8 font-semibold text-gray-900">Find us around the world</p>
+        <section className="relative bg-[url('https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/06/07134748/2018-06-11-business-location-ThinkstockPhotos-614503922.jpg')] bg-cover text-white py-32 md:py-40 text-center">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative container mx-auto px-4">
+            <h1 className="text-4xl md:text-7xl font-bold mb-4">Our Locations</h1>
+            <p className="text-lg md:text-3xl mb-8 font-semibold text-gray-300">Find us around the world</p>
           </div>
         </section>
 
         {/* Map Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="mt-8 w-full h-96">
+            <div className="mt-8 w-full h-64 md:h-96">
               <iframe
                 title="Aaxel Insurance Location"
                 className="w-full h-full border-0 rounded-lg"
@@ -33,7 +34,7 @@ export default function OurLocation() {
         {/* Location Details Section */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   city: "New York",
@@ -91,4 +92,3 @@ export default function OurLocation() {
     </div>
   );
 }
-

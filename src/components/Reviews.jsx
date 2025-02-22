@@ -1,5 +1,4 @@
 "use client";
-// import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -40,14 +39,14 @@ const reviews = [
   },
 ];
 
-const GoogleReviews=()=> {
+const GoogleReviews = () => {
   return (
     <section className="py-6 bg-white">
       <div className="container mx-auto text-center">
         {/* Section Heading */}
-        <h2 className="text-3xl font-bold mb-4">GOOGLE REVIEWS</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">GOOGLE REVIEWS</h2>
         <div className="w-1/2 border-b-4 rounded-sm border-cyan-600 mx-auto "></div>
-        <hr className="mb-6"/>
+        <hr className="mb-6" />
         <div className="flex flex-col items-center md:flex-row md:justify-center gap-20">
           {/* Review Summary */}
           <div className="text-left">
@@ -69,7 +68,6 @@ const GoogleReviews=()=> {
               modules={[Navigation, Autoplay]}
               spaceBetween={20}
               slidesPerView={1}
-              // navigation
               autoplay={{ delay: 3000 }}
               breakpoints={{
                 768: { slidesPerView: 2 },
@@ -90,9 +88,14 @@ const GoogleReviews=()=> {
                         <p className="text-sm text-gray-500">{review.date}</p>
                       </div>
                     </div>
-                    <div className="text-yellow-500 mb-2 text-lg">{"★★★★★".slice(0, review.rating)}</div>
+                    <div className="text-yellow-500 mb-2 text-lg">
+                      {"★★★★★".slice(0, review.rating)}
+                    </div>
                     <p className="text-gray-700">{review.review}</p>
-                    <a href="#" className="text-blue-500 text-sm mt-2 inline-block">
+                    <a
+                      href="#"
+                      className="text-blue-500 text-sm mt-2 inline-block"
+                    >
                       Read more
                     </a>
                   </div>
@@ -109,10 +112,8 @@ const GoogleReviews=()=> {
           </button>
         </div>
       </div>
-
-      
     </section>
   );
-}
+};
 
 export default GoogleReviews;

@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
+import MobileNavbar from "@/components/MobileNavbar"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -15,7 +16,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body className={`antialiased ${montserrat.className}`}>
-        <Navbar />
+        <div className="md:hidden">
+          <MobileNavbar />
+        </div>
+
+        {/* Desktop Navbar (Hidden on mobile/tablet, shown on desktop) */}
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
         {children}
         <Footer />
       </body>

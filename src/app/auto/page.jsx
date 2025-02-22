@@ -115,7 +115,7 @@ const AutoInsurance = () => {
         ]}
       />
       <CoverageSection />
-      <Features/>
+      {/* <Features/> */}
       <CTA/>
       <ContactUs/>
       <FAQSection/>

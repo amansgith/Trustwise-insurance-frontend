@@ -9,9 +9,9 @@ import React from "react";
 const page = () => {
   return (
     <div className="py-6">
-      <div className="px-10 flex flex-col gap-3">
-        <h2 className="text-5xl font-bold">Contact Us</h2>
-        <p className="">
+      <div className="px-4 md:px-10 flex flex-col gap-3">
+        <h2 className="text-3xl md:text-5xl font-bold pt-14">Contact Us</h2>
+        <p className="text-base md:text-lg">
           At Aaxel Insurance, we pride ourselves on providing exceptional
           insurance coverage and service. Our knowledgeable agents are available
           to answer your questions and help you navigate your insurance options.
@@ -19,7 +19,7 @@ const page = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-10 py-10">
         {[
           {
             icon: MapPin,

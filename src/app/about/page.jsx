@@ -18,8 +18,8 @@ export default function AboutUs() {
         {/* Hero Section */}
         <section className="bg-[url('https://www.hashtagmotion.co.uk/wp-content/uploads/2018/06/about_us_background.jpg')] bg-cover text-white py-32 text-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-7xl font-extrabold mb-4 uppercase">About Us</h1>
-            <p className="text-xl font-semibold text-gray-400 mb-8">
+            <h1 className="text-4xl md:text-7xl font-extrabold mb-4 uppercase">About Us</h1>
+            <p className="text-lg md:text-xl font-semibold text-gray-400 mb-8">
               Your Coverage, Your Way...
             </p>
           </div>
@@ -27,29 +27,29 @@ export default function AboutUs() {
 
         {/* Our Story Section */}
         <section className="py-16 bg-background">
-          <div className="container flex justify-between mx-auto px-4">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-5xl font-bold mb-8">Our Story</h2>
-                <p className="text-lg mb-4">
+                <h2 className="text-3xl md:text-5xl font-bold mb-8">Our Story</h2>
+                <p className="text-base md:text-lg mb-4">
                   Founded in 2006, Aaxel Insurance is an independent insurance
                   broker serving throughout Ontario and Alberta. Aaxel Insurance
                   provides innovative Personal and Commercial Insurance
                   solutions to its client's Home, Auto, Life and Businesses
                   through our trusted insurance partners.
                 </p>
-                <p className="text-lg mb-4">
+                <p className="text-base md:text-lg mb-4">
                   Aaxel Insurance deliver best-in-class insurance solutions
                   backed by excellent customer service. We have locations across
                   Ontario and Alberta and proudly serving thousands of
                   customers.
                 </p>
-                <p className="text-lg">
+                <p className="text-base md:text-lg">
                   Aaxel Insurance provides innovative insurance solutions for
                   all your insurance needs at very comparative rates.
                 </p>
               </div>
-              <div className="w-[450px] h-[450px]">
+              <div className="w-full h-[300px] md:w-[450px] md:h-[450px]">
                 <img
                   src="https://www.aaxel.ca/wp-content/uploads/2023/03/Round-Logo-1.png"
                   alt="logo"
@@ -63,8 +63,8 @@ export default function AboutUs() {
         {/* Our Values Section */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-12">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: "https://img.icons8.com/?size=100&id=132&format=png&color=9ECB75",
@@ -74,7 +74,7 @@ export default function AboutUs() {
                 },
                 {
                   icon: "https://img.icons8.com/?size=100&id=11227&format=png&color=9ECB75",
-                  title: "Deliever",
+                  title: "Deliver",
                   description:
                     "We believe in the power of teamwork and diverse perspectives.",
                 },
@@ -111,7 +111,7 @@ export default function AboutUs() {
         {/* Contact Us Section */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-12">Contact Us</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Contact Us</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card>
                 <CardHeader>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 

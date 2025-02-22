@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 export default function InsuranceIntro({ 
@@ -15,10 +15,10 @@ export default function InsuranceIntro({
         
         {/* Left Side: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl font-extrabold text-blue-900 leading-snug">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 leading-snug pt-2">
             {title}
           </h1>
-          <div className="text-gray-700 mt-4 text-lg leading-relaxed">
+          <div className="text-gray-700 mt-4 text-lg md:text-xl leading-relaxed">
             {description}
           </div>
 
@@ -32,7 +32,7 @@ export default function InsuranceIntro({
           {/* Extra Buttons - Auto Insurance Services */}
           {extraButtons && (
             <div className="mt-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                 + Auto Insurance Services:
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -47,8 +47,8 @@ export default function InsuranceIntro({
         </div>
 
         {/* Right Side: Image */}
-        <div className="md:w-1/2">
-          <div className="relative w-full h-[350px] shadow-lg rounded-lg overflow-hidden">
+        <div className="md:w-1/2 w-full">
+          <div className="relative w-full h-[350px] md:h-[500px] shadow-lg rounded-lg overflow-hidden">
             <Image
               src={imageSrc}
               alt={title}
