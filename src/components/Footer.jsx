@@ -31,10 +31,9 @@ const footerLinks = [
       { url: "/", text: "Claim" },
       { url: "/", text: "Policy Insurances" },
       { url: "/", text: "Regulation" },
-      { url: "/", text: "How we Conduct" },
-      { url: "/", text: "Business?" },
-      { url: "/", text: "Term of Use" },
-      { url: "/", text: "Privacy Policy" },
+      { url: "/how-we-conduct-business", text: "How we Conduct Business?" },
+      { url: "/term-of-use", text: "Term of Use" },
+      { url: "/privacy-policy", text: "Privacy Policy" },
     ],
   },
 ];
