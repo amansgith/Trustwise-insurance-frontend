@@ -96,7 +96,7 @@ const Footer = () => {
       </div>
 
       {/* Charity Section */}
-      <div className="bg-[#f7f7f7] px-6 pt-[30px] pb-[60px] w-full flex flex-col md:flex-row items-center border-b-2">
+      <div className="bg-[#f7f7f7] px-6 pt-[10px] pb-[10px] w-full flex flex-col md:flex-row items-center border-b-2">
         <h4 className="text-3xl font-bold mb-4 md:mb-0">Charity We Support</h4>
         <div className="flex-1 flex flex-wrap justify-around items-center gap-4">
           <div className="w-full md:w-[300px] h-auto">
