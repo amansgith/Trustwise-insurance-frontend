@@ -160,7 +160,7 @@ const Footer = () => {
       </div>
 
       {/* Call Section */}
-      <div className="bg-green-700 text-white py-2 text-center font-bold text-2xl fixed z-20 bottom-0 left-0 right-0">
+      <div className="bg-green-700 text-white py-2 text-center font-bold text-lg md:text-2xl fixed z-20 bottom-0 left-0 right-0">
         Call for a quote:{" "}
         <span className="text-white pl-3">1-866-358-2860</span>
       </div>

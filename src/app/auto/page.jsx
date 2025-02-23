@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { FaCar, FaLayerGroup } from "react-icons/fa";
 import {
   MdGavel,
@@ -24,24 +25,27 @@ const AutoInsurance = () => {
   return (
     <div>
       <InsuranceIntro
-      title="Auto Insurance"
-      description="You can buy Auto Insurance through various channels. It is up to you to decide if you want your Automobile Insurance needs met through insurance call centres of multi-nationals, or the option of meeting your Auto Insurance needs through a local independent insurance broker."
-      imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg"
-      buttonText="Get a Free Quote"
-      extraButtons={[
-        "CLASSIC CAR",
-        "BOAT",
-        "RV",
-        "MOTORCYCLE",
-        "BUNDLE",
-        "COMMERCIAL AUTO",
-        "PRIVATE CLIENT",
-        "SNOWMOBILE",
-        "+ MORE",
-      ]}
+        title="Auto Insurance"
+        description="You can buy Auto Insurance through various channels. It is up to you to decide if you want your Automobile Insurance needs met through insurance call centres of multi-nationals, or the option of meeting your Auto Insurance needs through a local independent insurance broker."
+        imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg"
+        buttonText="Get a Free Quote"
+        extraButtons={[
+          { text: "CLASSIC CAR", href: "/auto/classic-car-insurance" },
+          { text: "BOAT", href: "/auto/boat-insurance" },
+          { text: "RV", href: "/auto/rv-insurance" },
+          { text: "MOTORCYCLE", href: "/auto/motorcycle-insurance" },
+          { text: "BUNDLE", href: "/auto/bundle-insurance" },
+          {
+            text: "COMMERCIAL AUTO",
+            href: "/auto/commercial-automobile-insurance",
+          },
+          { text: "PRIVATE CLIENT", href: "/auto/private-client-insurance" },
+          { text: "SNOWMOBILE", href: "/auto/snowmobile-insurance" },
+          { text: "+ MORE" },
+        ]}
       />
 
-      <TrustBanner/>
+      <TrustBanner />
 
       {/* Discounts Section */}
       <DiscountsSection
@@ -115,10 +119,10 @@ const AutoInsurance = () => {
         ]}
       />
       <CoverageSection />
-      {/* <Features/> */}
-      <CTA/>
-      <ContactUs/>
-      <FAQSection/>
+      <Features />
+      <CTA />
+      <ContactUs />
+      <FAQSection />
     </div>
   );
 };
@@ -148,9 +152,11 @@ const DiscountsSection = ({ discounts }) => {
         ))}
       </div>
       <div className="flex">
-        <button className="flex mx-auto mt-10 justify-center bg-cyan-500 hover:bg-green-700 text-xl text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
-          Get Quote <IoMdArrowForward className="mx-1 mt-1" />
-        </button>
+        <Link href="/call-back-request" className="flex mx-auto">
+          <button className="flex mx-auto mt-10 justify-center bg-cyan-500 hover:bg-green-700 text-xl text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+            Get Quote <IoMdArrowForward className="mx-1 mt-1" />
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -254,7 +260,7 @@ const CoverageSection = () => {
         meet your specific needs today.
       </p>
 
-      <div className="space-y-4">
+      <div className="space-y-6 w-full md:space-y-4 rounded-md">
         {coverages.map((item, index) => (
           <div
             key={index}
@@ -279,7 +285,5 @@ const CoverageSection = () => {
     </div>
   );
 };
-
-
 
 export default AutoInsurance;

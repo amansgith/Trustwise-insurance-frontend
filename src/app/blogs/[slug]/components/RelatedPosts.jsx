@@ -5,20 +5,20 @@ export default function RelatedPosts() {
   const posts = [
     {
       id: 1,
-      title: "The Rise of Progressive Web Apps",
+      title: "The Best Travel Insurance for all your needs.",
       excerpt:
-        "Explore how PWAs are changing the landscape of web development.",
+        "Explore how Aaxel is changing the landscape of Travel insurance with super fast claims.",
     },
     {
       id: 2,
-      title: "Mastering React Hooks",
+      title: "Best Insruance policy for your car in 2025.",
       excerpt:
-        "A deep dive into React Hooks and how they can simplify your code.",
+        "Drive without any tension about your car.",
     },
     {
       id: 3,
-      title: "GraphQL vs REST: A Comparative Analysis",
-      excerpt: "Understand the pros and cons of GraphQL and REST APIs.",
+      title: "Your best choice for Life Insurance this summer.",
+      excerpt: "The best life inusrance for your whole family",
     },
   ];
 

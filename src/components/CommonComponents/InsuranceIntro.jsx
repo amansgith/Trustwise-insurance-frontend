@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function InsuranceIntro({
   title,
@@ -39,12 +39,19 @@ export default function InsuranceIntro({
               </h3>
               <div className="flex flex-wrap gap-3">
                 {extraButtons.map((btn, index) => (
-                  <button
-                    key={index}
-                    className="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded-md"
-                  >
-                    {btn}
-                  </button>
+                  btn.href ? (
+                    <Link key={index} href={btn.href}>
+                      <button
+                        className="bg-green-400 hover:bg-green-500 text-black font-bold py-2 px-4 rounded-md"
+                      >
+                        {btn.text}
+                      </button>
+                    </Link>
+                  ) : (
+                    <span key={index} className=" text-green-600 font-bold py-2 px-2">
+                      {btn.text}
+                    </span>
+                  )
                 ))}
               </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch, FaFacebookF, FaInstagram, FaLinkedinIn, FaEnvelope, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/Logo.png";
@@ -8,9 +8,14 @@ import Logo from "../../public/Logo.png";
 const MobileNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleDropdown = (title) => {
     setOpenDropdown(openDropdown === title ? null : title);
+  };
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
   };
 
   const menuItems = [
@@ -74,6 +79,11 @@ const MobileNavbar = () => {
         { name: "Cyber Liability Insurance", href: "/business/cyber-liability-insurance" },
         { name: "Employee Liability Insurance", href: "/business/employee-liability-insurance" },
         { name: "Environmental Impairment Liability Insurance", href: "/business/environmental-liability-insurance" },
+        { name: "Professional Liability Insurance", href: "/business/professional-liability-insurance" },
+        { name: "Legal Expense Insurance", href: "/business/legal-expense-insurance" },
+        { name: "Malpractice Insurance", href: "/business/malpractice-insurance" },
+        { name: "Private Client Insurance", href: "/auto/private-client-insurance" },
+        { name: "Speciality Insurance", href: "/business/speciality-insurance" },
       ],
     },
     {
@@ -104,40 +114,80 @@ const MobileNavbar = () => {
         </Link>
 
         {/* Search Button */}
-        <button className="text-2xl">
+        <button className="text-2xl" onClick={toggleSearch}>
           <FaSearch />
         </button>
+      </div>
+
+      {/* Search Slide */}
+      <div
+        className={`fixed inset-0 bg-white z-40 flex flex-col p-6 shadow-lg transform ${
+          isSearchOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300`}
+      >
+        {/* Cross Button */}
+        <button className="absolute top-4 left-4 text-2xl" onClick={toggleSearch}>
+          <FaTimes />
+        </button>
+
+        {/* Search Input and Button */}
+        <div className="flex flex-col items-center justify-center h-full">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full p-3 border rounded-lg mb-4"
+          />
+          <button className="w-full p-3 bg-cyan-700 text-white rounded-lg">
+            Search
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       <nav
         className={`fixed top-0 left-0 w-3/4 h-full bg-white shadow-lg transform ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300`}
+        } transition-transform duration-300 overflow-y-auto`}
       >
-        <div className="flex flex-col p-6 space-y-4 text-lg font-semibold">
-          {/* Static Links */}
-          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-          <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+        <div className="flex justify-end p-4">
+          <button onClick={() => setMenuOpen(false)} className="text-2xl">
+            <FaTimes />
+          </button>
+        </div>
+        <div className="flex flex-col p-6 space-y-4 text-lg font-bold gap-2">
+          <Link href="tel:+18663582860" className="text-cyan-600">
+            +1 866-358-2860
+          </Link>
+
+          {/* Social Media Icons */}
+          <div className="flex space-x-4 text-gray-700">
+            <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
+            <FaInstagram className="cursor-pointer hover:text-pink-500 transition duration-300" />
+            <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
+            <FaEnvelope className="cursor-pointer hover:text-red-500 transition duration-300" />
+            <FaWhatsapp className="cursor-pointer hover:text-green-600 transition duration-300" />
+            <FaTiktok className="cursor-pointer hover:text-black transition duration-300" />
+          </div>
 
           {/* Dropdown Sections */}
           {menuItems.map((item) => (
             <div key={item.title}>
-              {/* Dropdown Title */}
-              <button 
-                className="w-full text-left font-bold py-2 border-b"
+              <button
+                className="w-full text-left font-bold py-2 border-b hover:text-cyan-700"
                 onClick={() => toggleDropdown(item.title)}
               >
                 {item.title}
               </button>
 
-              {/* Dropdown Links */}
               {openDropdown === item.title && (
-                <div className="pl-4 mt-2 space-y-2">
+                <div className="pl-2 mt-2 space-y-2 max-h-60 overflow-y-auto hover:text-cyan-600">
                   {item.links.map((link) => (
-                    <Link key={link.name} href={link.href} className="block" onClick={() => setMenuOpen(false)}>
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block font-thin"
+                      onClick={() => setMenuOpen(false)}
+                    >
                       {link.name}
                     </Link>
                   ))}
@@ -146,15 +196,26 @@ const MobileNavbar = () => {
             </div>
           ))}
 
-          {/* Phone Number */}
-          <Link href="tel:+18663582860" className="text-cyan-600">
-            +1 866-358-2860
+          {/* Additional Links */}
+          <Link href="/travel" className="block" onClick={() => setMenuOpen(false)}>
+            Travel
+          </Link>
+          <Link href="/claims" className="block" onClick={() => setMenuOpen(false)}>
+            Claims
+          </Link>
+          <Link href="/blogs" className="block" onClick={() => setMenuOpen(false)}>
+            Blog
           </Link>
         </div>
       </nav>
 
       {/* Background Overlay */}
-      {menuOpen && <div className="fixed inset-0 bg-black opacity-50" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 -z-10"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
     </header>
   );
 };

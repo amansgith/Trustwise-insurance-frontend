@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import {
   FaFacebookF,
   FaInstagram,
@@ -16,10 +17,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState({});
+  const pathname = usePathname();
 
   const toggleDropdown = (title) => {
     setDropdownOpen((prev) => ({ ...prev, [title]: !prev[title] }));
   };
+
+  const isActive = (path) => pathname === path;
 
   return (
     <header className="z-20 font-montserrat shadow-md text-black bg-white sticky top-0">
@@ -41,29 +45,27 @@ const Navbar = () => {
           {/* Top Bar */}
           <div className="flex justify-between items-center px-6 py-6 text-sm">
             <div className="flex justify-end w-full space-x-6 text-xs px-4">
-              <Link href="/careers" className="relative group">
-                <span className="group-hover:text-blue-500 transition duration-300">
-                  Join Our Team
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-              </Link>
-              <Link href="/our-location" className="relative group">
-                Our Locations
-                <span className="group-hover:text-blue-500 transition duration-300"></span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-              </Link>
-              <Link href="/about" className="relative group">
-                <span className="group-hover:text-blue-500 transition duration-300">
-                  About Us
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-              </Link>
-              <Link href="/contact" className="relative group">
-                <span className="group-hover:text-blue-500 transition duration-300">
-                  Contact Us
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-              </Link>
+              {[
+                { name: "Join Our Team", path: "/careers" },
+                { name: "Our Locations", path: "/our-location" },
+                { name: "About Us", path: "/about" },
+                { name: "Contact Us", path: "/contact" },
+              ].map((link) => (
+                <Link key={link.path} href={link.path} className="relative group">
+                  <span
+                    className={`transition duration-300 ${
+                      isActive(link.path) ? "text-blue-500" : "group-hover:text-blue-500"
+                    }`}
+                  >
+                    {link.name}
+                  </span>
+                  <span
+                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-blue-500 transition-all duration-300 ${
+                      isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  ></span>
+                </Link>
+              ))}
             </div>
             <div className="flex space-x-4 text-gray-700">
               <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
@@ -75,13 +77,12 @@ const Navbar = () => {
             </div>
           </div>
           <hr className="w-full" />
+
           {/* Bottom Bar - Main Navigation */}
           <div className="flex justify-between items-center px-4 py-3">
-            {/* Navigation Menu (Desktop) */}
             <div className="flex space-x-6 font-semibold text-sm">
-              <Dropdown
-                title="AUTO"
-                links={[
+              {[
+                { title: "AUTO", links: [
                   { name: "Auto Insurance", href: "/auto" },
                   { name: "Bundle Insurance", href: "/auto/bundle-insurance" },
                   { name: "Boat Insurance", href: "/auto/boat-insurance" },
@@ -91,24 +92,16 @@ const Navbar = () => {
                   { name: "RV Insurance", href: "/auto/rv-insurance" },
                   { name: "Snowmobile Insurance", href: "/auto/snowmobile-insurance" },
                   { name: "Commercial Automobile Insurance", href: "/auto/commercial-automobile-insurance" },
-                ]}
-              />
-
-              <Dropdown
-                title="HOME"
-                links={[
+                ]},
+                { title: "HOME", links: [
                   { name: "Home Insurance", href: "/Home" },
                   { name: "Condo Insurance", href: "/Home/condo-insurance" },
                   { name: "Tenant Insurance", href: "/Home/tenant-insurance" },
                   { name: "Cottage Insurance", href: "/Home/cottage-insurance" },
                   { name: "Rental Property Insurance", href: "/Home/rental-property-insurance" },
                   { name: "Pet Insurance", href: "/Home/pet-insurance" },
-                ]}
-              />
-
-              <Dropdown
-                title="GROUPS"
-                links={[
+                ]},
+                { title: "GROUPS", links: [
                   { name: "Group Insurance", href: "/groups" },
                   { name: "Association – CHPTA", href: "/groups/association-chpta" },
                   { name: "Association – COPA", href: "/groups/association-copa" },
@@ -123,12 +116,8 @@ const Navbar = () => {
                   { name: "Charger Logistics Inc.", href: "/groups/charger-logistics" },
                   { name: "HRAI", href: "/groups/hrai" },
                   { name: "Mobile-Live", href: "/groups/mobilelive" },
-                ]}
-              />
-
-              <Dropdown
-                title="BUSINESS"
-                links={[
+                ]},
+                { title: "BUSINESS", links: [
                   { name: "Business Insurance", href: "/business" },
                   { name: "Home-Based Business Insurance", href: "/business/home-business-insurance" },
                   { name: "Small Medium Business Insurance", href: "/business/smb-insurance" },
@@ -149,12 +138,8 @@ const Navbar = () => {
                   { name: "Malpractice Insurance", href: "/business/malpractice-insurance" },
                   { name: "Private Client Insurance", href: "/auto/private-client-insurance" },
                   { name: "Speciality Insurance", href: "/business/speciality-insurance" },
-                ]}
-              />
-
-              <Dropdown
-                title="LIFE & FINANCIAL"
-                links={[
+                ]},
+                { title: "LIFE & FINANCIAL", links: [
                   { name: "Life Insurance", href: "/life-financial" },
                   { name: "Disability Insurance", href: "/life-financial/disability-insurance" },
                   { name: "Critical Illness Insurance", href: "/life-financial/critical-illness-insurance" },
@@ -162,32 +147,35 @@ const Navbar = () => {
                   { name: "Investments", href: "/life-financial/investments" },
                   { name: "Long-Term Care", href: "/life-financial/long-term-care" },
                   { name: "Group Benefits", href: "/life-financial/group-benefits" },
-                ]}
-              />
+                ]},
+              ].map((item) => (
+                <Dropdown key={item.title} title={item.title} links={item.links} pathname={pathname} />
+              ))}
 
-              <Link href="/travel" className="relative group">
-                <span className="group-hover:text-cyan-700 transition duration-300">
-                  TRAVEL
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
-              </Link>
-              <Link href="/claims" className="relative group">
-                <span className="group-hover:text-cyan-700 transition duration-300">
-                  CLAIMS
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
-              </Link>
-              <Link href="/blogs" className="relative group">
-                <span className="group-hover:text-cyan-700 transition duration-300">
-                  BLOG
-                </span>
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 scale-x-0 group-hover:scale-x-150 transition-all duration-300"></span>
-              </Link>
+              {[
+                { name: "TRAVEL", path: "/travel" },
+                { name: "CLAIMS", path: "/claims" },
+                { name: "BLOG", path: "/blogs" },
+              ].map((link) => (
+                <Link key={link.path} href={link.path} className="relative group">
+                  <span
+                    className={`transition duration-300 ${
+                      isActive(link.path) ? "text-cyan-700" : "group-hover:text-cyan-700"
+                    }`}
+                  >
+                    {link.name}
+                  </span>
+                  <span
+                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-cyan-700 transition-all duration-300 ${
+                      isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  ></span>
+                </Link>
+              ))}
             </div>
 
-            {/* Right - Search Icon & Contact Button */}
+            {/* Right - Contact Button */}
             <div className="flex items-center space-x-6">
-              {/* <FaSearch className="text-xl cursor-pointer" /> */}
               <a
                 href="tel:+18663582860"
                 className="cursor-pointer bg-cyan-600 hover:bg-black text-white px-9 py-4 rounded-md transition duration-300"
@@ -202,8 +190,7 @@ const Navbar = () => {
   );
 };
 
-// Dropdown Component (for Desktop)
-const Dropdown = ({ title, links }) => {
+const Dropdown = ({ title, links, pathname }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -215,28 +202,26 @@ const Dropdown = ({ title, links }) => {
       <button className="flex items-center group-hover:text-cyan-600 transition duration-300">
         <span className="relative pb-4">
           {title}
-          {/* Underline Effect */}
           <span
             className={`absolute left-0 bottom-0 w-full h-[3px] bg-cyan-600 transition-all duration-300 ${
-              open ? "scale-x-100" : "scale-x-0"
+              open || links.some(link => pathname.startsWith(link.href)) ? "scale-x-100" : "scale-x-0"
             }`}
           ></span>
         </span>
         <RiArrowDropDownLine className="text-lg mb-4" />
       </button>
 
-      {/* Dropdown Menu */}
       {open && (
-        <div className="absolute top-9 -left-20 rounded-lg bg-white shadow-md py-2 w-48 transition duration-300 z-10">
-          {links.map((link, index) => (
+        <div className="absolute top-9 -left-20 rounded-lg bg-white shadow-md py-2 w-48 transition duration-300 z-10 max-h-80 overflow-y-auto">
+          {links.map((link) => (
             <Link
-              key={index}
+              key={link.href}
               href={link.href}
-              className="relative group block px-4 py-2 text-[10px] font-light hover:text-cyan-700 transition duration-300"
+              className={`relative group block px-4 py-2 text-[10px] font-light transition duration-300 ${
+                pathname.startsWith(link.href) ? "text-cyan-700" : "hover:text-cyan-700"
+              }`}
             >
-              <span className="hover:text-cyan-700 transition duration-300">
-                {link.name}
-              </span>
+              {link.name}
             </Link>
           ))}
         </div>
