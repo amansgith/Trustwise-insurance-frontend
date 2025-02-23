@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Select from "react-select";
 import * as yup from "yup";
+import validator from "validator";
 
 const timeOptions = [
   { label: "Morning (9 AM - 12 PM)", value: "Morning" },
@@ -12,9 +13,20 @@ const timeOptions = [
 ];
 
 const groupOptions = [
-  { label: "Group A", value: "Group A" },
-  { label: "Group B", value: "Group B" },
-  { label: "Group C", value: "Group C" },
+  { label: "Association - CHPTA", value: "Association - CHPTA" },
+  { label: "Association - COPA", value: "Asosciation - COPA" },
+  { label: "Association - emergiTEL", value: "Association -" },
+  { label: "Association - SBPA", value: "Association - SBPA" },
+  { label: "Association - PAU Alumni", value: "Association - PAU Alumni-" },
+  { label: "Association - Pakmen Volleyball Club", value: "Association - Pakmen Volleyball Club" },
+  { label: "Association - IIM", value: "Association - IIM" },
+  { label: "Association - CTAO", value: "Association - CTAO" },
+  { label: "Association - CASAL", value: "Association - CASAL" },
+  { label: "Association - PAO", value: "Association - PAO" },
+  { label: "Charger Logistic Inc.", value: "Charging Logistic Inc." },
+  { label: "Cheerleading Clubs", value: "Cheerleading Clubs" },
+  { label: "HRAI", value: "HRAI" },
+  { label: "MobileLive", value: "MobileLive" },
 ];
 
 const quoteOptions = {
@@ -62,6 +74,7 @@ const quoteOptions = {
     "Specialty Insurance",
     "Garage Insurance",
     "Builder’s Risk Insurance",
+    "Garage Insurance",
   ],
   "Life & Financial": [
     "Life Insurance",
@@ -72,6 +85,7 @@ const quoteOptions = {
     "Long-Term Care Insurance",
     "Group Benefits",
     "Investments",
+    "Travel",
   ],
 };
 
@@ -84,13 +98,15 @@ const quoteOptionsList = Object.keys(quoteOptions).map((key) => ({
 const schema = yup.object().shape({
   quoteFor: yup.string().required("Please select a quote type"),
   subQuote: yup.string().required("Please select an option"),
-  firstName: yup.string().required("First name is required"),
-  lastName: yup.string().required("Last name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
-  phone: yup.string().matches(/^\d{10}$/, "Phone must be 10 digits").required("Phone is required"),
-  businessName: yup.string().required("Business name is required"),
-  dateToContact: yup.string().required("Please select a date"),
-  timeToContact: yup.string().required("Please select a time"),
+  firstName: yup.string().required("First name is required").transform(value => validator.escape(value)),
+  lastName: yup.string().required("Last name is required").transform(value => validator.escape(value)),
+  email: yup.string().email("Invalid email").required("Email is required").transform(value => validator.normalizeEmail(value)),
+  phone: yup.string().matches(/^\d{10}$/, "Phone must be 10 digits").required("Phone is required").transform(value => validator.escape(value)),
+  businessName: yup.string().required("Business name is required").transform(value => validator.escape(value)),
+  dateToContact: yup.string().required("Please select a date").transform(value => validator.escape(value)),
+  timeToContact: yup.string().required("Please select a time").transform(value => validator.escape(value)),
+  groupName: yup.string().nullable().transform(value => value ? validator.escape(value) : null),
+  notes: yup.string().nullable().transform(value => value ? validator.escape(value) : null),
 });
 
 const QuoteForm = () => {
@@ -100,10 +116,28 @@ const QuoteForm = () => {
   });
 
   const onSubmit = async (data) => {
-    console.log("Form Submitted:", data);
-    alert("Form submitted successfully!");
-    reset();
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        reset();
+      } else {
+        alert('Error submitting form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting form');
+    }
   };
+
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="max-w-4xl mx-auto p-6 my-4 bg-white shadow-lg rounded-lg">
@@ -183,7 +217,7 @@ const QuoteForm = () => {
         {/* Date to Contact */}
         <div>
           <label className="font-semibold text-gray-700">Date to Contact *</label>
-          <input type="date" {...register("dateToContact")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+          <input type="date" {...register("dateToContact")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" min={today}/>
           {errors.dateToContact && <p className="text-red-500 text-sm">{errors.dateToContact.message}</p>}
         </div>
 

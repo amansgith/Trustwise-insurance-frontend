@@ -13,7 +13,7 @@ const Partners = dynamic(() => import("@/components/Partners"), { ssr: false });
 const GoogleReviews = dynamic(() => import("@/components/Reviews"), {
   ssr: false,
 });
-const ContactUs = dynamic(() => import("@/components/Contact"), { ssr: false });
+const ContactUs = dynamic(() => import("@/components/ContactCard"), { ssr: false });
 
 export default function Home() {
   return (
