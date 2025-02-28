@@ -9,7 +9,7 @@ const CTA = dynamic(() => import("@/components/CTA"), { ssr: false });
 const BlogSection = dynamic(() => import("@/components/BlogSection"), {
   ssr: false,
 });
-const Partners = dynamic(() => import("@/components/Partners"), { ssr: false });
+// const Partners = dynamic(() => import("@/components/Partners"), { ssr: false });
 const GoogleReviews = dynamic(() => import("@/components/Reviews"), {
   ssr: false,
 });
@@ -24,7 +24,7 @@ export default function Home() {
       <CTA />
       <Features />
       <BlogSection />
-      <Partners />
+      {/* <Partners /> */}
       <GoogleReviews />
       <ContactUs />
     </>

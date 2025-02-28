@@ -31,7 +31,7 @@ const About = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 mt-6 md:mt-0 overflow-hidden">
-          <Image src={Companylogo} alt="Company Logo" className="w-full h-auto sm:skew-y-3 md:-skew-x-6" />
+          <Image src={Companylogo} alt="Company Logo" className="w-full h-auto md:-skew-x-6" />
         </div>
       </div>
     </>

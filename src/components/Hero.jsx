@@ -2,13 +2,13 @@
 import Link from "next/link";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-const buttons = [
-  { label: "Auto", link: "/auto" },
-  { label: "Home", link: "/Home" },
-  { label: "Business", link: "/business" },
-  { label: "Life & Financial", link: "/life-financial" },
-  { label: "Travel", link: "/travel" },
-];
+// const buttons = [
+//   { label: "Auto", link: "/auto" },
+//   { label: "Home", link: "/Home" },
+//   { label: "Business", link: "/business" },
+//   { label: "Life & Financial", link: "/life-financial" },
+//   { label: "Travel", link: "/travel" },
+// ];
 
 const Hero = () => {
   return (
@@ -22,11 +22,10 @@ const Hero = () => {
           Auto, Home and Business Insurance
         </h3>
         <p className="text-lg md:text-2xl">
-          Your Trusted Insurance Partner. Customized Solutions for Your
-          Insurance Needs!
+          Your Trusted Insurance Partner. Customized Solutions for Your Insurance Needs!
         </p>
-        <h3 className="text-lg md:text-xl font-bold">+ Popular Products</h3>
-        <div className="flex flex-wrap gap-2 items-center text-[14px] md:text-[16px] font-bold">
+        {/* <h3 className="text-lg md:text-xl font-bold">+ Popular Products</h3> */}
+        {/* <div className="flex flex-wrap gap-2 items-center text-[14px] md:text-[16px] font-bold">
           {buttons.map((button, index) => (
             <Link key={index} href={button.link} passHref>
               <button className="p-2.5 md:p-3.5 uppercase rounded bg-[#FEDF83] hover:bg-[#2A3591] hover:text-white transition duration-300">
@@ -39,11 +38,16 @@ const Hero = () => {
               + MORE
             </p>
           </Link>
-        </div>
-        <div className="">
+        </div> */}
+        <div className="flex md:flex-col gap-4">
           <Link href="/call-back-request">
             <button className="py-2.5 md:py-3.5 px-8 rounded-lg md:px-10 uppercase text-white bg-[#2A3591] hover:bg-[#FDEF83] hover:text-black text-lg md:text-xl font-bold transition duration-300">
               Get a Quote
+            </button>
+          </Link>
+          <Link href="/call-back-request">
+            <button className="py-2.5 md:py-3.5 px-8 rounded-lg md:px-8 uppercase text-white bg-[#2A3591] hover:bg-[#FDEF83] hover:text-black text-lg md:text-xl font-bold transition duration-300">
+              + Popular Products
             </button>
           </Link>
         </div>
