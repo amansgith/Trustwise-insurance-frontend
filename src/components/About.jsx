@@ -9,7 +9,7 @@ const About = () => {
     <>
       <div className="flex flex-col md:flex-row gap-10 items-center bg-[#2A3591] text-white">
         <div className="flex flex-col  justify-between md:w-1/2 px-6 pt-4 md:pl-20">
-          <div className="w-fit flex flex-col gap-4">
+          <div className="w-fit flex flex-col gap-2 mb-3">
             <h2 className="uppercase text-[36px] md:text-[46px] leading-[46px] md:leading-[56px] font-bold">About Us</h2>
             <div className="h-0.5 w-9/12 bg-[#2a80b4]"></div>
           </div>
@@ -25,7 +25,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-4">
-            <button className="py-3.5 px-10 bg-[#EDFE83] text-black rounded-lg hover:bg-[#2A3591]  hover:text-white flex items-center transition duration-300">
+            <button className="py-3.5 px-10 bg-secondary text-black rounded-lg hover:  hover:text-white flex items-center transition duration-300">
               Learn More <ArrowRight size={16} className="ml-2" />
             </button>
           </div>

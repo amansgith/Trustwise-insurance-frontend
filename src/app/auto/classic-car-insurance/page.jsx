@@ -18,8 +18,6 @@ const ClassicCarInsurance = () => {
         buttonText="Get a Free Quote"
       />
       <TrustBanner />
-
-      {/* get quote form  */}
       <QuoteForm/>
       <Features />
       <ContactUs />

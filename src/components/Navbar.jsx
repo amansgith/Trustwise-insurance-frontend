@@ -277,14 +277,14 @@ const DeskNavbar = () => {
                   <span
                     className={`transition duration-300 ${
                       isActive(link.path)
-                        ? "text-[#2A3591]"
-                        : "group-hover:text-[#2A3591]"
+                        ? "text-primary"
+                        : "group-hover:text-primary"
                     }`}
                   >
                     {link.name}
                   </span>
                   <span
-                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-[#2A3591] transition-all duration-300 ${
+                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
                       isActive(link.path)
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
@@ -294,12 +294,12 @@ const DeskNavbar = () => {
               ))}
             </div>
             <div className="flex space-x-4 text-gray-700">
-              <FaFacebookF className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
-              <FaInstagram className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
-              <FaLinkedinIn className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
-              <FaEnvelope className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
-              <FaWhatsapp className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
-              <FaTiktok className="cursor-pointer hover:text-[#2A3591] transition duration-300" />
+              <FaFacebookF className="cursor-pointer hover:text-primary transition duration-300" />
+              <FaInstagram className="cursor-pointer hover:text-primary transition duration-300" />
+              <FaLinkedinIn className="cursor-pointer hover:text-primary transition duration-300" />
+              <FaEnvelope className="cursor-pointer hover:text-primary transition duration-300" />
+              <FaWhatsapp className="cursor-pointer hover:text-primary transition duration-300" />
+              <FaTiktok className="cursor-pointer hover:text-primary transition duration-300" />
             </div>
           </div>
           <hr className="w-full" />
@@ -350,14 +350,14 @@ const DeskNavbar = () => {
                   <span
                     className={`transition duration-300 ${
                       isActive(link.path)
-                        ? "text-[#2A3591]"
-                        : "group-hover:text-[#2A3591]"
+                        ? "text-primary"
+                        : "group-hover:text-primary"
                     }`}
                   >
                     {link.name}
                   </span>
                   <span
-                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-[#2A3591] transition-all duration-300 ${
+                    className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
                       isActive(link.path)
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
@@ -371,7 +371,7 @@ const DeskNavbar = () => {
             <div className="flex items-center space-x-6">
               <a
                 href="tel:+18663582860"
-                className="cursor-pointer bg-[#FEDF83] hover:bg-[#2A3591] text-black hover:text-white px-9 py-4 rounded-md transition duration-300"
+                className="cursor-pointer bg-secondary hover:bg-primary text-black hover:text-white px-9 py-4 rounded-md transition duration-300"
               >
                 +1 866-358-2860
               </a>
@@ -392,11 +392,11 @@ const Dropdown = ({ title, links, pathname }) => {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button className="flex items-center group-hover:text-[#2A3591] transition duration-300">
+      <button className="flex items-center group-hover:text-primary transition duration-300">
         <span className="relative pb-4">
           {title}
           <span
-            className={`absolute left-0 bottom-0 w-full h-[3px] bg-[#2A3591] transition-all duration-300 ${
+            className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
               open || links.some((link) => pathname.startsWith(link.href))
                 ? "scale-x-100"
                 : "scale-x-0"
@@ -414,8 +414,8 @@ const Dropdown = ({ title, links, pathname }) => {
               href={link.href}
               className={`relative group block px-4 py-2 text-[10px] font-medium transition duration-300 ${
                 pathname.startsWith(link.href)
-                  ? "text-[#2A3591]"
-                  : "hover:text-[#2A3591]"
+                  ? "text-primary"
+                  : "hover:text-primary"
               }`}
             >
               {link.name}
