@@ -108,7 +108,7 @@ const services = [
   },
 ];
 
-const CTA = () => {
+const PopularServices = () => {
   return (
     <section id="popular-product" className="relative bg-gray-50 py-16 px-6">
       <div className="absolute inset-0 w-full h-full opacity-60">
@@ -174,4 +174,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default PopularServices;

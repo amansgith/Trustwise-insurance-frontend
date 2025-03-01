@@ -16,7 +16,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TrustBanner from "@/components/CommonComponents/Banner";
 import Features from "@/components/Features";
-import CTA from "@/components/CTA";
+import CTA from "@/components/PopularServices";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";

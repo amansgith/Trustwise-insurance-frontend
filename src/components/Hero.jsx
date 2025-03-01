@@ -22,11 +22,11 @@ const Hero = () => {
 
   return (
     <div className="bg-white w-full flex flex-col md:flex-row px-8 md:px-20 pb-14 items-center">
-      <div className="flex flex-col gap-4 md:w-1/2 pt-24">
+      <div className="flex flex-col gap-4 md:w-1/2 pt-16">
         <h3 className="uppercase text-[18px] md:text-[30px] font-bold leading-normal">
           Your Coverage, Your Way!
         </h3>
-        <h3 className="text-[36px] md:text-[70px] font-extrabold leading-[36px] md:leading-[64px]">
+        <h3 className="text-[36px] md:text-[64px] font-extrabold leading-[36px] md:leading-[64px]">
           Save Up To 30% on <br />
           Auto, Home and Business Insurance
         </h3>

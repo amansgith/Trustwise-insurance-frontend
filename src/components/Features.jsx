@@ -187,47 +187,47 @@ const features = [
 const Features = () => {
 
     return(
-    <section className="relative bg-primary text-white py-24 px-8 sm:px-16 lg:px-24 flex flex-col lg:flex-row items-center justify-between overflow-hidden min-h-screen">
-      {/* Left Content */}
-      <div className="lg:w-1/2 z-10">
-        <h2 className="text-blue-400 font-bold md:font-semibold text-3xl md:text-6xl uppercase tracking-wide">
-          Why Choose TrustWise?
-        </h2>
-        <h3 className="text-3xl sm:text-4xl font-bold mt-2">
-          Few reasons for people choosing us
-        </h3>
-        <p className="text-gray-400 mt-4 max-w-lg">
-          We provide top-tier insurance services with transparency, hassle-free
-          claims, and the best digital experience.
-        </p>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-6 bg-gray-800 p-6 rounded-lg shadow-lg"
-            >
-              <span className="text-blue-400 text-3xl">{feature.icon}</span>
-              <h4 className="text-xl font-semibold">{feature.title}</h4>
-            </div>
-          ))}
+        <section className="relative bg-primary text-white py-16 px-6 sm:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between overflow-hidden">
+        {/* Left Content */}
+        <div className="lg:w-1/2 z-10">
+          <h2 className="text-blue-400 font-semibold text-6xl uppercase tracking-wide">
+            Why Choose TrustWise?
+          </h2>
+          <h3 className="text-3xl sm:text-4xl font-bold mt-2">
+            Few reasons for people choosing us
+          </h3>
+          <p className="text-gray-400 mt-4 max-w-lg">
+            We provide top-tier insurance services with transparency, hassle-free
+            claims, and the best digital experience.
+          </p>
+  
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg shadow-lg"
+              >
+                <span className="text-blue-400 text-2xl">{feature.icon}</span>
+                <h4 className="text-lg font-semibold">{feature.title}</h4>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Right Image (Diamond Shape) */}
-      <div className="absolute right-0 top-0 w-full h-full lg:w-1/2 flex justify-center lg:mt-0 overflow-hidden hidden lg:flex">
-        <div className="relative w-full h-full transform rotate-45 overflow-hidden">
-          <Image
-            src={featureimg} // Update the image path accordingly
-            alt="Why Choose Us"
-            layout="fill"
-            objectFit="cover"
-            className="-rotate-45"
-          />
+  
+        {/* Right Image (Diamond Shape) */}
+        <div className="absolute right-0 top-0 w-full h-full lg:w-1/2 flex justify-center lg:mt-0 overflow-hidden">
+          <div className="relative w-full h-full transform rotate-45 overflow-hidden">
+            <Image
+              src={featureimg} // Update the image path accordingly
+              alt="Why Choose Us"
+              layout="fill"
+              objectFit="cover"
+              className="-rotate-45"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     )
 };
 export default Features;
