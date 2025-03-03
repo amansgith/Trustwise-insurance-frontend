@@ -141,7 +141,7 @@ const QuoteForm = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 my-4 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold text-center text-cyan-600 mb-6">Get Your Quote</h2>
+      <h2 className="text-3xl font-bold text-center text-primary mb-6">Get Your Quote</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Quote Type Dropdown */}
@@ -234,7 +234,7 @@ const QuoteForm = () => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="w-full bg-cyan-700 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 text-lg font-semibold">
+        <button type="submit" className="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition duration-300 text-lg font-semibold">
           Submit
         </button>
       </form>

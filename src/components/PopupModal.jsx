@@ -15,11 +15,11 @@ const PopupModal = () => {
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={() => setModalIsOpen(false)}
-      className="fixed inset-0 flex items-center justify-center z-50"
-      overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center z-[999999]"
+      overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-[999998]"
       ariaHideApp={false} // 🔴 FIX: Disable setAppElement since it's not needed in App Router
     >
-      <div className="relative -z-50 bg-white max-w-lg w-full rounded-lg shadow-lg mt-20 p-6">
+      <div className="relative bg-white max-w-lg w-full rounded-lg shadow-lg mt-20 p-6">
         {/* Close Button */}
         <button
           onClick={() => setModalIsOpen(false)}

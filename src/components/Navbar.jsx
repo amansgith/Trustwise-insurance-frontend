@@ -244,7 +244,7 @@ const DeskNavbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <header className="z-20 font-montserrat shadow-md border-red-50 text-black bg-white rounded-full top-20">
+    <header className="z-20 font-montserrat shadow-md border-red-50 text-black bg-white rounded-full sticky top-0">
       <div className="mx-auto flex items-center pb-3 md:px-8 mb-2 transition-transform duration-300">
         {/* Center Section - Logo */}
         <div className="flex-1 flex justify-center md:justify-start min-w-60 pl-8 relative overflow-hidden">

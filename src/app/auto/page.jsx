@@ -153,7 +153,7 @@ const DiscountsSection = ({ discounts }) => {
       </div>
       <div className="flex">
         <Link href="/call-back-request" className="flex mx-auto">
-          <button className="flex mx-auto mt-10 justify-center bg-cyan-500 hover:bg-green-700 text-xl text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+          <button className="flex mx-auto mt-10 justify-center bg-primary hover:bg-secondary text-xl text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
             Get Quote <IoMdArrowForward className="mx-1 mt-1" />
           </button>
         </Link>
@@ -246,7 +246,7 @@ const CoverageSection = () => {
   ];
 
   return (
-    <div className="my-12 max-w-1/2 px-20 py-10 bg-gradient-to-r from-blue-50 to-blue-200">
+    <div className="py-16 max-w-1/2 px-6 md:px-20 bg-gradient-to-r from-yellow-50 to-blue-200">
       <h2 className="text-3xl font-bold text-center mb-4 text-gray-800">
         Customize Your Car Insurance Coverage
       </h2>

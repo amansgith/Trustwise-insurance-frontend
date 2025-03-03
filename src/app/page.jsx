@@ -1,29 +1,17 @@
 "use client";
 import PopupModal from "@/components/PopupModal";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-
-const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
-const Features = dynamic(() => import("@/components/Features"), { ssr: false });
-const About = dynamic(() => import("@/components/About"), { ssr: false });
-const CTA = dynamic(() => import("@/components/PopularServices"), {
-  ssr: false,
-});
-const BlogSection = dynamic(() => import("@/components/BlogSection"), {
-  ssr: false,
-});
-// const Partners = dynamic(() => import("@/components/Partners"), { ssr: false });
-const GoogleReviews = dynamic(() => import("@/components/Reviews"), {
-  ssr: false,
-});
-const ContactUs = dynamic(() => import("@/components/ContactCard"), {
-  ssr: false,
-});
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import About from "@/components/About";
+import CTA from "@/components/PopularServices";
+import BlogSection from "@/components/BlogSection";
+// import Partners from "@/components/Partners";
+import GoogleReviews from "@/components/Reviews";
+import ContactUs from "@/components/ContactCard";
 
 export default function Home() {
   return (
     <>
-      
       <PopupModal />
       <Hero />
       <About />

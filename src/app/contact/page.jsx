@@ -3,46 +3,44 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Clock, Phone } from "lucide-react";
+import QuoteForm from "@/components/CommonComponents/GetQuote"
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
   return (
-    <div className="py-6">
+    <div className="py-16 md:py-6">
       <div className="px-4 md:px-10 flex flex-col gap-3">
         <h2 className="text-3xl md:text-5xl font-bold pt-14">Contact Us</h2>
         <p className="text-base md:text-lg">
-          At Aaxel Insurance, we pride ourselves on providing exceptional
-          insurance coverage and service. Our knowledgeable agents are available
-          to answer your questions and help you navigate your insurance options.
-          Contact us anytime for personalized insurance coverage and service.
+          At Trustwise Insurance, we believe in building lasting relationships with our clients. Our team of experienced professionals is dedicated to delivering exceptional customer service and support. We work with a wide range of trusted insurance partners to offer the best coverage options for home, auto, life, and business insurance.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-10 py-10">
         {[
           {
-            icon: MapPin,
-            title: "Collaborative Environment",
-            description: "Work with a diverse team of passionate individuals",
+            icon: Mail,
+            title: "Get in Touch",
+            description: "info@trustwise.com",
           },
           {
             icon: Phone,
-            title: "Career Growth",
-            description: "Opportunities for learning and advancement",
+            title: "Phone Numbers",
+            description: "+1 (555) 123-4567",
           },
           {
             icon: Clock,
-            title: "Work-Life Balance",
-            description: "Flexible hours and remote work options",
+            title: "Working Hours",
+            description: "Mon-Fri 9am-5pm",
           },
         ].map((item, index) => (
           <Card key={index}>
-            <CardHeader>
-              <item.icon className="w-10 h-10 mb-2 text-[#9ecb75]" />
-              <CardTitle className="text-[#9ecb75]">{item.title}</CardTitle>
+            <CardHeader className="flex flex-col items-center">
+              <item.icon className="w-10 h-10 mb-2 text-secondary" />
+              <CardTitle className="text-primary text-center">{item.title}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="text-center text-lg">
               <CardDescription>{item.description}</CardDescription>
             </CardContent>
           </Card>
@@ -54,37 +52,15 @@ const page = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Call Back Request
           </h2>
-          <Card>
-            <CardHeader />
-            <CardContent>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input placeholder="First Name" aria-label="First Name" />
-                  <Input placeholder="Last Name" aria-label="Last Name" />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input type="email" placeholder="Email" aria-label="Email" />
-                  <Input type="phone" placeholder="Phone" aria-label="Phone" />
-                </div>
-                <Textarea
-                  rows={5}
-                  placeholder="Tell us about your experience and why you'd be a great fit"
-                  aria-label="Cover Letter"
-                />
-                <Button type="submit" className="w-full">
-                  Submit
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <QuoteForm/>
         </div>
       </section>
 
       {/* Find Us Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Find Us</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 justify-center items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Our Locations</h3>
               <ul className="space-y-4">
@@ -107,7 +83,7 @@ const page = () => {
             </div>
             <div className="mt-8 w-full h-96">
               <iframe
-                title="Aaxel Insurance Location"
+                title="Trustwise Insurance Location"
                 className="w-full h-full border-0 rounded-lg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.354424927402!2d-79.62579512351845!3d43.636101055939634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b39ad6a6367ff%3A0xe293bb4235b760b6!2sAaxel%20Insurance%20Brokers%20Ltd!5e0!3m2!1sen!2sca!4v1708500000000"
                 allowFullScreen

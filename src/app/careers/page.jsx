@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { memo } from 'react';
 import { Button } from '@/components/ui/button';
@@ -6,14 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Users, Briefcase, Heart, Zap } from 'lucide-react';
-import Image from 'next/image';
-
-// Dynamically import components
-const TrustBanner = dynamic(() => import('@/components/CommonComponents/Banner'));
-const ContactUs = dynamic(() => import('@/components/CommonComponents/ContactUs'));
-const FAQSection = dynamic(() => import('@/components/CommonComponents/FAQ'));
-const Features = dynamic(() => import('@/components/Features'));
-const QuoteForm = dynamic(() => import('@/components/CommonComponents/GetQuote'));
 
 const JoinOurTeam = () => {
   const cultureItems = [
@@ -73,13 +64,14 @@ const JoinOurTeam = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen mt-8">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-cover bg-opacity-10 text-primary-foreground py-20 text-center" style={{ backgroundImage: "url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg')" }}>
-          <div className="container mx-auto px-4">
+        <section className="relative bg-cover bg-opacity-6 text-primary-foreground py-20 text-center" style={{ backgroundImage: "url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg')" }}>
+          <div className="absolute inset-0 bg-gray-500 bg-opacity-50"></div>
+          <div className="relative container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl text-white mb-8">
               Be part of something extraordinary. We're looking for talented individuals to help shape the future.
             </p>
             <Button asChild size="lg">
@@ -91,13 +83,13 @@ const JoinOurTeam = () => {
         {/* Company Culture Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl text-[#2a80b4] font-bold text-center mb-12">Why Work With Us?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {cultureItems.map((item, index) => (
                 <Card key={index}>
                   <CardHeader>
-                    <item.icon className="w-10 h-10 mb-2 text-[#9ecb75]" />
-                    <CardTitle className="text-[#9ecb75]">{item.title}</CardTitle>
+                    <item.icon className="w-10 h-10 mb-2 text-secondary" />
+                    <CardTitle className="text-primary">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription>{item.description}</CardDescription>
@@ -158,13 +150,6 @@ const JoinOurTeam = () => {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-muted py-6">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Our Company. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }

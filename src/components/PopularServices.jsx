@@ -164,7 +164,7 @@ const PopularServices = () => {
 
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-white flex gap-2 text-lg font-bold">Visit <FaArrowUpRightFromSquare/> </span>
+                <span className="text-white flex gap-2 text-lg font-bold">Explore Now<FaArrowUpRightFromSquare/> </span>
               </div>
             </div>
           </Link>
