@@ -316,7 +316,7 @@ const BlogPage = async () => {
 
   if (!blogs.length) {
     return (
-      <div className="text-center mt-12">
+      <div className="text-center my-12">
         <h2 className="text-2xl font-bold">No blogs available</h2>
         <p className="text-gray-600">Check back later for updates.</p>
       </div>

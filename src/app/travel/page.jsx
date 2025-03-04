@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import Image from "next/image";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const quotes = [
   {
@@ -36,24 +33,13 @@ const TravelInsurance = () => {
         title="Travel Insurance"
         description={
           <p className="text-sm md:text-base lg:text-lg">
-            Travel Insurance is an essential investment for anyone planning a
-            trip abroad, as it provides financial protection against unexpected
-            events that could disrupt your travel plans. At AAXEL Insurance, we
-            offer a range of comprehensive travel insurance products designed to
-            meet the unique needs of our clients.
+            Travel Insurance is an essential investment for anyone planning a trip abroad, as it provides financial protection against unexpected events that could disrupt your travel plans. At Trustwise Insurance, we offer a range of comprehensive travel insurance products designed to meet the unique needs of our clients.
             <br />
             <br />
-            Our Travel Insurance products include coverage for trip cancellation
-            and interruption, medical expenses, emergency medical evacuation,
-            and travel accidents. We also offer coverage for lost or stolen
-            baggage and personal items, as well as rental car coverage.
+            Our Travel Insurance products include coverage for trip cancellation and interruption, medical expenses, emergency medical evacuation, and travel accidents. We also offer coverage for lost or stolen baggage and personal items, as well as rental car coverage.
             <br />
             <br />
-            Our team of experienced professionals works closely with clients to
-            develop customized insurance solutions that meet their specific
-            needs and budget. We prioritize transparency and keep our clients
-            informed about their coverage and options, providing regular updates
-            and reports.
+            Our team of experienced professionals works closely with clients to develop customized insurance solutions that meet their specific needs and budget. We prioritize transparency and keep our clients informed about their coverage and options, providing regular updates and reports.
           </p>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/jeshoots-com-mSESwdMZr-A-unsplash.jpg"
@@ -76,7 +62,7 @@ const TravelInsurance = () => {
                 <h3 className="text-md font-bold text-gray-800 mb-3">
                   {quote.title}
                 </h3>
-                <div className="w-full h-40 relative rounded-md overflow-hidden border-b-2 border-green-400">
+                <div className="w-full h-40 relative rounded-md overflow-hidden border-b-2 border-secondary">
                   <Image
                     src={quote.imageSrc}
                     alt={quote.title}

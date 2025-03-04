@@ -69,7 +69,7 @@ export default async function Page({ params }) {
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
             <div>
               <p className="text-sm font-medium text-gray-700">
-                Aaxel Insurance
+                Trustwise Insurance
               </p>
               <p className="text-sm text-gray-500">
                 Published on {formattedDate}
