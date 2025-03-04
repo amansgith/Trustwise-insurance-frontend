@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 import { FaRegCalendarAlt, FaRegCommentDots } from "react-icons/fa";
+import Link from "next/link";
 
 // Import Playfair Display and Open Sans fonts
 const playfairDisplay = Playfair_Display({
@@ -198,9 +199,9 @@ const BlogSection = () => {
                 <p className="text-gray-600 mt-2">{post.description}</p>
 
                 {/* Read More */}
-                <a href="#" className="text-blue-600 font-semibold flex items-center mt-4">
+                <Link href="/blogs" className="text-blue-600 font-semibold flex items-center mt-4">
                   Read More <span className="ml-2">➤</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -208,9 +209,11 @@ const BlogSection = () => {
 
         {/* "Read More" Button */}
         <div className="mt-10">
-          <button className="px-6 py-3 bg-secondary text-black font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+          <Link href='/blogs'>
+          <button className="px-6 py-3 bg-secondary text-black hover:text-white font-semibold rounded-lg shadow-md hover:bg-primary transition">
             Read More Articles
           </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Companylogo from '../../public/companylogo1.png';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const About = () => {
   return (
@@ -25,9 +26,11 @@ const About = () => {
             </p>
           </div>
           <div className="my-4">
-            <button className="py-3.5 px-10 bg-secondary text-black rounded-lg hover:  hover:text-white flex items-center transition duration-300">
-              Learn More <ArrowRight size={16} className="ml-2" />
-            </button>
+            <Link href="/about">
+              <button className="py-3.5 px-10 bg-secondary text-black rounded-lg hover:text-white flex items-center transition duration-300">
+                Learn More <ArrowRight size={16} className="ml-2" />
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-full md:w-1/2 mt-6 md:mt-0 overflow-hidden">
