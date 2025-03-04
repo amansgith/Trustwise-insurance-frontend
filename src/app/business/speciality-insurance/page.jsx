@@ -3,45 +3,40 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const SpecialityInsurance = () => {
   return (
     <>
       <InsuranceIntro
-        title="Speciality Insurance"
+        title="Specialty Insurance"
         description={
           <>
-            Specialty Insurance is a unique type of coverage offered by AAXEL
-            Insurance that provides specialized protection against niche and
-            unique risks that are not covered by standard insurance policies.
-            This type of insurance is crucial for businesses and individuals who
-            operate in specialized industries or engage in unique activities
-            that require specialized coverage.
+            <b>Comprehensive Specialty Insurance from Trustwise Insurance</b>
+            <br /><br />
+            Specialty Insurance provides specialized protection against niche and unique risks that are not covered by standard insurance policies. This type of insurance is crucial for businesses and individuals who operate in specialized industries or engage in unique activities that require specialized coverage.
             <br />
             <br />
-            At AAXEL Insurance, we offer a range of customized Specialty
-            Insurance coverage options, including coverage for events,
-            entertainment, sports, and other unique risks. Our team of experts
-            works closely with clients to understand their unique needs and
-            tailor policies that provide them with the protection and peace of
-            mind they need to operate with confidence.
+            <b>Why Specialty Insurance Matters?</b>
+            <br />
+            Specialty Insurance is essential for businesses and individuals who operate in specialized industries or engage in unique activities. It offers crucial protection against financial losses resulting from niche risks, helping you comply with legal requirements and enhancing your risk management strategy. With Trustwise Insurance, you get the peace of mind you need to focus on your specialized activities.
             <br />
             <br />
-            With our Specialty Insurance policies, clients can be sure that they
-            are protected against financial losses resulting from niche risks
-            and can focus on pursuing their specialized activities without
-            worrying about potential liabilities or legal disputes.
+            <b>What Our Specialty Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Event Coverage: Protects against financial losses resulting from event cancellations, postponements, or other disruptions.</li>
+              <li>🎬 Entertainment Coverage: Provides coverage for film productions, concerts, and other entertainment-related activities.</li>
+              <li>⚽ Sports Coverage: Covers sports events, teams, and athletes against various risks.</li>
+              <li>⚡ Customized Policies: Tailored coverage based on your unique needs and risk exposure, ensuring you only pay for what you need.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Specialty Insurance helps businesses and individuals enhance their risk management strategies and build trust with clients and partners.
             <br />
             <br />
-            At AAXEL Insurance, we are committed to providing our clients with
-            the best possible coverage and peace of mind they need to succeed in
-            their specialized fields. Contact us today to learn more about our
-            Specialty Insurance coverage options and how we can help protect you
-            and your business.
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect specialty insurance coverage for your needs.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/linkedin-sales-solutions-7wyEG321GS0-unsplash.jpg"

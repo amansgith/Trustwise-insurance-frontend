@@ -29,7 +29,7 @@ const RentalPropertyInsurance = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Comprehensive Coverage for Landlords and Property Owners</h2>
           <p>We provide customizable Rental Property Insurance policies tailored to your unique needs, offering protection for:</p>
-          <ul className="list-disc list-inside ml-4 mt-2">
+          <ul className="list-inside ml-4 mt-2">
             <li>🏡 Property damage from fire, storms, vandalism, and more</li>
             <li>🛡️ Liability claims in case of accidents or injuries on your rental property</li>
             <li>💰 Loss of rental income if your property becomes uninhabitable due to a covered loss</li>

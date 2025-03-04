@@ -9,64 +9,46 @@ const AssociationIIM = () => {
   return (
     <>
       <Associations
-        title="Indian Institute of Management Society - IIM"
+        title="Indian Institute of Management Society (IIM) | Group Home & Auto & Commercial Insurance"
         description={
-            <>
-            <b>Your coverage, your way...</b>
-            <p>
-              Aaxel Insurance Brokers Ltd. and IIM are pleased to offer the
-              following insurance programs for its members and their employees:
-            </p>
-            <ol className="list-decimal list-inside">
-              <li>Group home & auto insurance and</li>
-              <li>Commercial insurance</li>
-            </ol><br />
-            <p>
-              The group program is underwritten by Economical Insurance & Intact
-              Insurance.
-            </p><br />
-            <p>
-              To receive an instant quote, please contact our sales staff at any
-              of the following numbers:
-            </p><br />
-            <b>Aaxel Insurance Brokers Ltd.</b>
-            <p>Ontario: 866-358-2860</p>
-            <p>Quebec: 888-542-4811</p>
-            <p>Rest of Canada: 866-247-7700</p>
+          <>
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            As an Indian Institute of Management Society (IIM) member, you can now enjoy exclusive discounts on your Home and Auto Insurance premiums through the IIM Home & Auto Insurance Program.
             <br />
-            <p>
-            The program is available to all the employees of IIM member companies, their spouses, and dependent children residing at home or away from school.
-            </p><br />
-            <p>
-              Be sure to mention when you call that you are a member of the
-              IIM.
-            </p>
-          </>}
+            <br />
+            <b>Program Highlights:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>🚗🏡 Home & Auto Insurance Discounts: IIM members can save on insurance premiums while securing comprehensive coverage for their homes and vehicles.</li>
+              <li>💰 Group Discounted Rates: Get access to special rates available only to IIM members. A portion of the premiums also supports The Community Fund, helping strengthen the club.</li>
+              <li>🛡️ 1 Million Third-Party Liability Coverage: Standard coverage for many car insurance policies, crucial for families carpooling to and from events. Ensure your coverage matches your risks.</li>
+            </ul>
+            <br />
+            <b>Get Your Free Quote Today</b>
+            <br />
+            📞 Call Trustwise Insurance at 780-255-5151
+            <br />
+            👉 Be sure to mention that you are a member of IIM when you call to receive your group discounted rates.
+          </>
+        }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/07/IIM-Indian-Institute-of-Management-Society.jpg"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Our Insurance Program?"
+        buttonLink="/call-back-request"
+        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
-              We recommend member companies communicate the availability of this
-              program to their employees.
+              We recommend member companies communicate the availability of this program to their employees.
             </p>
             <p className="text-balance">
-              Please note this program is offered on behalf of the association
-              to all employees and in no way it may hold member companies
-              responsible for the administration of the program.
+              Please note this program is offered on behalf of the association to all employees and in no way it may hold member companies responsible for the administration of the program.
             </p>
             <p className="mt-4">The key advantages of the program include:</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Savings of up to 30% on home and auto insurance</li>
-              <li>No service or interest charges for monthly payment plans</li>
-              <li>Accident waiver</li>
-              <li>Age discount</li>
-              <li>No-conviction discount</li>
-              <li>Multi-policy & Multi-vehicle discounts</li>
-              <li>Retiree discount</li>
-              <li>Discounts for security systems</li>
+              <li>✅ Exclusive group discounts for IIM members</li>
+              <li>✅ Support your club with every premium paid—help fund The Community Fund</li>
+              <li>✅ Reliable, comprehensive coverage to meet your home and auto insurance needs</li>
             </ul>
           </>
         }

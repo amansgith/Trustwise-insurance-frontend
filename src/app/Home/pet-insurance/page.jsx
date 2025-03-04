@@ -25,11 +25,11 @@ const PetInsurance = () => {
       />
       <TrustBanner />
 
-      <section className="py-8 bg-gray-100">
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Tailor Your Pet Insurance Plan</h2>
           <p>With Trustwise Pet Insurance, you can personalize your coverage to include:</p>
-          <ul className="list-disc list-inside ml-4 mt-2">
+          <ul className="list-inside ml-4 mt-2">
             <li>🏥 Veterinary Expense Coverage: Choose reimbursement options for up to 80% of veterinary bills, including accidents, illnesses, and emergency care.</li>
             <li>🦷 Dental & Specialized Care: Add protection for dental treatments, alternative therapies (such as physiotherapy or acupuncture), surgeries, and prescription medications.</li>
             <li>🐾 Routine & Preventative Care: Select wellness coverage options for routine check-ups, vaccinations, flea and heartworm prevention, and more.</li>

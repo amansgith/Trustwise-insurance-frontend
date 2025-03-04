@@ -25,11 +25,11 @@ const TenantInsurance = () => {
       />
       <TrustBanner />
 
-      <section className="py-8 bg-gray-100">
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Comprehensive Coverage for Peace of Mind</h2>
           <p>Our customizable Tenant Insurance policies are designed to fit your lifestyle and provide complete protection, including:</p>
-          <ul className="list-disc list-inside ml-4 mt-2">
+          <ul className="list-inside ml-4 mt-2">
             <li>🏡 Personal belongings coverage: Protect your furniture, electronics, and valuables from theft, fire, and more.</li>
             <li>🛡️ Liability protection: Stay protected if you’re held responsible for injury or property damage.</li>
             <li>🏠 Additional living expenses: Get coverage for temporary housing if your rental becomes uninhabitable due to a covered loss.</li>

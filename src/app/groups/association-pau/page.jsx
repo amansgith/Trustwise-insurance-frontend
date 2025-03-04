@@ -9,64 +9,51 @@ const AssociationPAU = () => {
   return (
     <>
       <Associations
-        title="PAU Alumni"
+        title="PAU Alumni | Group Home & Auto & Commercial Insurance"
         description={
-            <>
-            <b>Your coverage, your way...</b>
-            <p>
-              Aaxel Insurance Brokers Ltd. and PAU Alumni are pleased to offer the
-              following insurance programs for its members and their employees:
-            </p>
-            <ol className="list-decimal list-inside">
-              <li>Group home & auto insurance and</li>
-              <li>Commercial insurance</li>
-            </ol>
-            <p>
-              The group program is underwritten by Economical Insurance & Intact
-              Insurance.
-            </p>
-            <p>
-              To receive an instant quote, please contact our sales staff at any
-              of the following numbers:
-            </p>
-            <b>Aaxel Insurance Brokers Ltd.</b>
-            <p>Ontario: 866-358-2860</p>
-            <p>Quebec: 888-542-4811</p>
-            <p>Rest of Canada: 866-247-7700</p>
-            <p>
-            The program is available to all of PAU Alumni, their spouses, and dependent children residing at home or away from school.
-            </p>
-            <p>
-              Be sure to mention when you call that you are a member of the
-              PAU Alumni.
-            </p>
-          </>}
+          <>
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            Trustwise Insurance is pleased to partner with PAU Alumni to offer exclusive insurance programs designed specifically for PAU Alumni members and their families.
+            <br />
+            <br />
+            <b>Program Highlights:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>🚗🏡 Group Home & Auto Insurance: Comprehensive home and auto coverage tailored to the needs of PAU Alumni members.</li>
+              <li>🏢 Commercial Insurance: Customized insurance solutions to safeguard your business assets and operations.</li>
+              <li>💼 Flexibility: Choose from a range of coverage options, including personal and commercial plans that suit your lifestyle and business needs.</li>
+              <li>🔒 Trusted Underwriting: The group program is underwritten by Economical Insurance & Intact Insurance, ensuring reliable and robust protection.</li>
+            </ul>
+            <br />
+            <b>Get Your Instant Quote Today</b>
+            <br />
+            📞 Call Trustwise Insurance at 780-255-5151
+            <br />
+            •	Ontario: 866-358-2860
+            <br />
+            👉 Be sure to mention that you’re a member of PAU Alumni when you call!
+          </>
+        }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/07/PAU-Alumni.png"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Our Insurance Program?"
+        buttonLink="/call-back-request"
+        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
-              We recommend member companies communicate the availability of this
-              program to their employees.
+              We recommend member companies communicate the availability of this program to their employees.
             </p>
             <p className="text-balance">
-              Please note this program is offered on behalf of the association
-              to all employees and in no way it may hold member companies
-              responsible for the administration of the program.
+              Please note this program is offered on behalf of the association to all employees and in no way it may hold member companies responsible for the administration of the program.
             </p>
             <p className="mt-4">The key advantages of the program include:</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Savings of up to 30% on home and auto insurance</li>
-              <li>No service or interest charges for monthly payment plans</li>
-              <li>Accident waiver</li>
-              <li>Age discount</li>
-              <li>No-conviction discount</li>
-              <li>Multi-policy & Multi-vehicle discounts</li>
-              <li>Retiree discount</li>
-              <li>Discounts for security systems</li>
+              <li>✅ Exclusive group rates for PAU Alumni members</li>
+              <li>✅ Expert support from our dedicated team</li>
+              <li>✅ Quick and easy quote process</li>
             </ul>
+            <p>🔗 Protect your home, auto, and business today with Trustwise Insurance—your trusted partner for comprehensive coverage.</p>
           </>
         }
         sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"

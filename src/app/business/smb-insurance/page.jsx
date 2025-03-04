@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const SmallMediumBusinessInsurance = () => {
   return (
@@ -15,39 +12,51 @@ const SmallMediumBusinessInsurance = () => {
         title="Small Medium Business Insurance"
         description={
           <>
-            As a small- or medium-sized business owner, you must safeguard
-            yourself from claims resulting from your business operations.
-            Whether you run a small or medium business or are a retailer,
-            consultant, or contractor, Aaxel insurance understands the risks you
-            may encounter.
+            <b>Protect Your Small or Medium Business with Trustwise Insurance</b>
             <br />
             <br />
-            Since no two businesses are alike, our expert insurance brokers at
-            Aaxel insurance tailor our insurance solutions to meet the needs of
-            small and medium-sized businesses.
+            At Trustwise Insurance, we understand that running a small or
+            medium-sized business comes with unique challenges. Whether you’re a
+            retailer, consultant, or contractor, safeguarding your business from
+            unexpected claims is essential. That’s where we come in.
             <br />
             <br />
-            You will require small/medium business insurance if your company
-            delivers professional or creative services, advice, or suggestions.
+            No two businesses are the same, which is why our expert brokers
+            offer customized insurance solutions designed to fit your specific
+            needs.
             <br />
             <br />
-            If you sell your products from a store, internet, or home, Make sure
-            you have the insurance to cover your small or medium business
-            insurance needs. Running a retail operation requires work,
-            commitment, and enthusiasm. By failing to obtain the required
-            insurance, you run the risk of endangering your inventory, business,
-            and clients.
+            <b>Why Home-Based Business Insurance Matters:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>
+                ✅ Protect Your Business Assets: Whether you’re running a
+                full-time or part-time business from home, your equipment,
+                inventory, and intellectual property need protection from risks
+                like theft, fire, or damage.
+              </li>
+              <li>
+                ✅ Personal & Professional Coverage: Home insurance might not
+                cover business-related liabilities or property damage. Business
+                insurance ensures that you are covered in both areas.
+              </li>
+              <li>
+                ✅ Peace of Mind: Focus on growing your business without
+                worrying about what could go wrong. Comprehensive coverage
+                allows you to protect both your passion and your livelihood.
+              </li>
+            </ul>
+            <br />
+            Recovering from an uninsured loss can be tough and may even impact
+            your reputation. With Trustwise Insurance, you can focus on growing
+            your business while we handle the risks.
             <br />
             <br />
-            If you, as a small- or medium-sized business owner, provide contract
-            services, Protect your tools and equipment against loss that is
-            insurable by obtaining contractor’s insurance. For small- or
-            medium-sized business owners, recovering from an uninsured loss can
-            be devastating for small or medium business owners and negatively
-            affect their reputation in the industry.
+            Join thousands of Canadian businesses already protected by Trustwise
+            Insurance.
             <br />
             <br />
-            Join thousands of Canadian businesses that are already protected!
+            Call us today at 780-255-5151 to get started!
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/cowomen-7Zy2KV76Mts-unsplash.jpg"

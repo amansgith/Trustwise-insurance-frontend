@@ -2,7 +2,6 @@ import QuoteForm from '@/components/CommonComponents/GetQuote'
 import ContactUs from '@/components/ContactCard'
 import Values from '@/components/CommonComponents/Values'
 import Features from '@/components/Features'
-import Partners from '@/components/Partners'
 import React from 'react'
 
 const CallBackRequest = () => {
@@ -11,7 +10,6 @@ const CallBackRequest = () => {
         <QuoteForm/>
         <Features/>
         <Values/>
-        <Partners/>
         <ContactUs/>
     </>
   )

@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const EnvironmentLiabilityInsurance = () => {
   return (
@@ -15,31 +12,31 @@ const EnvironmentLiabilityInsurance = () => {
         title="Environmental Impairment Liability Insurance"
         description={
           <>
-            Environmental Impairment Liability Insurance is a type of insurance
-            offered by AAXEL Insurance that provides coverage for businesses
-            against environmental risks associated with their operations. This
-            type of insurance is essential for businesses that handle hazardous
-            materials or engage in activities that may pose environmental risks.
+            <b>Comprehensive Environmental Impairment Liability Insurance from Trustwise Insurance</b>
+            <br />
+            At Trustwise Insurance, we understand that businesses handling hazardous materials or engaging in activities that pose environmental risks face unique challenges. Our Environmental Impairment Liability Insurance provides the protection you need to navigate these risks confidently.
             <br />
             <br />
-            AAXEL Insurance offers a range of coverage options for Environmental
-            Impairment Liability Insurance, including coverage for cleanup
-            costs, legal defense costs, and third-party bodily injury or
-            property damage resulting from pollution incidents. These policies
-            can be customized to meet the unique needs of individual businesses,
-            with coverage limits based on the size and scope of their
-            operations.
+            <b>Why Environmental Impairment Liability Insurance Matters?</b>
+            <br />
+            Environmental Impairment Liability Insurance is essential for businesses that handle hazardous materials or engage in activities that may pose environmental risks. It offers crucial protection against financial losses resulting from environmental incidents, helping you comply with legal requirements and enhancing your risk management strategy. With Trustwise Insurance, you get the peace of mind you need to focus on growing your business.
             <br />
             <br />
-            In addition to protecting businesses against financial losses
-            resulting from environmental risks, Environmental Impairment
-            Liability Insurance can also help them comply with legal
-            requirements for environmental protection and enhance their risk
-            management strategies. AAXEL Insurance is a reputable insurance
-            provider that offers Environmental Impairment Liability Insurance
-            policies to help businesses protect themselves against potential
-            environmental risks and to provide them with peace of mind while
-            conducting their operations in a responsible and sustainable manner.
+            <b>What Our Environmental Impairment Liability Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Cleanup Costs: Covers costs associated with cleaning up pollution incidents.</li>
+              <li>⚖️ Legal Defense Costs: Covers legal expenses related to defending against environmental claims.</li>
+              <li>💼 Third-Party Bodily Injury or Property Damage: Covers costs associated with third-party bodily injury or property damage resulting from pollution incidents.</li>
+              <li>⚡ Customized Policies: Tailored coverage based on your business type and risk exposure, ensuring you only pay for what you need.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Environmental Impairment Liability Insurance helps businesses comply with legal requirements for environmental protection and enhances their risk management strategies.
+            <br />
+            <br />
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect environmental impairment liability coverage for your business.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/matthew-smith-Rfflri94rs8-unsplash.jpg"

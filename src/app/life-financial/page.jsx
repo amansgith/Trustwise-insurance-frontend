@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const LifeInsurance = () => {
   return (
@@ -15,31 +12,16 @@ const LifeInsurance = () => {
         title="Life Insurance"
         description={
           <>
-            At AAXEL Insurance, we understand that planning for the future is
-            essential, and Life Insurance is an essential part of that planning.
-            We offer customizable Life Insurance policies that provide our
-            clients with financial security and peace of mind for themselves and
-            their loved ones.
+            At Trustwise Insurance, we understand that planning for the future is essential. Our customizable Life Insurance policies provide financial security and peace of mind for you and your loved ones.
             <br />
             <br />
-            Our Life Insurance policies provide our clients with the flexibility
-            to choose the amount of coverage they need, the length of coverage,
-            and the beneficiaries who will receive the benefits. We offer both
-            term life and permanent life insurance options, each designed to
-            meet our clients' unique needs and budgets.
+            We offer both term life and permanent life insurance options, allowing you to choose the coverage amount, length, and beneficiaries that best meet your needs and budget.
             <br />
             <br />
-            Our team of experts works closely with our clients to understand
-            their specific needs and help them make informed decisions about
-            their Life Insurance coverage. We offer competitive rates and a
-            range of options to ensure that our clients get the coverage they
-            need at a price they can afford.
+            Our team of experts works closely with you to understand your specific needs and help you make informed decisions about your Life Insurance coverage. We offer competitive rates and a range of options to ensure you get the coverage you need at a price you can afford.
             <br />
             <br />
-            With AAXEL Insurance, our clients can have peace of mind knowing
-            that they and their loved ones are protected in the event of an
-            unexpected tragedy. Contact us today to learn more about our Life
-            Insurance policies and how we can help you plan for the future.
+            With Trustwise Insurance, you can have peace of mind knowing that you and your loved ones are protected. Contact us today to learn more about our Life Insurance policies and how we can help you plan for the future.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/name_-gravity-_AdUs32i0jc-unsplash.jpg"

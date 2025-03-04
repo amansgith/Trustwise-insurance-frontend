@@ -9,49 +9,49 @@ const AssociationemergiTEL = () => {
   return (
     <>
       <Associations
-        title="emergiTEL"
+        title="emergiTEL | Group Home & Auto Insurance"
         description={
           <p>
-            Aaxel Insurance Brokers Ltd. and emergiTEL are pleased to offer the Group home and auto insurance programs for its members and their employees.
-<br />
-The group program is underwritten by Intact Insurance.
-<br />
-To receive an instant quote, please contact our sales staff at any of the following numbers:
-<br />
-<b>Aaxel Insurance Brokers Ltd.</b>
-<br />
-866-358-2860
-<br />
-The program is available to all the employees of emergiTEL member companies, their spouses, and dependent children residing at home or away from school.
-<br />
-Be sure to mention when you call that you are a member of the emergiTEL.
-          </p>}
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            Trustwise Insurance is proud to partner with emergiTEL to offer exclusive Group Home and Auto Insurance programs for emergiTEL members and their employees.
+            <br />
+            <br />
+            <b>Program Highlights:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>🚗🏡 Comprehensive Home & Auto Coverage: Tailored insurance options designed to meet the specific needs of emergiTEL members and their families.</li>
+              <li>👨‍👩‍👧 Coverage for the Whole Family: Available to employees of emergiTEL member companies, their spouses, and dependent children, whether residing at home or attending school away.</li>
+              <li>💡 Flexible Options: Choose the coverage that best fits your needs, with competitive rates that offer value and protection.</li>
+              <li>🔒 Trusted Underwriting: The group program is underwritten by Intact Insurance, ensuring reliable and comprehensive protection for your home and auto.</li>
+            </ul>
+            <br />
+            <b>Get Your Instant Quote Today</b>
+            <br />
+            📞 Call Trustwise Insurance at 780-255-5151
+            <br />
+            👉 Be sure to mention you’re a member of emergiTEL when you call!
+          </p>
+        }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/05/Emergitel.png"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Our Insurance Program?"
+        buttonLink="/call-back-request"
+        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
-              We recommend member companies communicate the availability of this
-              program to their employees.
+              We recommend member companies communicate the availability of this program to their employees.
             </p>
             <p className="text-balance">
-              Please note this program is offered on behalf of the association
-              to all employees and in no way it may hold member companies
-              responsible for the administration of the program.
+              Please note this program is offered on behalf of the association to all employees and in no way it may hold member companies responsible for the administration of the program.
             </p>
             <p className="mt-4">The key advantages of the program include:</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Savings of up to 30% on home and auto insurance</li>
-              <li>No service or interest charges for monthly payment plans</li>
-              <li>Accident waiver</li>
-              <li>Age discount</li>
-              <li>No-conviction discount</li>
-              <li>Multi-policy & Multi-vehicle discounts</li>
-              <li>Retiree discount</li>
-              <li>Discounts for security systems</li>
+              <li>✅ Exclusive group rates for emergiTEL members</li>
+              <li>✅ Expert support from our dedicated sales team</li>
+              <li>✅ Quick and seamless quote process</li>
             </ul>
+            <p>🔗 Protect your home, auto, and family today with Trustwise Insurance—your partner in comprehensive coverage.</p>
           </>
         }
         sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"

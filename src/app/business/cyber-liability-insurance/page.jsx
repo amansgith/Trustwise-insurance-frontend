@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const CyberLiabilityInsurance = () => {
   return (
@@ -15,30 +12,31 @@ const CyberLiabilityInsurance = () => {
         title="Cyber Liability Insurance"
         description={
           <>
-            Cyber Liability Insurance is a type of insurance offered by AAXEL
-            Insurance that provides coverage for businesses against risks
-            associated with cyber attacks, data breaches, and other cyber
-            threats. This type of insurance is essential for businesses of all
-            sizes and industries, as cyber threats have become increasingly
-            common and sophisticated in recent years.
+            <b>Comprehensive Cyber Liability Insurance from Trustwise Insurance</b>
+            <br />
+            At Trustwise Insurance, we understand that in today's digital age, businesses of all sizes and industries face significant cyber risks. From data breaches to cyberattacks, these threats can lead to substantial financial losses and reputational damage. Our Cyber Liability Insurance provides the protection you need to navigate these challenges confidently.
             <br />
             <br />
-            AAXEL Insurance offers a range of coverage options for Cyber
-            Liability Insurance, including coverage for data breach response,
-            business interruption, legal defense costs, and regulatory fines and
-            penalties. These policies can be customized to meet the unique needs
-            of individual businesses, with coverage limits based on the size and
-            type of data they handle, as well as their level of risk exposure.
+            <b>Why Cyber Liability Insurance Matters?</b>
+            <br />
+            Cyber Liability Insurance is essential for businesses that handle sensitive data or rely on digital operations. It offers crucial protection against financial losses resulting from cyber incidents, helping you comply with legal requirements and enhancing your risk management strategy. With Trustwise Insurance, you get the peace of mind you need to focus on growing your business.
             <br />
             <br />
-            In addition to protecting businesses against financial losses
-            resulting from cyber attacks and data breaches, Cyber Liability
-            Insurance can also help them comply with legal requirements for data
-            security and enhance their risk management strategies. AAXEL
-            Insurance is a reputable insurance provider that offers Cyber
-            Liability Insurance policies to help businesses protect themselves
-            against potential cyber risks and to provide them with peace of mind
-            while conducting their operations in a digital world.
+            <b>What Our Cyber Liability Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Data Breach Response: Covers costs associated with responding to a data breach, including notification, credit monitoring, and public relations efforts.</li>
+              <li>💼 Business Interruption: Covers loss of income and extra expenses incurred due to a cyber incident that disrupts your operations.</li>
+              <li>⚖️ Legal Defense Costs: Covers legal expenses related to defending against claims resulting from a cyber incident.</li>
+              <li>🔒 Regulatory Fines and Penalties: Covers fines and penalties imposed by regulatory bodies due to non-compliance with data protection laws.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Cyber Liability Insurance helps businesses enhance their cybersecurity posture and build trust with clients and partners.
+            <br />
+            <br />
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect cyber liability coverage for your business.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/markus-spiske-iar-afB0QQw-unsplash.jpg"

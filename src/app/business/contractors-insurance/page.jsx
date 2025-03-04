@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const ContractorsInsurance = () => {
   return (
@@ -15,30 +12,31 @@ const ContractorsInsurance = () => {
         title="Contractors Insurance"
         description={
           <>
-            Contractors Insurance is a type of insurance offered by AAXEL
-            Insurance that provides coverage for contractors against risks
-            associated with construction projects. This type of insurance is
-            essential for contractors who work in the construction industry, as
-            it provides financial protection in the event of accidents, property
-            damage, and lawsuits resulting from their work.
+            <b>Reliable Contractors Insurance from Trustwise Insurance</b>
+            <br /><br />
+            At Trustwise Insurance, we know that working in the construction industry comes with its share of risks. From accidents on-site to property damage and potential lawsuits, contractors face challenges that can impact both their projects and reputation. Our Contractors Insurance solutions provide the protection you need to handle these risks confidently.
             <br />
             <br />
-            AAXEL Insurance offers a range of coverage options for Contractors
-            Insurance, including General Liability Insurance, Workers'
-            Compensation Insurance, Commercial Auto Insurance, and Umbrella
-            Insurance. These policies can be customized to meet the unique needs
-            of individual contractors, with coverage limits based on the size
-            and scope of their projects.
+            <b>Why Choose Contractors Insurance from Trustwise?</b>
+            <br />
+            Whether you’re an independent contractor or manage large construction projects, having the right insurance is crucial. Our coverage protects your business from unexpected financial losses while helping you meet legal requirements and enhancing your reputation for safety and reliability.
             <br />
             <br />
-            In addition to protecting contractors against financial losses
-            resulting from accidents and lawsuits, Contractors Insurance can
-            also help them comply with legal requirements for insurance coverage
-            and enhance their reputation for safety and quality. AAXEL Insurance
-            is a reputable insurance provider that offers Contractors Insurance
-            policies to help contractors protect themselves against potential
-            risks and to provide them with peace of mind while conducting their
-            projects.
+            <b>Coverage Options Designed for Contractors:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ General Liability Insurance: Protection against claims for bodily injury, property damage, and more.</li>
+              <li>🛠 Workers' Compensation Insurance: Covers medical expenses and lost wages if your employees are injured on the job.</li>
+              <li>🚚 Commercial Auto Insurance: Safeguards vehicles used for your business operations.</li>
+              <li>🏗 Umbrella Insurance: Provides extra liability coverage for large claims that exceed standard policy limits.</li>
+            </ul>
+            <br />
+            We customize each policy based on the size and scope of your projects, ensuring you get the coverage you need without paying for extras you don’t.
+            <br />
+            <br />
+            <b>Build with confidence. Protect your business with Trustwise Insurance.</b>
+            <br />
+            📞 Call us today at 780-255-5151 and let us help you secure the right protection for your contracting projects.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/james-kovin-YQGPSblLPz0-unsplash.jpg"

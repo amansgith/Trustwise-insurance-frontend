@@ -2,12 +2,8 @@ import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
-import QuoteForm from "@/components/CommonComponents/GetQuote";
-import InsuranceCard from "@/components/ui/InsuranceCard"
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceCard from "@/components/ui/InsuranceCard";
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const insuranceData = [
   {
@@ -111,26 +107,33 @@ const BusinessInsurance = () => {
   return (
     <>
       <InsuranceIntro
-        title="Business Insurance"
+        title="Business Insurance with Trustwise Insurance"
         description={
           <>
-            <em>Your Coverage, Your Way...</em>
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            Business insurance is essential for safeguarding your company from potential claims and legal issues. Every business faces unique risks, and while all Canadian businesses take some risks, failing to take protective measures could lead to significant financial losses.
             <br />
             <br />
-            Business insurance protects your business from potential claims and
-            or legal issues. Every business faces unique risks. All Canadian
-            businesses take some risks, but taking too many risks or failing to
-            take protective measures can lead to business losses. Business
-            insurance is important because it can help protect your business
-            from financial loss in the event of a catastrophic event, such as a
-            fire, flood, or natural disaster.
+            <b>Why Business Insurance Matters:</b>
             <br />
+            <ul className="list-inside mt-2">
+              <li>✅ Financial Protection: In the event of catastrophic events like fire, flood, or natural disasters, business insurance helps ensure your company remains financially stable.</li>
+              <li>✅ Risk Management: Protects against unexpected risks that could impact your operations, such as legal liabilities or property damage.</li>
+              <li>✅ Peace of Mind: Provides business owners the security they need to focus on growing their business, without the constant worry of potential risks.</li>
+            </ul>
             <br />
-            Business owners often get frustrated with the process of getting
-            quote, understanding coverage needs, and who to trust.
+            <b>How Trustwise Insurance Helps Your Business:</b>
             <br />
+            <ul className="list-inside mt-2">
+              <li>✅ Tailored Coverage: Customizable options to match your unique business needs, whether you're a small startup or an established enterprise.</li>
+              <li>✅ Easy Process: Trustwise Insurance simplifies the quoting process, helping you understand your coverage needs and providing guidance every step of the way.</li>
+              <li>✅ Expert Guidance: Our team is committed to helping you find the best solutions, so you don’t have to navigate business insurance alone.</li>
+            </ul>
             <br />
-            Join thousands of Canadian businesses that are already protected!
+            <b>Join Thousands of Canadian Businesses Already Protected!</b>
+            <br />
+            📞 Call Trustwise Insurance at 780-255-5151 for more information or to get your free quote today.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Business-Insuranc.jpg"
@@ -140,7 +143,7 @@ const BusinessInsurance = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-blue-700 mb-10">
-            Aaxel Insurance Serves All Your Insurance Needs Under One Roof!
+            Trustwise Insurance Serves All Your Insurance Needs Under One Roof!
           </h2>
 
           {/* Grid Layout */}
@@ -156,8 +159,10 @@ const BusinessInsurance = () => {
           </div>
 
           {/* Call-to-action */}
-          <div className="mt-12 bg-green-600 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-md">
-            Call for a Quote: <span className="font-bold">1-866-358-2860</span>
+          <div className="mt-12 bg-secondary text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-md">
+            <a href="tel:1-866-358-2860" className="text-white">
+              Call for a Quote: <span className="font-bold">1-866-358-2860</span>
+            </a>
           </div>
         </div>
       </section>

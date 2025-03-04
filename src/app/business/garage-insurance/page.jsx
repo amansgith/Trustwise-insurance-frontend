@@ -3,47 +3,40 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
-
-const SpecialityInsurance = () => {
+const GarageInsurance = () => {
   return (
     <>
       <InsuranceIntro
         title="Garage Insurance"
         description={
           <>
-            Garage Insurance is an important type of coverage offered by AAXEL
-            Insurance that provides protection to automotive repair and service
-            businesses against various risks, including property damage,
-            liability claims, and theft. This type of insurance is essential for
-            garage owners who want to ensure that their business and assets are
-            adequately covered and protected in the event of unforeseen
-            circumstances.
+            <b>Comprehensive Garage Insurance from Trustwise Insurance</b>
+            <br />
+            Garage Insurance provides protection to automotive repair and service businesses against various risks, including property damage, liability claims, and theft. This type of insurance is essential for garage owners who want to ensure that their business and assets are adequately covered and protected in the event of unforeseen circumstances.
             <br />
             <br />
-            At AAXEL Insurance, we offer customizable Garage Insurance options
-            that provide our clients with comprehensive coverage, including
-            coverage for property damage, liability claims, and theft. Our team
-            of experts works closely with garage owners to understand their
-            unique needs and tailor policies that provide them with the
-            protection and peace of mind they need.
+            <b>Why Garage Insurance Matters</b>
+            <br />
+            Garage Insurance is essential for automotive repair and service businesses. It offers crucial protection against financial losses resulting from property damage, liability claims, and theft, helping you maintain financial stability and focus on delivering quality services. With Trustwise Insurance, you get the peace of mind you need to focus on your business.
             <br />
             <br />
-            With our Garage Insurance policies, garage owners can be sure that
-            their business and assets are adequately protected against various
-            risks, and they can focus on providing quality service to their
-            clients without worrying about potential liabilities or financial
-            losses.
+            <b>What Our Garage Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Property Damage Coverage: Protects against damage to the garage and equipment.</li>
+              <li>🔒 Liability Coverage: Covers claims related to bodily injury or property damage caused by your business operations.</li>
+              <li>🚗 Theft Coverage: Covers losses due to theft of vehicles, parts, and equipment.</li>
+              <li>⚡ Customized Policies: Tailored coverage based on your business type and risk exposure, ensuring you only pay for what you need.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Garage Insurance helps automotive repair and service businesses enhance their risk management strategies and build trust with clients and partners.
             <br />
             <br />
-            At AAXEL Insurance, we are committed to providing our clients with
-            the best possible coverage and peace of mind they need to protect
-            their garage business. Contact us today to learn more about our
-            Garage Insurance coverage options and how we can help you protect
-            your business and assets.
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect garage insurance coverage for your business.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/edgar-EW5tFsF6e4g-unsplash.jpg"
@@ -58,4 +51,4 @@ const SpecialityInsurance = () => {
   );
 };
 
-export default SpecialityInsurance;
+export default GarageInsurance;

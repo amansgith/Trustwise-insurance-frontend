@@ -9,66 +9,51 @@ const AssociationSBPA = () => {
   return (
     <>
       <Associations
-        title="Small Business Owners and Professionals Association – SBPA"
+        title="Small Business Owners and Professionals Association (SBPA) | Group Home & Auto & Commercial Insurance"
         description={
-            <>
-            <b>Your coverage, your way...</b>
-            <p>
-              Aaxel Insurance Brokers Ltd. and SBPA are pleased to offer the
-              following insurance programs for its members and their employees:
-            </p>
-            <ol className="list-decimal list-inside">
-              <li>Group home & auto insurance and</li>
-              <li>Commercial insurance</li>
-            </ol>
-            <p>
-              The group program is underwritten by Economical Insurance & Intact
-              Insurance.
-            </p>
-            <p>
-              To receive an instant quote, please contact our sales staff at any
-              of the following numbers:
-            </p>
-            <b>Aaxel Insurance Brokers Ltd.</b>
-            <p>Ontario: 866-358-2860</p>
-            <p>Quebec: 888-542-4811</p>
-            <p>Rest of Canada: 866-247-7700</p>
-            <p>
-              The program is available to all the employees of SBPA member
-              companies, their spouses, and dependent children residing at home
-              or away from school.
-            </p>
-            <p>
-              Be sure to mention when you call that you are a member of the
-              SBPA.
-            </p>
-          </>}
+          <>
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            Trustwise Insurance is proud to partner with SBPA to offer exclusive insurance programs for SBPA members and their employees.
+            <br />
+            <br />
+            <b>Program Highlights:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>🚗🏡 Group Home & Auto Insurance: Comprehensive coverage designed for the unique needs of small business owners and their families.</li>
+              <li>🏢 Commercial Insurance: Tailored coverage solutions to protect your business assets, employees, and operations.</li>
+              <li>💼 Multiple Insurance Options: Flexibility to choose the coverage you need, including both personal and commercial plans.</li>
+              <li>🔒 Trusted Underwriting: The group program is underwritten by Economical Insurance & Intact Insurance, ensuring you get the most reliable protection available.</li>
+            </ul>
+            <br />
+            <b>Get Your Instant Quote Today</b>
+            <br />
+            📞 Call Trustwise Insurance at 780-255-5151
+            <br />
+            •	Ontario: 866-358-2860
+            <br />
+            👉 Be sure to mention you’re a member of SBPA when you call!
+          </>
+        }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/05/SBOAPA-Logo-2017.png"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Our Insurance Program?"
+        buttonLink="/call-back-request"
+        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
-              We recommend member companies communicate the availability of this
-              program to their employees.
+              We recommend member companies communicate the availability of this program to their employees.
             </p>
             <p className="text-balance">
-              Please note this program is offered on behalf of the association
-              to all employees and in no way it may hold member companies
-              responsible for the administration of the program.
+              Please note this program is offered on behalf of the association to all employees and in no way it may hold member companies responsible for the administration of the program.
             </p>
             <p className="mt-4">The key advantages of the program include:</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Savings of up to 30% on home and auto insurance</li>
-              <li>No service or interest charges for monthly payment plans</li>
-              <li>Accident waiver</li>
-              <li>Age discount</li>
-              <li>No-conviction discount</li>
-              <li>Multi-policy & Multi-vehicle discounts</li>
-              <li>Retiree discount</li>
-              <li>Discounts for security systems</li>
+              <li>✅ Exclusive rates for SBPA members</li>
+              <li>✅ Dedicated, support from our experienced team</li>
+              <li>✅ Fast, hassle-free quote process</li>
             </ul>
+            <p>🔗 Secure your personal and business coverage today with Trustwise Insurance—your partner in comprehensive protection.</p>
           </>
         }
         sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"

@@ -115,11 +115,11 @@ const business=[
   },
   {
     name: "Product Liability Insurance",
-    href: "/business/environmental-liability-insurance",
+    href: "/business/product-liability-insurance",
   },
   {
     name: "Environmental Impairment Liability Insurance",
-    href: "/business/product-liability-insurance",
+    href: "/business/environmental-liability-insurance",
   },
   {
     name: "Professional Liability Insurance",

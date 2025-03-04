@@ -9,71 +9,55 @@ const AssociationHRAI = () => {
   return (
     <>
       <Associations
-        title="HRAI - The Heating, Refrigeration & Air Conditioning Institute of Canada"
+        title="HRAI - The Heating, Refrigeration & Air Conditioning Institute of Canada | Group Home & Auto & Commercial Insurance"
         description={
           <>
-            <b>Your coverage, your way...</b>
-            <p>
-              Aaxel Insurance Brokers Ltd. and HRAI are pleased to offer the
-              following insurance programs for its members and their employees:
-            </p>
-            <ol className="list-decimal list-inside">
-              <li>Group home & auto insurance and</li>
-              <li>Commercial insurance</li>
-            </ol>
+            <b>Your Coverage, Your Way with Trustwise Insurance</b>
+            <br /><br />
+            Trustwise Insurance is pleased to partner with HRAI to offer exclusive insurance programs for HRAI members and their employees.
             <br />
-            <p>
-              The group program is underwritten by Economical Insurance & Intact
-              Insurance.
-            </p>
             <br />
-            <p>
-              To receive an instant quote, please contact our sales staff at any
-              of the following numbers:
-            </p>
+            <b>Program Highlights:</b>
             <br />
-            <b>Aaxel Insurance Brokers Ltd.</b>
-            <p>Ontario: 866-358-2860</p>
-            <p>Quebec: 888-542-4811</p>
-            <p>Rest of Canada: 866-247-7700</p>
+            <ul className="list-inside mt-2 leading-8">
+              <li>🚗🏡 Group Home & Auto Insurance: Comprehensive and affordable home and auto insurance coverage tailored to the needs of HRAI members and their families.</li>
+              <li>🏢 Commercial Insurance: Protect your business with specialized commercial insurance designed to meet the unique needs of HRAI members.</li>
+              <li>💼 Customizable Coverage Options: Choose from a variety of insurance solutions that suit both personal and business needs.</li>
+              <li>🔒 Reliable Underwriting: The group program is underwritten by Economical Insurance & Intact Insurance, providing strong, dependable protection.</li>
+            </ul>
             <br />
-            <p>
-              The program is available to all the employees of HRAI member
-              companies, their spouses, and dependent children residing at home
-              or away from school.
-            </p>
+            <b>Get Your Instant Quote Today</b>
             <br />
-            <p>
-              Be sure to mention when you call that you are a member of the HRAI.
-            </p>
+            📞 Call Trustwise Insurance at 780-255-5151
+            <br />
+            • Ontario: 866-358-2860
+            <br />
+            • Quebec: 888-542-4811
+            <br />
+            • Rest of Canada: 866-247-7700
+            <br />
+            👉 Be sure to mention that you are a member of HRAI when you call to receive your exclusive group rates!
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/07/HRAI.jpg"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Our Insurance Program?"
+        buttonLink="/call-back-request"
+        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
-              We recommend member companies communicate the availability of this
-              program to their employees.
+              We recommend member companies communicate the availability of this program to their employees.
             </p>
             <p className="text-balance">
-              Please note this program is offered on behalf of the association
-              to all employees and in no way it may hold member companies
-              responsible for the administration of the program.
+              Please note this program is offered on behalf of the association to all employees and in no way it may hold member companies responsible for the administration of the program.
             </p>
             <p className="mt-4">The key advantages of the program include:</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Savings of up to 30% on home and auto insurance</li>
-              <li>No service or interest charges for monthly payment plans</li>
-              <li>Accident waiver</li>
-              <li>Age discount</li>
-              <li>No-conviction discount</li>
-              <li>Multi-policy & Multi-vehicle discounts</li>
-              <li>Retiree discount</li>
-              <li>Discounts for security systems</li>
+              <li>✅ Expertly tailored insurance programs for HRAI members</li>
+              <li>✅ Personalized support from our team of professionals</li>
+              <li>✅ Fast and simple quote process</li>
             </ul>
+            <p>🔗 Get the coverage you need for your home, auto, and business with Trustwise Insurance—your trusted partner for comprehensive insurance solutions.</p>
           </>
         }
         sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"

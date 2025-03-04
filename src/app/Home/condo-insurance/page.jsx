@@ -25,11 +25,11 @@ const CondoInsurance = () => {
       />
       <TrustBanner />
 
-      <section className="py-8 bg-gray-100">
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Comprehensive Coverage for Complete Confidence</h2>
           <p>We offer customizable Condo Insurance solutions that are tailored to your unique needs, including protection for:</p>
-          <ul className="list-disc list-inside ml-4 mt-2">
+          <ul className="list-inside ml-4 mt-2">
             <li>Property damage caused by fire, water, or other unexpected events ✅</li>
             <li>Personal belongings, including furniture, electronics, and valuables ✅</li>
             <li>Liability claims if someone is injured while visiting your condo ✅</li>

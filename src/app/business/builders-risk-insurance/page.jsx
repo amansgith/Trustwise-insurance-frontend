@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const BuilderRiskInsurance = () => {
   return (
@@ -15,35 +12,30 @@ const BuilderRiskInsurance = () => {
         title="Builder's Risk Insurance"
         description={
           <>
-            Builder's Risk Insurance is an essential type of coverage offered by
-            AAXEL Insurance that provides protection to construction projects
-            against various risks, including property damage, theft, and other
-            unexpected events that can occur during the construction process.
-            This type of insurance is essential for builders and contractors who
-            want to ensure that their projects are adequately covered and
-            protected in the event of unforeseen circumstances.
+            <b>Comprehensive Builder's Risk Insurance from Trustwise Insurance</b>
+            <br />
+            Builder's Risk Insurance provides protection to construction projects against various risks, including property damage, theft, and other unexpected events that can occur during the construction process. This type of insurance is essential for builders and contractors who want to ensure that their projects are adequately covered and protected in the event of unforeseen circumstances.
             <br />
             <br />
-            At AAXEL Insurance, we offer customizable Builder's Risk Insurance
-            options that provide our clients with comprehensive coverage,
-            including coverage for property damage, liability claims, and theft.
-            Our team of experts works closely with builders and contractors to
-            understand their unique needs and tailor policies that provide them
-            with the protection and peace of mind they need.
+            <b>Why Builder's Risk Insurance Matters</b>
+            <br />
+            Builder's Risk Insurance is essential for builders and contractors. It offers crucial protection against financial losses resulting from property damage, theft, and other risks during construction, helping you maintain financial stability and focus on delivering quality projects. With Trustwise Insurance, you get the peace of mind you need to focus on your construction projects.
             <br />
             <br />
-            With our Builder's Risk Insurance policies, builders and contractors
-            can be sure that their projects are adequately protected against
-            various risks, and they can focus on delivering quality construction
-            projects without worrying about potential liabilities or financial
-            losses.
+            <b>What Our Builder's Risk Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Property Damage Coverage: Protects against damage to the construction site and materials.</li>
+              <li>🔒 Theft Coverage: Covers losses due to theft of materials and equipment.</li>
+              <li>⚡ Customized Policies: Tailored coverage based on your project type and risk exposure, ensuring you only pay for what you need.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Builder's Risk Insurance helps builders and contractors enhance their risk management strategies and build trust with clients and partners.
             <br />
             <br />
-            At AAXEL Insurance, we are committed to providing our clients with
-            the best possible coverage and peace of mind they need to protect
-            their construction projects. Contact us today to learn more about
-            our Builder's Risk Insurance coverage options and how we can help
-            you protect your construction project.
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect builder's risk insurance coverage for your construction projects.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/2018042103c32dde-3aa6-2784-1197-a124394a9889-1.jpg"

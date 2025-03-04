@@ -29,7 +29,7 @@ const CottageInsurance = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Coverage Designed for Cottage Living</h2>
           <p>Every cottage is unique, and so are your insurance needs. That’s why we provide customizable Cottage Insurance policies, offering protection for:</p>
-          <ul className="list-disc list-inside ml-4 mt-2">
+          <ul className="list-inside ml-4 mt-2">
             <li>🏡 Property damage caused by fire, storms, or vandalism</li>
             <li>🔐 Theft protection for your cottage and its contents</li>
             <li>🛡️ Liability coverage in case of accidents on your property</li>

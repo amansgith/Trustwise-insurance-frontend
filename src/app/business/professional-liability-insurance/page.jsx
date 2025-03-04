@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const ProfessionalLiabilityInsurance = () => {
   return (
@@ -15,31 +12,30 @@ const ProfessionalLiabilityInsurance = () => {
         title="Professional Liability Insurance"
         description={
           <>
-            Professional Liability Insurance, also known as Errors and Omissions
-            (E&O) insurance, is a type of insurance offered by AAXEL Insurance
-            that provides coverage for businesses and individuals against claims
-            for negligence or errors in the services they provide. This type of
-            insurance is essential for professionals who provide specialized
-            services, such as lawyers, doctors, architects, and consultants.
+            <b>Comprehensive Professional Liability Insurance from Trustwise Insurance</b>
+            <br /><br />
+            Professional Liability Insurance, also known as Errors and Omissions (E&O) insurance, is a type of insurance that provides coverage for businesses and individuals against claims for negligence or errors in the services they provide. This type of insurance is essential for professionals who provide specialized services, such as lawyers, doctors, architects, and consultants.
             <br />
             <br />
-            AAXEL Insurance offers a range of coverage options for Professional
-            Liability Insurance, including coverage for legal defense costs,
-            settlements, and judgments. These policies can be customized to meet
-            the unique needs of individual professionals and businesses, with
-            coverage limits based on the type of services provided and the level
-            of risk exposure.
+            <b>Why Professional Liability Insurance Matters?</b>
+            <br />
+            Professional Liability Insurance is essential for professionals who provide specialized services. It offers crucial protection against financial losses resulting from claims for negligence or errors, helping you comply with legal requirements and enhancing your risk management strategy. With Trustwise Insurance, you get the peace of mind you need to focus on providing quality services.
             <br />
             <br />
-            In addition to protecting professionals and businesses against
-            financial losses resulting from claims for negligence or errors,
-            Professional Liability Insurance can also help them improve their
-            risk management strategies and enhance their reputation for quality
-            and professionalism. AAXEL Insurance is a reputable insurance
-            provider that offers Professional Liability Insurance policies to
-            help professionals and businesses protect themselves against
-            potential liability risks and to provide them with peace of mind
-            while providing their specialized services.
+            <b>What Our Professional Liability Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ Legal Defense Costs: Covers legal expenses related to defending against claims for negligence or errors.</li>
+              <li>💼 Settlements and Judgments: Covers costs associated with settlements and judgments resulting from claims for negligence or errors.</li>
+              <li>⚡ Customized Policies: Tailored coverage based on your profession and risk exposure, ensuring you only pay for what you need.</li>
+            </ul>
+            <br />
+            Beyond offering financial protection, our Professional Liability Insurance helps professionals enhance their risk management strategies and build trust with clients and partners.
+            <br />
+            <br />
+            <b>Stay protected from the unexpected with Trustwise Insurance.</b>
+            <br />
+            📞 Call 780-255-5151 today and let us tailor the perfect professional liability coverage for your business.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/dylan-gillis-KdeqA3aTnBY-unsplash.jpg"

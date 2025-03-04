@@ -17,7 +17,7 @@ export default function Associations({
   return (
     <div className="bg-gray-50">
       {/* 🔹 Hero Section */}
-      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6 md:px-12">
+      <section className="bg-gradient-to-r from-yellow-50 to-blue-100 py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left Side: Text Content */}
           <div className="md:w-1/2 text-center md:text-left">
@@ -30,7 +30,7 @@ export default function Associations({
 
             {/* Primary Button */}
             <Link href="/call-back-request">
-              <button className="mt-6 bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
+              <button className="mt-6 bg-primary hover:bg-secondary text-white hover:text-black font-semibold py-3 px-6 rounded-full shadow-lg transition-transform duration-500 transform hover:scale-105">
                 Get a Quote
               </button>
             </Link>
@@ -46,10 +46,10 @@ export default function Associations({
       </section>
 
       {/* 🔹 Section Below (Benefits) */}
-      <section className="bg-gradient-to-r from-blue-200  to-green-200 py-12 px-6 md:px-12">
+      <section className="bg-gradient-to-r from-primary  to-secondary py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left Side: Content */}
-          <div className="md:w-1/2 bg-cyan-600 text-white p-6 rounded-lg shadow-lg">
+          <div className="md:w-1/2 bg-primary text-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl md:text-3xl font-bold">{sectionTitle}</h2>
             <div className="mt-4 text-lg md:text-xl">{sectionDescription}</div>
           </div>

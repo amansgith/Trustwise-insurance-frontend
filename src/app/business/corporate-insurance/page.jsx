@@ -3,43 +3,41 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
-
-const HomeBusinessInsurance = () => {
+const CorporateInsurance = () => {
   return (
     <>
       <InsuranceIntro
         title="Corporate Insurance"
         description={
           <>
-            Corporate Insurance is a type of insurance offered by AAXEL
-            Insurance that provides coverage for corporations against a range of
-            risks associated with their operations. This type of insurance is
-            essential for corporations of all sizes and industries, as it
-            provides financial protection in the event of accidents, property
-            damage, lawsuits, and other unforeseen events.
+            <b>Comprehensive Corporate Insurance Solutions by Trustwise Insurance</b>
+            <br /><br />
+            At Trustwise Insurance, we understand that running a corporation—regardless of its size or industry—comes with complex risks. From property damage and lawsuits to cyber threats, unforeseen events can disrupt your operations and impact your bottom line. That’s why our Corporate Insurance solutions are designed to provide robust protection, so you can focus on growing your business with confidence.
             <br />
             <br />
-            AAXEL Insurance offers a range of coverage options for Corporate
-            Insurance, including General Liability Insurance, Property
-            Insurance, Directors and Officers (D&O) Liability Insurance, Cyber
-            Liability Insurance, and Employment Practices Liability Insurance.
-            These policies can be customized to meet the unique needs of
-            individual corporations, with coverage limits based on the size and
-            scope of their operations.
+            <b>Why Corporate Insurance from Trustwise Insurance?</b>
+            <br />
+            Corporate Insurance is essential for safeguarding your business against financial losses, ensuring compliance with legal requirements, and strengthening your risk management strategy. Our expert brokers work closely with you to customize coverage that aligns with the unique needs of your corporation.
             <br />
             <br />
-            In addition to protecting corporations against financial losses
-            resulting from a range of risks, Corporate Insurance can also help
-            them comply with legal requirements for insurance coverage and
-            enhance their risk management strategies. AAXEL Insurance is a
-            reputable insurance provider that offers Corporate Insurance
-            policies to help corporations protect themselves against potential
-            risks and to provide them with peace of mind while conducting their
-            operations.
+            <b>Our Corporate Insurance Coverage Includes:</b>
+            <br />
+            <ul className="list-inside mt-2 leading-8">
+              <li>✅ General Liability Insurance: Protection against claims of bodily injury, property damage, and more.</li>
+              <li>🏢 Property Insurance: Covers your physical assets, including buildings, equipment, and inventory.</li>
+              <li>👩‍💼 Directors and Officers (D&O) Liability Insurance: Shields executives from personal losses due to management decisions.</li>
+              <li>🔒 Cyber Liability Insurance: Protects your business against data breaches, cyberattacks, and related risks.</li>
+              <li>🏛 Employment Practices Liability Insurance: Covers claims related to employment issues such as wrongful termination, harassment, or discrimination.</li>
+            </ul>
+            <br />
+            At Trustwise Insurance, we tailor each policy based on the size, industry, and scope of your operations—ensuring you only pay for the coverage you truly need.
+            <br />
+            <br />
+            <b>Stay protected. Stay confident.</b>
+            <br />
+            📞 Call Trustwise Insurance today at 780-255-5151 and discover how we can protect your corporation against tomorrow’s uncertainties.
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/christina-wocintechchat-com-2JDDn7iSGH8-unsplash.jpg"
@@ -54,4 +52,4 @@ const HomeBusinessInsurance = () => {
   );
 };
 
-export default HomeBusinessInsurance;
+export default CorporateInsurance;
