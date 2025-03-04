@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const CommercialAutomobileInsurance = () => {
   return (
@@ -15,29 +12,15 @@ const CommercialAutomobileInsurance = () => {
         title="Commercial Automobile Insurance"
         description={
           <>
-            Commercial Automobile Insurance is a type of insurance offered by
-            AAXEL Insurance that provides coverage for businesses that use
-            vehicles for work-related purposes. This type of insurance is
-            essential for businesses that rely on vehicles to transport goods,
-            equipment, or employees, as it provides financial protection in the
-            event of accidents, theft, or damage to the vehicle.
-            <br />
-            <br />
-            AAXEL Insurance offers a range of coverage options for commercial
-            automobile insurance, including liability coverage, collision
-            coverage, comprehensive coverage, and more. These policies can be
-            customized to meet the unique needs of individual businesses, with
-            coverage limits based on the type and number of vehicles used.
-            <br />
-            <br />
-            In addition to protecting businesses against financial losses
-            resulting from accidents or damage to their vehicles, commercial
-            automobile insurance can also help businesses comply with legal
-            requirements for insurance coverage. We are a reputable insurance
-            provider that offers commercial automobile insurance policies to
-            help businesses protect themselves against financial losses
-            resulting from work-related vehicle use, and to provide them with
-            peace of mind while on the road.
+            <p>
+              At Trustwise Insurance, we understand the importance of keeping your business moving. Our Commercial Automobile Insurance provides comprehensive coverage for businesses that use vehicles for work-related purposes. Whether you rely on vehicles to transport goods, equipment, or employees, we have you covered.
+            </p>
+            <p>
+              Our policies include a range of coverage options such as liability coverage, collision coverage, comprehensive coverage, and more. Each policy can be customized to meet the unique needs of your business, ensuring you have the right protection based on the type and number of vehicles you use.
+            </p>
+            <p>
+              In addition to protecting your business against financial losses resulting from accidents, theft, or damage to your vehicles, our commercial automobile insurance helps you comply with legal requirements for insurance coverage. Trustwise Insurance is committed to providing you with peace of mind while on the road, so you can focus on running your business.
+            </p>
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/zetong-li-mVqTumQH-c0-unsplash.jpg"

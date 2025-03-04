@@ -3,24 +3,30 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
 import Features from "@/components/Features";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const BundleInsurance = () => {
   return (
     <>
       <InsuranceIntro
         title="Bundle Insurance"
-        description={`Bundle Insurance is about you, Your Auto, Home, Investment properties and your pleasure crafts. At Aaxel Insurance, we know that each person is unique and has different needs. ${"\n\n"}One of our personal insurance brokers can help you find policies that fit your needs without any overlap of coverage, gaps, or unnecessary extra costs. Our personal insurance brokers will work with one of the best Canadian insurance companies to provide simple, affordable insurance solutions.`}
+        description={
+          <>
+            <p>
+              Bundle Insurance is designed to provide comprehensive coverage for all your insurance needs, including <strong>Auto</strong>, <strong>Home</strong>, <strong>Investment properties</strong>, and your <strong>pleasure crafts</strong>. At Trustwise Insurance, we understand that each individual is unique and has different requirements.
+            </p>
+            <p>
+              Our dedicated personal insurance brokers can help you find policies that fit your specific needs without any overlap of coverage, gaps, or unnecessary extra costs. We work with some of the best Canadian insurance companies to provide simple, affordable insurance solutions tailored just for you.
+            </p>
+          </>
+        }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/Header-Compressed-Webp.webp"
         buttonText="Get a Free Quote"
       />
       <TrustBanner />
 
       {/* get quote form  */}
-      <QuoteForm/>
+      <QuoteForm />
       <Features />
       <ContactUs />
       <FAQSection />

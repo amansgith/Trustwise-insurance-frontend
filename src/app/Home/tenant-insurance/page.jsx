@@ -3,10 +3,7 @@ import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
-
-const {
-  default: InsuranceIntro,
-} = require("@/components/CommonComponents/InsuranceIntro");
+import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 
 const TenantInsurance = () => {
   return (
@@ -15,39 +12,46 @@ const TenantInsurance = () => {
         title="Tenant Insurance"
         description={
           <>
-            Tenant Insurance is an essential type of coverage offered by AAXEL
-            Insurance that provides protection to tenants against various risks,
-            including theft, property damage, and liability claims. This type of
-            insurance is crucial for tenants who want to ensure that their
-            belongings are adequately covered and protected in the event of
-            unforeseen circumstances.
-            <br />
-            <br />
-            At AAXEL Insurance, we offer customizable Tenant Insurance options
-            that provide our clients with comprehensive coverage, including
-            coverage for personal belongings, liability claims, and additional
-            living expenses. Our team of experts works closely with clients to
-            understand their unique needs and tailor policies that provide them
-            with the protection and peace of mind they need.
-            <br />
-            <br />
-            With our Tenant Insurance policies, clients can be sure that their
-            belongings are adequately protected against various risks, and they
-            can focus on enjoying their rental property without worrying about
-            potential liabilities or financial losses.
-            <br />
-            <br />
-            At AAXEL Insurance, we are committed to providing our clients with
-            the best possible coverage and peace of mind they need to protect
-            their belongings and rental property. Contact us today to learn more
-            about our Tenant Insurance coverage options and how we can help you
-            protect your rental property.
+            <p>
+              Tenant Insurance That Has You Covered | Trustwise Insurance
+            </p>
+            <p>
+              Renting a home comes with its own set of responsibilities—and protecting your personal belongings should be one of them. At Trustwise Insurance, our Tenant Insurance plans provide reliable protection against theft, property damage, and liability claims, ensuring you’re covered when the unexpected happens.
+            </p>
           </>
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/kara-eads-L7EwHkq1B2s-unsplash.jpg"
         buttonText="Get a Free Quote"
       />
       <TrustBanner />
+
+      <section className="py-8 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4">Comprehensive Coverage for Peace of Mind</h2>
+          <p>Our customizable Tenant Insurance policies are designed to fit your lifestyle and provide complete protection, including:</p>
+          <ul className="list-disc list-inside ml-4 mt-2">
+            <li>🏡 Personal belongings coverage: Protect your furniture, electronics, and valuables from theft, fire, and more.</li>
+            <li>🛡️ Liability protection: Stay protected if you’re held responsible for injury or property damage.</li>
+            <li>🏠 Additional living expenses: Get coverage for temporary housing if your rental becomes uninhabitable due to a covered loss.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4">Rent with Confidence</h2>
+          <p>
+            At Trustwise Insurance, we work closely with you to create policies that safeguard your belongings and protect you from potential liabilities. With our Tenant Insurance, you can relax and enjoy your rental home, knowing you’re covered against life’s uncertainties.
+          </p>
+          <p className="mt-4">
+            Protect what matters most—your belongings and peace of mind.
+          </p>
+          <p className="mt-4">
+            📞 Contact Trustwise Insurance today to learn more about our Tenant Insurance options and secure the coverage you need.
+          </p>
+        </div>
+      </section>
+
       <QuoteForm />
       <Features />
       <ContactUs />

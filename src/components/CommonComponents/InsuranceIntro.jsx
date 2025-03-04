@@ -15,7 +15,7 @@ export default function InsuranceIntro({
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left Side: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-snug pt-2">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-primary leading-snug pt-2">
             {title}
           </h1>
           <div className="text-gray-700 mt-4 text-lg md:text-xl leading-relaxed">

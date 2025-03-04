@@ -19,10 +19,9 @@ const Hero = () => {
     }
   };
 
-
   return (
-    <div className="bg-white w-full flex flex-col md:flex-row px-8 md:px-20 pb-14 items-center">
-      <div className="flex flex-col gap-4 md:w-1/2 pt-16">
+    <div className="bg-white w-full flex flex-col md:flex-row px-8 md:px-20 pb-14 items-center pt-24 md:pt-10">
+      <div className="flex flex-col gap-4 md:w-1/2 pt-16 md:pt-0">
         <h3 className="uppercase text-[18px] md:text-[30px] font-bold leading-normal">
           Your Coverage, Your Way!
         </h3>
@@ -48,15 +47,15 @@ const Hero = () => {
             </p>
           </Link>
         </div> */}
-        <div className="flex gap-4 pb-14">
+        <div className="flex flex-col sm:flex-row gap-4 pb-14">
           <Link href="/call-back-request">
-            <button className="py-2.5 md:py-3.5 px-8 rounded-lg md:px-10 uppercase text-white bg-primary hover:bg-secondary hover:text-black text-base md:text-xl font-bold transition duration-300">
+            <button className="py-2.5 md:py-3.5 px-8 sm:px-10 rounded-lg uppercase text-white bg-primary hover:bg-secondary hover:text-black text-base md:text-xl font-bold transition duration-300">
               Get a Quote
             </button>
           </Link>
-            <button onClick={scrollToSection} className="w-auto py-2.5 md:py-3.5 px-8 rounded-lg md:px-8 uppercase bg-secondary hover:bg-primary hover:text-white text-lg md:text-xl font-bold transition duration-300">
-              + Popular Products
-            </button>
+          <button onClick={scrollToSection} className="w-auto py-2.5 md:py-3.5 px-8 sm:px-10 rounded-lg uppercase bg-secondary hover:bg-primary hover:text-white text-base md:text-xl font-bold transition duration-300">
+            + Popular Products
+          </button>
         </div>
       </div>
       <div className="w-full md:w-1/2 overflow-hidden mt-6 md:mt-0">
