@@ -66,12 +66,12 @@ export default async function Page({ params }) {
             {title}
           </h1>
 
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
+          <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-center mb-4">
             <div>
               <p className="text-sm font-medium text-gray-700">
                 Trustwise Insurance
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 block">
                 Published on {formattedDate}
               </p>
             </div>
@@ -86,7 +86,7 @@ export default async function Page({ params }) {
           {/* Display the blog image if available */}
           {Image?.data?.attributes?.url && (
             <img
-              src={`http://localhost:1337${Image.data.attributes.url}`}
+              src={`${API_URL}${Image.data.attributes.url}`}
               alt={title}
               className="rounded-lg mb-8 w-full h-auto max-w-4xl mx-auto"
             />
@@ -105,7 +105,7 @@ export default async function Page({ params }) {
         </article>
 
         {/* Sidebar */}
-        <aside className="w-full lg:w-1/3 lg:sticky lg:top-20 lg:self-start mt-8 lg:mt-0">
+        <aside className="w-full hidden md:block lg:w-1/3 lg:sticky lg:top-20 lg:self-start mt-8 lg:mt-0">
           <div className="bg-white p-4 rounded-lg shadow-md mb-8">
             <h2 className="text-xl font-bold mb-4">Recent Blogs</h2>
             <ul>

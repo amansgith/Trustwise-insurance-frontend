@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-white w-full flex flex-col md:flex-row px-8 md:px-20 pb-14 items-center pt-24 md:pt-10">
+    <div className="bg-white w-full flex flex-col md:flex-row px-8 md:px-20 pb-14 items-center pt-16 md:pt-10">
       <div className="flex flex-col gap-4 md:w-1/2 pt-16 md:pt-0">
         <h3 className="uppercase text-[18px] md:text-[30px] font-bold leading-normal">
           Your Coverage, Your Way!

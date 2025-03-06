@@ -12,7 +12,7 @@ const getBlogs = async () => {
       content: item.content,
       author: item.author || "Unknown Author",
       publishedAt: item.publishedAt,
-      image: `${process.env.NEXT_PUBLIC_API_URL}${item.Image.formats.medium.url}`, // Ensure image handling
+      image: item.Image ? `${process.env.NEXT_PUBLIC_API_URL}${item.Image.formats.medium.url}` : null, // Ensure image handling
     }));
   } catch (error) {
     console.error("Error fetching blogs:", error);
