@@ -1,6 +1,6 @@
 const getBlogs = async () => {
   try {
-    const res = await fetch("http://localhost:1337/api/blogs?populate=*");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*`);
     const json = await res.json();
 
     if (!json.data) return [];
@@ -12,7 +12,7 @@ const getBlogs = async () => {
       content: item.content,
       author: item.author || "Unknown Author",
       publishedAt: item.publishedAt,
-      image: item.Image ? `http://localhost:1337${item.Image.formats.medium.url}` : null, // Ensure image handling
+      image: `${process.env.NEXT_PUBLIC_API_URL}${item.Image.formats.medium.url}`, // Ensure image handling
     }));
   } catch (error) {
     console.error("Error fetching blogs:", error);
