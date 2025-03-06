@@ -2,7 +2,7 @@ const getBlogs = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*`);
     const json = await res.json();
-
+    
     if (!json.data) return [];
 
     return json.data.map((item) => ({
@@ -12,6 +12,7 @@ const getBlogs = async () => {
       content: item.content,
       author: item.author || "Unknown Author",
       publishedAt: item.publishedAt,
+      category: item.category ? item.category.Name : "Uncategorized",
       image: item.Image ? `${process.env.NEXT_PUBLIC_API_URL}${item.Image.formats.medium.url}` : null, // Ensure image handling
     }));
   } catch (error) {
