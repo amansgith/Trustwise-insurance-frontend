@@ -84,9 +84,9 @@ export default async function Page({ params }) {
           </div>
 
           {/* Display the blog image if available */}
-          {Image?.data?.attributes?.url && (
+          {Image?.formats?.medium?.url && (
             <img
-              src={`${API_URL}${Image.data.attributes.url}`}
+              src={`${Image.formats.medium.url}`}
               alt={title}
               className="rounded-lg mb-8 w-full h-auto max-w-4xl mx-auto"
             />
