@@ -7,15 +7,15 @@ export async function POST(request) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'your-email@gmail.com', // Replace with your Gmail address
-      pass: 'your-email-password', // Replace with your Gmail password or App Password
+      user: 'amankhancompq2002@gmail.com', // Replace with your Gmail address
+      pass: '1a7b8c6d@Aman', // Replace with your Gmail password or App Password
     },
   });
 
   // Email options
   const mailOptions = {
-    from: 'your-email@gmail.com', // Replace with your Gmail address
-    to: 'recipient@example.com', // Replace with the recipient's email
+    from: 'amankhancompq2002@gmail.com', // Replace with your Gmail address
+    to: 'valtwonder@gmail.com', // Replace with the recipient's email
     subject: 'New Quote Request',
     text: `
       Quote For: ${quoteFor}
