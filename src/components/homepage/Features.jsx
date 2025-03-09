@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { FaHeadset, FaEye, FaClipboardCheck, FaShieldAlt, FaLaptopCode, FaPiggyBank } from "react-icons/fa";
 import featureimg from '../../../public/featureimg.webp';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const features = [
   { icon: <FaHeadset />, title: "24/7 Support" },
@@ -16,22 +14,6 @@ const features = [
 ];
 
 const Features = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.9, ease: "easeOut" },
-      });
-    }
-  }, [controls, inView]);
-
   return (
     <section className="relative bg-primary text-white py-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between overflow-hidden">
       {/* Left Content */}
@@ -50,27 +32,19 @@ const Features = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              ref={ref}
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
               className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg shadow-lg"
             >
               <span className="text-blue-400 text-2xl">{feature.icon}</span>
               <h4 className="text-lg font-semibold">{feature.title}</h4>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Right Image (Diamond Shape) */}
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, x: 50 }}
-        animate={controls}
-        className="hidden lg:flex absolute right-0 top-0 w-full h-full lg:w-1/2 justify-center lg:mt-0 overflow-hidden"
-      >
+      <div className="hidden lg:flex absolute right-0 top-0 w-full h-full lg:w-1/2 justify-center lg:mt-0 overflow-hidden">
         <div className="relative w-full h-full transform rotate-45 overflow-hidden">
           <Image
             src={featureimg} // Update the image path accordingly
@@ -80,7 +54,7 @@ const Features = () => {
             className="-rotate-45"
           />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

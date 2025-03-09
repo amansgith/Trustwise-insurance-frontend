@@ -17,7 +17,7 @@ const services = [
   },
   {
     title: "Life insurance",
-    description: "Secure your family's future.",
+    description: "Secure your family's future and live carefree.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/name_-gravity-_AdUs32i0jc-unsplash.jpg",
     icon: "❤️",
@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Bundle insurance",
-    description: "Combine and save on your insurance plans.",
+    description: "Combine and save on your insurance plans with additional discounts.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/Header-Compressed-Webp.webp",
     icon: "📦",
@@ -40,7 +40,7 @@ const services = [
   },
   {
     title: "Business insurance",
-    description: "Keep your business safe and secure.",
+    description: "Keep your business safe and secure. Evolve your ideas into action.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/04/Business-Insuranc.jpg",
     icon: "💼",
@@ -48,7 +48,7 @@ const services = [
   },
   {
     title: "Group insurance",
-    description: "Get the advantage of group power.",
+    description: "Get the advantage of group power. Unlock discounts and facilities.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/04/Group-Insurance.jpg",
     icon: "👥",
@@ -56,7 +56,7 @@ const services = [
   },
   {
     title: "Travel insurance",
-    description: "Travel with peace of mind.",
+    description: "Travel with peace of mind. Make your heart leap around the world.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/jeshoots-com-mSESwdMZr-A-unsplash.jpg",
     icon: "✈️",
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: "Disability insurance",
-    description: "Financial support when you need it most.",
+    description: "Financial support when you need it most. Fastest claims readily available.",
     image:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/yomex-owo-gRTzhQsiVG0-unsplash.jpg",
     icon: "🦽",
@@ -124,8 +124,8 @@ const PopularServices = () => {
       </motion.div>
       {/* Header Section */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-primary text-lg md:text-6xl font-extrabold uppercase tracking-wide">
-          Popular Services
+        <h2 className="text-primary text-lg md:text-xl font-extrabold uppercase tracking-wide">
+          {`>>> Popular Services <<<`}
         </h2>
         <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
           We’re covering all the insurance fields
@@ -137,7 +137,7 @@ const PopularServices = () => {
       </div>
 
       {/* Responsive Grid Layout */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <Link key={index} href={service.href}>
             <motion.div

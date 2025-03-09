@@ -272,10 +272,8 @@ const DeskNavbar = () => {
       {/* Top Navbar */}
       <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
         <div className="flex space-x-6">
-          <span className="flex items-center">
-            📍 30 Commercial Road Fratton, Australia
-          </span>
-          <span className="flex items-center">✉️ needhelp@company.com</span>
+          
+          <span className="flex items-center">✉️ support@trustwise.com</span>
         </div>
         <div className="flex space-x-6">
           {[
@@ -401,7 +399,7 @@ const DeskNavbar = () => {
               className="absolute top-4 right-4 text-2xl"
               onClick={toggleSearch}
             >
-            <FaTimes className="ml-2" />
+              <FaTimes className="ml-2" />
             </button>
             <input
               type="text"
@@ -632,7 +630,12 @@ const MobileNavbar = () => {
     <header className="container mx-auto z-50 bg-white fixed top-0 w-full px-4 py-3 flex justify-between items-center">
       {/* Logo on Left */}
       <Link href="/">
-        <Image src={Navlogo} alt="Trustwise Insurance" width={160} height={120} />
+        <Image
+          src={Navlogo}
+          alt="Trustwise Insurance"
+          width={160}
+          height={120}
+        />
       </Link>
 
       {/* Toggle Button on Right */}
@@ -658,7 +661,7 @@ const MobileNavbar = () => {
       <motion.nav
         initial={{ x: "-100%" }}
         animate={{ x: menuOpen ? "0%" : "-100%" }}
-        transition={{ type: "tween", duration: 0.4, delay: 0.3 }}
+        transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }} // Adjusted transition properties
         className="fixed top-0 left-0 w-3/4 h-full bg-primary text-white z-50 p-6 flex flex-col shadow-md"
       >
         {/* Close Button */}
@@ -669,7 +672,10 @@ const MobileNavbar = () => {
         </div>
 
         {/* Phone Contact */}
-        <Link href="tel:+18663582860" className="text-secondary font-bold text-lg mb-4">
+        <Link
+          href="tel:+18663582860"
+          className="text-secondary font-bold text-lg mb-4"
+        >
           +1 866-358-2860
         </Link>
 
@@ -698,7 +704,7 @@ const MobileNavbar = () => {
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }} // Adjusted transition properties
                   className="pl-2 mt-2 space-y-2 max-h-60 overflow-y-auto text-white"
                 >
                   {item.links.map((link) => (
@@ -717,13 +723,25 @@ const MobileNavbar = () => {
           ))}
 
           {/* Additional Links */}
-          <Link href="/travel" className="block hover:text-cyan-700 transition" onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/travel"
+            className="block hover:text-cyan-700 transition"
+            onClick={() => setMenuOpen(false)}
+          >
             Travel
           </Link>
-          <Link href="/claims" className="block hover:text-cyan-700 transition" onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/claims"
+            className="block hover:text-cyan-700 transition"
+            onClick={() => setMenuOpen(false)}
+          >
             Claims
           </Link>
-          <Link href="/blogs" className="block hover:text-cyan-700 transition" onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/blogs"
+            className="block hover:text-cyan-700 transition"
+            onClick={() => setMenuOpen(false)}
+          >
             Blog
           </Link>
         </div>

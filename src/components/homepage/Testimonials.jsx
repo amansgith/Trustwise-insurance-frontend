@@ -130,7 +130,6 @@ import Image from "next/image";
 import vectorimg from '../../../public/vectorimg.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { useInView } from "react-intersection-observer";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -174,16 +173,13 @@ const testimonials = [
 ];
 
 const GoogleReviews = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  
 
   return (
     <section className="py-16 px-6 p-6 md:px-16 lg:px-24 bg-gray-50">
       {/* Header Section */}
       <div className="text-center max-w-3xl mx-auto">
-        <h3 className="text-blue-500 text-lg font-semibold">{`>>> TESTIMONIALS <<<`}</h3>
+        <h3 className="text-primary text-lg font-semibold">{`>>> TESTIMONIALS <<<`}</h3>
         <h2 className="text-4xl font-bold text-gray-800 mt-2">
           What our customers are{" "}
           <span className="text-blue-500">talking about</span>
@@ -211,10 +207,8 @@ const GoogleReviews = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
-                ref={ref}
-                className={`bg-white overflow-hidden shadow-lg rounded-xl mx-4 p-16 md:p-8 flex flex-col items-center text-center border border-gray-100 transform transition-transform duration-300 hover:scale-105 mb-8 mt-12 ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+                
+                className={`bg-white overflow-hidden shadow-lg rounded-xl mx-4 p-16 md:p-8 flex flex-col items-center text-center border border-gray-100 transform transition-transform duration-500 hover:scale-105 mb-8 mt-12` }
               >
                 {/* Profile Image with Quote Icon */}
                 <div className="relative rounded-full w-32 h-32">
