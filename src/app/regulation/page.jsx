@@ -16,7 +16,7 @@ const documents = [
   },
 ];
 
-export default function RegulationPage() {
+const Regulation=()=> {
   return (
     <div className="bg-gray-50 min-h-screen py-16 px-4 sm:px-8">
       {/* Header Section */}
@@ -62,3 +62,5 @@ export default function RegulationPage() {
     </div>
   );
 }
+
+export default Regulation;
