@@ -59,6 +59,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import shape from "../../../public/heroshape.webp"
 
 const slides = [
@@ -144,6 +145,7 @@ export default function Hero  () {
                     {slide.description}
                   </motion.p>
 
+                  <Link href='/call-back-request'>
                   <motion.button
                     key={slide.buttonText} // Ensure button animation per slide
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -154,6 +156,7 @@ export default function Hero  () {
                   >
                     {slide.buttonText}
                   </motion.button>
+                  </Link>
                 </AnimatePresence>
               </div>
 
