@@ -4,13 +4,12 @@ const getBlogs = async () => {
     const json = await res.json();
 
     if (!json.data) return [];
-
     return json.data.map((item) => ({
       id: item.id,
       title: item.title,
       slug: item.slug,
       content: item.content,
-      author: item.author || "Unknown Author",
+      author: item.author.Name || "Unknown Author",
       publishedAt: item.publishedAt,
       category: item.category ? item.category.Name : "Uncategorized",
       image: item.Image ? item.Image.formats.medium.url : null, // Ensure image handling

@@ -1,7 +1,7 @@
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
-import Features from "@/components/Features";
+import Features from "@/components/homepage/Features";
 import InsuranceCard from "@/components/ui/InsuranceCard";
 import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 

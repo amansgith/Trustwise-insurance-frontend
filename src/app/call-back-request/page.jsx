@@ -1,7 +1,7 @@
 import QuoteForm from '@/components/CommonComponents/GetQuote'
-import ContactUs from '@/components/ContactCard'
+import ContactUs from '@/components/homepage/ContactCard'
 import Values from '@/components/CommonComponents/Values'
-import Features from '@/components/Features'
+import Features from '@/components/homepage/Features'
 import React from 'react'
 
 const CallBackRequest = () => {

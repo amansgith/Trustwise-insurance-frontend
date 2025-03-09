@@ -2,7 +2,7 @@ import Associations from "@/components/CommonComponents/Associations";
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
-import Features from "@/components/Features";
+import Features from "@/components/homepage/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
 
 const AssociationHRAI = () => {

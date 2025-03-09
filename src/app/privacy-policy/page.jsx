@@ -1,4 +1,4 @@
-import ContactUs from '@/components/ContactCard';
+import ContactUs from '@/components/homepage/ContactCard';
 import React from 'react'
 
 const Privacy = () => {
