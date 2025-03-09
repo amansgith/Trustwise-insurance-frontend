@@ -1,5 +1,4 @@
 "use client";
-import { FaYoutube, FaFacebook, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import getBlogs from "@/lib/strapi";
 import { useState, useEffect } from "react";
@@ -12,9 +11,15 @@ const BlogPage = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const data = await getBlogs();
-      setBlogs(data);
-      setLoading(false);
+      try {
+        const data = await getBlogs();
+        console.log("Fetched blogs:", data); // Log fetched data
+        setBlogs(data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error); // Log any errors
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchBlogs();
