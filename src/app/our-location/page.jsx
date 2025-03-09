@@ -20,7 +20,7 @@ export default function OurLocation() {
           <div className="container mx-auto px-4">
             <div className="mt-8 w-full h-64 md:h-96">
               <iframe
-                title="Aaxel Insurance Location"
+                title="Trustwise Insurance Location"
                 className="w-full h-full border-0 rounded-lg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.354424927402!2d-79.62579512351845!3d43.636101055939634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b39ad6a6367ff%3A0xe293bb4235b760b6!2sAaxel%20Insurance%20Brokers%20Ltd!5e0!3m2!1sen!2sca!4v1708500000000"
                 allowFullScreen

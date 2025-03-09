@@ -9,7 +9,7 @@ const TermPage = () => {
       </h2>
       <div className="flex flex-col gap-8 py-10 md:text-lg">
         <p>
-          Thank you for your request. Below is a detailed terms of use for Aaxel
+          Thank you for your request. Below is a detailed terms of use for Trustwise
           Insurance Brokers Ltd. Please note that this is a sample and may not
           reflect the exact terms of use for the company.
         </p>
@@ -17,13 +17,13 @@ const TermPage = () => {
           Acceptance of Terms
         </h2>
         <p>
-          By using the Aaxel Insurance Brokers Ltd. website (the “Site”), you
+          By using the Trustwise Insurance Brokers Ltd. website (the “Site”), you
           agree to be bound by these terms of use (the “Terms”). If you do not
           agree to these Terms, please do not use the Site.
         </p>
         <h2 className="text-primary font-semibold text-2xl">Use of Site</h2>
         <p>
-          By using the Aaxel Insurance Brokers Ltd. website (the “Site”), you
+          By using the Trustwise Insurance Brokers Ltd. website (the “Site”), you
           You may use the Site only for lawful purposes and in accordance with
           these Terms. You agree not to use the Site:
         </p>
@@ -34,7 +34,7 @@ const TermPage = () => {
           </li>
           <li>
             To engage in any conduct that restricts or inhibits anyone’s use or
-            enjoyment of the Site, or which, as determined by us, may harm Aaxel
+            enjoyment of the Site, or which, as determined by us, may harm Trustwise
             Insurance Brokers Ltd. or users of the Site or expose them to
             liability.
           </li>
@@ -50,7 +50,7 @@ const TermPage = () => {
         </h2>
         <p>
           The content on the Site, including but not limited to text, graphics,
-          logos, images, and software, is owned by Aaxel Insurance Brokers Ltd.
+          logos, images, and software, is owned by Trustwise Insurance Brokers Ltd.
           or its licensors and is protected by applicable copyright, trademark,
           and other intellectual property laws. You may not reproduce,
           distribute, modify, create derivative works of, publicly display,
@@ -73,7 +73,7 @@ const TermPage = () => {
         <p>
           The Site may contain links to third-party websites. These links are
           provided solely for your convenience and do not imply endorsement or
-          approval of these websites by Aaxel Insurance Brokers Ltd. We are not
+          approval of these websites by Trustwise Insurance Brokers Ltd. We are not
           responsible for the content of these websites or for any loss or
           damage that may arise from your use of them.
         </p>
@@ -84,7 +84,7 @@ const TermPage = () => {
           The Site and its contents are provided “as is” without warranty of any
           kind, either expressed or implied, including but not limited to, the
           implied warranties of merchantability, fitness for a particular
-          purpose, or non-infringement. Aaxel Insurance Brokers Ltd. does not
+          purpose, or non-infringement. Trustwise Insurance Brokers Ltd. does not
           warrant that the Site or its contents will be uninterrupted or
           error-free, that defects will be corrected, or that the Site or its
           servers are free of viruses or other harmful components.
@@ -93,7 +93,7 @@ const TermPage = () => {
           Changes to Term of Use
         </h2>
         <p>
-          Aaxel Insurance Brokers Ltd. reserves the right to modify these Terms
+          Trustwise Insurance Brokers Ltd. reserves the right to modify these Terms
           at any time without prior notice. Your continued use of the Site after
           such modifications constitutes your acceptance of the updated Terms.
         </p>

@@ -272,8 +272,7 @@ const DeskNavbar = () => {
       {/* Top Navbar */}
       <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
         <div className="flex space-x-6">
-          
-          <span className="flex items-center">✉️ support@trustwise.com</span>
+          <a href="mailto:info@trustwiseinsurance.com" className="flex items-center">✉️ info@trustwiseinsurance.com</a>
         </div>
         <div className="flex space-x-6">
           {[
@@ -304,7 +303,7 @@ const DeskNavbar = () => {
           <Link href="/">
             <Image
               src={Navlogo}
-              alt="Aaxel Insurance"
+              alt="Trustwise Insurance"
               priority
               className="h-auto max-w-[200px]"
             />
@@ -380,14 +379,20 @@ const DeskNavbar = () => {
             <div className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
               📞
             </div>
-            <div>
+            <div className="flex flex-col gap-2 pt-2">
               <a
-                href="tel:+18663582860"
+                href="tel:+17802555151"
                 className="cursor-pointer text-sm font-bold"
               >
-                +1 866-358-2860
-                <p className="text-xs text-gray-500">Call to Our Experts</p>
+                +1 (780) 255-5151
               </a>
+              <a
+                href="tel:+17802555252"
+                className="cursor-pointer text-sm font-bold"
+              >
+                +1 (780) 255-5252
+              </a>
+                <p className="text-xs text-gray-500">Call to Our Experts</p>
             </div>
           </div>
         </div>
@@ -436,7 +441,7 @@ const DeskNavbar = () => {
 //           <Link href="/">
 //             <Image
 //               src={Navlogo}
-//               alt="Aaxel Insurance"
+//               alt="Trustwise Insurance"
 //               priority
 //               className="w-full h-auto md:w-3/4"
 //             />

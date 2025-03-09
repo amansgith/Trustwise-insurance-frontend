@@ -16,13 +16,13 @@
 //           </div>
 //           <div className="flex flex-col gap-4">
 //             <p className="font-medium text-base md:text-lg">
-//               Founded in 2006, Aaxel Insurance is an independent insurance broker serving throughout Ontario and Alberta. Aaxel Insurance provides innovative Personal and Commercial Insurance solutions to its client’s Home, Auto, Life and Businesses through our trusted insurance partners.
+//               Founded in 2006, Trustwise Insurance is an independent insurance broker serving throughout Ontario and Alberta. Trustwise Insurance provides innovative Personal and Commercial Insurance solutions to its client’s Home, Auto, Life and Businesses through our trusted insurance partners.
 //             </p>
 //             <p className="font-medium text-base md:text-lg">
-//               Aaxel Insurance delivers best-in-class insurance solutions backed by excellent customer service. We have locations across Ontario and Alberta and proudly serve thousands of customers.
+//               Trustwise Insurance delivers best-in-class insurance solutions backed by excellent customer service. We have locations across Ontario and Alberta and proudly serve thousands of customers.
 //             </p>
 //             <p className="font-medium text-base md:text-lg">
-//               Aaxel Insurance provides innovative insurance solutions for all your insurance needs at very competitive rates.
+//               Trustwise Insurance provides innovative insurance solutions for all your insurance needs at very competitive rates.
 //             </p>
 //           </div>
 //           <div className="my-4">

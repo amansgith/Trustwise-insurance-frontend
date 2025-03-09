@@ -10,7 +10,7 @@ const Privacy = () => {
         </h2>
         <div className="flex flex-col gap-8 md:text-lg py-10">
         <p className="">
-          <strong>Aaxel Insurance Brokers Ltd.</strong> values your business and
+          <strong>Trustwise Insurance Brokers Ltd.</strong> values your business and
           we thank you for your confidence in choosing our firm as your source
           of advice and products. As our client, you trust us with your personal
           information. We respect that trust and want you to be aware of our
@@ -27,10 +27,10 @@ const Privacy = () => {
           their own products or services.
         </p>
         <p className="font-semibold ">
-          Aaxel Insurance Brokers Ltd. Privacy Statement
+          Trustwise Insurance Brokers Ltd. Privacy Statement
         </p>
         <p className="">
-          The subsidiaries and operating divisions of Aaxel Insurance Brokers
+          The subsidiaries and operating divisions of Trustwise Insurance Brokers
           Ltd. take steps intended to meet privacy principles and requirements
           with respect to personal information under applicable Canadian privacy
           legislation. The purpose of this statement is to inform our customers
@@ -44,17 +44,17 @@ const Privacy = () => {
           personal information.
         </p>
         <p className="font-semibold">
-          Aaxel Insurance Entities Providing this Privacy Statement
+          Trustwise Insurance Entities Providing this Privacy Statement
         </p>
         <p>
-          We are providing this Privacy Statement on behalf of Aaxel insurance’s
+          We are providing this Privacy Statement on behalf of Trustwise insurance’s
           entities and operating divisions, listed below:
         </p>
-        <p>Aaxel Insurance Brokers Ltd.</p>
-        <p>Aaxel Financial Services Ltd.</p>
+        <p>Trustwise Insurance Brokers Ltd.</p>
+        <p>Trustwise Financial Services Ltd.</p>
         <p className="font-semibold">Personal Information We Collect</p>
         <p>
-          Aaxel insurance and its brokers/agents and representatives collect
+          Trustwise insurance and its brokers/agents and representatives collect
           personal information in a number of circumstances in the course of
           conducting our business. Personal information we may collect includes:
         </p>
@@ -93,8 +93,8 @@ const Privacy = () => {
         </p>
         <p className="font-semibold">Disclosure of Your Personal Information</p>
         <p>
-          As necessary to carry out the purposes for which Aaxel insurance
-          collects and uses your personal information. Aaxel insurance may
+          As necessary to carry out the purposes for which Trustwise insurance
+          collects and uses your personal information. Trustwise insurance may
           disclose your personal information to third parties, such as other
           insurance brokers, insurers, consumer reporting agencies, claims
           adjusters, government, regulatory and self-regulatory agencies,
@@ -102,7 +102,7 @@ const Privacy = () => {
           professionals, and others involved in the claims handling process in
           accordance with legal and insurance regulatory reporting requirements
           or standard accepted insurance brokerage and insurance practices.
-          Aaxel insurance may also disclose your personal information with your
+          Trustwise insurance may also disclose your personal information with your
           consent or as permitted or required by law.
         </p>
         <p className="font-semibold">Disclosure to Affilates</p>
@@ -122,7 +122,7 @@ const Privacy = () => {
           control. These include safeguards to protect personal information
           against loss or theft, as well as unauthorized access, disclosure,
           copying, use, or modification. Authorized employees, agents and
-          mandataries of Aaxel Insurance who require access to your personal
+          mandataries of Trustwise Insurance who require access to your personal
           information in order to fulfill their job requirements will have
           access to your personal information.
         </p>

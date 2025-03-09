@@ -6,7 +6,7 @@ const TrustBanner = () => {
     {
       icon: <FaLink />,
       title: "Join thousands plus customers",
-      text: "who have trusted Aaxel!",
+      text: "who have trusted Trustwise!",
     },
     {
       icon: <FaPiggyBank />,
