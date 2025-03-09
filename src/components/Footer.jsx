@@ -36,7 +36,7 @@ const footerLinks = [
       { url: "/blogs", text: "Blog" },
       { url: "/call-back-request", text: "Get A Quote" },
       { url: "/claims", text: "Claim" },
-      { url: "/policy-insurances", text: "Policy Insurances" },
+      { url: "/policy-payments", text: "Policy Payments" },
       { url: "/regulation", text: "Regulation" },
       { url: "/how-we-conduct-business", text: "How we Conduct Business?" },
       { url: "/term-of-use", text: "Term of Use" },
@@ -74,7 +74,7 @@ const Footer = () => {
                   <li key={idx}>
                     <Link
                       href={link.url}
-                      className="text-gray-600 hover:text-primary transition"
+                      className="text-gray-600 hover:text-secondary transition"
                     >
                       {link.text}
                     </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-600 text-white font-medium rounded-b-md sm:rounded-r-md sm:rounded-b-none hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-primary text-white font-medium rounded-b-md sm:rounded-r-md sm:rounded-b-none hover:bg-blue-700 transition"
               >
                 Subscribe
               </button>

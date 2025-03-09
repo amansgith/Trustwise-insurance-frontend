@@ -55,7 +55,7 @@ const claimsData = [
 const Claims = () => {
   return (
     <>
-      <section className="bg-[url('https://www.hashtagmotion.co.uk/wp-content/uploads/2018/06/about_us_background.jpg')] bg-cover text-white py-32 text-center">
+      <section className="bg-[url('https://www.hashtagmotion.co.uk/wp-content/uploads/2018/06/about_us_background.jpg')] bg-cover text-white md:py-16 pt-32 pb-4 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-7xl font-extrabold mb-4 uppercase">
             Claims
@@ -74,13 +74,13 @@ const Claims = () => {
               regular business hours, if you need immediate assistance or would
               want to report a claim, our knowledgeable claims support team can
               help. They may also arrange for the emergency response services
-              you require. At Aaxel Insurance, we’re here to make sure your
+              you require. At Trustwise Insurance, we’re here to make sure your
               claims inquiries are addressed and your claim is handled fairly
               and promptly.
               <br />
               <br />
-              If this an afterhours claims emergency, Contact Aaxel Insurance’s
-              24-Hour claims assistance service by calling 1-866- 856- 6335. You
+              If this an afterhours claims emergency, Contact Trustwise Insurance’s
+              24-Hour claims assistance service by calling 1-780-255-5151. You
               will be connected with our claims partner DSB claims, our
               after-hours claims service provider.
               <br />
@@ -108,8 +108,8 @@ const Claims = () => {
       <section className="px-6 py-12 md:py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            After Hours Emergency Property Claims:
-            <span className="text-green-600 ml-2">1-866-856-6335</span>
+            After Hours Emergency Property Claims:<br />
+            <span className="text-secondary ml-2"> 1-780-255-5252</span>
           </h2>
         </div>
 

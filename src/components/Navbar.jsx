@@ -9,16 +9,14 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaTiktok,
-  FaBars,
   FaTimes,
-  FaSearch,
 } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 import Navlogo from "../../public/logocomp.png";
 import Image from "next/image";
 import Link from "next/link";
+import Search from "@/components/Search";
 
 const auto = [
   { name: "Auto Insurance", href: "/auto" },
@@ -250,6 +248,7 @@ const DeskNavbar = () => {
   const [dropdown, setDropdown] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
+  const pathname = usePathname();
 
   const handleMouseEnter = (index) => {
     if (dropdownTimeout) clearTimeout(dropdownTimeout);
@@ -267,12 +266,19 @@ const DeskNavbar = () => {
     setIsSearchOpen(!isSearchOpen); // Toggle search overlay
   };
 
+  const isActive = (path) => pathname === path;
+
   return (
     <header className="z-[9999] font-montserrat text-black navbar-animation">
       {/* Top Navbar */}
       <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
         <div className="flex space-x-6">
-          <a href="mailto:info@trustwiseinsurance.com" className="flex items-center">✉️ info@trustwiseinsurance.com</a>
+          <a
+            href="mailto:info@trustwiseinsurance.com"
+            className="flex items-center"
+          >
+            ✉️ info@trustwiseinsurance.com
+          </a>
         </div>
         <div className="flex space-x-6">
           {[
@@ -326,7 +332,13 @@ const DeskNavbar = () => {
                   <>
                     <Link
                       href="#"
-                      className="text-gray-700 font-medium hover:text-blue-600"
+                      className={`text-gray-700 font-medium hover:border-b-2 hover:pb-5 hover:border-blue-800 hover:text-blue-600 ${
+                        item.submenu.some((sub) =>
+                          pathname.startsWith(sub.href)
+                        )
+                          ? "border-b-2 pb-5 border-blue-800 text-blue-600"
+                          : ""
+                      }`}
                     >
                       {item.name}
                     </Link>
@@ -343,7 +355,7 @@ const DeskNavbar = () => {
                           <li key={idx}>
                             <Link
                               href={sub.href}
-                              className="block px-4 py-2 text-gray-700"
+                              className="block px-4 py-2 text-gray-700 hover:text-secondary"
                             >
                               {sub.name}
                             </Link>
@@ -356,7 +368,11 @@ const DeskNavbar = () => {
                   // If no submenu, it's a simple link
                   <Link
                     href={item.href}
-                    className="text-gray-700 font-medium hover:text-blue-600"
+                    className={`text-gray-700 font-medium hover:text-blue-600 ${
+                      isActive(item.href)
+                        ? "border-b-2 pb-5 border-blue-800 text-blue-600"
+                        : ""
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -366,10 +382,10 @@ const DeskNavbar = () => {
           </ul>
           <span className="opacity-40">|</span>
           <FiSearch className="cursor-pointer text-lg" onClick={toggleSearch} />
-          <Link href='/call-back-request'>
-          <button className="bg-secondary text-white px-6 py-4 rounded-r-md hover:bg-primary transition">
-            Get a Quote
-          </button>
+          <Link href="/call-back-request">
+            <button className="bg-secondary text-white px-6 py-4 rounded-r-md hover:bg-primary transition">
+              Get a Quote
+            </button>
           </Link>
         </nav>
 
@@ -392,7 +408,7 @@ const DeskNavbar = () => {
               >
                 +1 (780) 255-5252
               </a>
-                <p className="text-xs text-gray-500">Call to Our Experts</p>
+              <p className="text-xs text-gray-500">Call to Our Experts</p>
             </div>
           </div>
         </div>
@@ -401,22 +417,7 @@ const DeskNavbar = () => {
       {/* Search Overlay */}
       {isSearchOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
-            <button
-              className="absolute top-4 right-4 text-2xl"
-              onClick={toggleSearch}
-            >
-              <FaTimes className="ml-2" />
-            </button>
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full p-3 border rounded-lg mb-4"
-            />
-            <button className="w-full p-3 bg-cyan-700 text-white rounded-lg">
-              Search
-            </button>
-          </div>
+          <Search navItems={navItems} toggleSearch={toggleSearch} />
         </div>
       )}
     </header>
