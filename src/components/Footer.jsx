@@ -33,11 +33,11 @@ const footerLinks = [
   {
     title: "Resources",
     sublinks: [
-      { url: "/", text: "Blog" },
-      { url: "/", text: "Get A Quote" },
-      { url: "/", text: "Claim" },
-      { url: "/", text: "Policy Insurances" },
-      { url: "/", text: "Regulation" },
+      { url: "/blogs", text: "Blog" },
+      { url: "/call-back-request", text: "Get A Quote" },
+      { url: "/claims", text: "Claim" },
+      { url: "/policy-insurances", text: "Policy Insurances" },
+      { url: "/regulation", text: "Regulation" },
       { url: "/how-we-conduct-business", text: "How we Conduct Business?" },
       { url: "/term-of-use", text: "Term of Use" },
       { url: "/privacy-policy", text: "Privacy Policy" },
@@ -133,10 +133,10 @@ const Footer = () => {
         </div>
 
         {/* Row 3: Call Section */}
-        <div className="bg-green-700 text-white py-2 text-center font-bold text-lg md:text-2xl fixed z-20 bottom-0 left-0 right-0">
+        {/* <div className="bg-green-700 text-white py-2 text-center font-bold text-lg md:text-2xl fixed z-20 bottom-0 left-0 right-0">
           Call for a quote:{" "}
           <span className="text-white pl-3">1-866-358-2860</span>
-        </div>
+        </div> */}
 
         {/* Copyright */}
         <div className="py-2 mt-6">

@@ -5,6 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Select from "react-select";
 import * as yup from "yup";
 import validator from "validator";
+import Image from "next/image";
+import advertbanner from "../../../public/modalimage.png"; // Add your agent woman image here
 
 const timeOptions = [
   { label: "Morning (9 AM - 12 PM)", value: "Morning" },
@@ -89,12 +91,6 @@ const quoteOptions = {
   ],
 };
 
-// Convert quoteOptions to react-select format
-const quoteOptionsList = Object.keys(quoteOptions).map((key) => ({
-  label: key,
-  value: key,
-}));
-
 const schema = yup.object().shape({
   quoteFor: yup.string().required("Please select a quote type"),
   subQuote: yup.string().required("Please select an option"),
@@ -140,104 +136,124 @@ const QuoteForm = () => {
   const today = new Date().toISOString().split('T')[0];
 
   return (
-    <div className="max-w-4xl mx-auto p-6 my-4 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold text-center text-primary mb-6">Get Your Quote</h2>
+    <div className="max-w-7xl mx-auto p-6 mt-32 md:my-4 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center md:items-start md:gap-12 h-full">
+      {/* Left Side: Agent Woman Image */}
+      <div className="relative w-full md:w-1/2 top-0 h-screen hidden md:block">
+        <Image
+          src={advertbanner}
+          alt="Agent Woman"
+          layout="contain"
+          // objectFit="cover"
+          className="rounded-lg"
+        />
+      </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        {/* Quote Type Dropdown */}
-        <div>
-          <label className="font-semibold text-gray-700 text-lg">Quote For *</label>
-          <Select
-            options={quoteOptionsList}
-            isSearchable
-            onChange={(option) => {
-              setSelectedQuote(option.value);
-              setValue("quoteFor", option.value);
-            }}
-            className="w-full"
-          />
-          {errors.quoteFor && <p className="text-red-500 text-sm">{errors.quoteFor.message}</p>}
-        </div>
+      {/* Right Side: Form */}
+      <div className="w-full md:w-1/2">
+        <h2 className="text-3xl font-bold text-center text-primary mb-6">Get Your Quote</h2>
 
-        {/* Sub-Options Dropdown */}
-        {selectedQuote && (
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Quote Type Buttons */}
           <div>
-            <label className="font-semibold text-gray-700 text-lg">{selectedQuote} *</label>
-            <Select
-              options={quoteOptions[selectedQuote].map((sub) => ({ label: sub, value: sub }))}
-              isSearchable
-              onChange={(option) => setValue("subQuote", option.value)}
-              className="w-full"
-            />
-            {errors.subQuote && <p className="text-red-500 text-sm">{errors.subQuote.message}</p>}
+            <label className="font-semibold text-gray-700 text-lg">Quote For *</label>
+            <div className="flex flex-wrap gap-3 mt-2">
+              {Object.keys(quoteOptions).map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => {
+                    setSelectedQuote(key);
+                    setValue("quoteFor", key);
+                  }}
+                  className={`py-2 px-4 rounded-md font-semibold ${selectedQuote === key ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'}`}
+                >
+                  {key}
+                </button>
+              ))}
+            </div>
+            {errors.quoteFor && <p className="text-red-500 text-sm">{errors.quoteFor.message}</p>}
           </div>
-        )}
 
-        {/* Name Fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Sub-Options Dropdown */}
+          {selectedQuote && (
+            <div>
+              <label className="font-semibold text-gray-700 text-lg">{selectedQuote} *</label>
+              <Select
+                options={quoteOptions[selectedQuote].map((sub) => ({ label: sub, value: sub }))}
+                isSearchable
+                onChange={(option) => setValue("subQuote", option.value)}
+                className="w-full"
+              />
+              {errors.subQuote && <p className="text-red-500 text-sm">{errors.subQuote.message}</p>}
+            </div>
+          )}
+
+          {/* Name Fields */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="font-semibold text-gray-700">First Name *</label>
+              <input type="text" {...register("firstName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+              {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
+            </div>
+            <div>
+              <label className="font-semibold text-gray-700">Last Name *</label>
+              <input type="text" {...register("lastName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+              {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName.message}</p>}
+            </div>
+          </div>
+
+          {/* Email & Phone */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="font-semibold text-gray-700">Email *</label>
+              <input type="email" {...register("email")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            </div>
+            <div>
+              <label className="font-semibold text-gray-700">Phone *</label>
+              <input type="tel" {...register("phone")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+            </div>
+          </div>
+
+          {/* Business Name */}
           <div>
-            <label className="font-semibold text-gray-700">First Name *</label>
-            <input type="text" {...register("firstName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-            {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
+            <label className="font-semibold text-gray-700">Business Name *</label>
+            <input type="text" {...register("businessName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+            {errors.businessName && <p className="text-red-500 text-sm">{errors.businessName.message}</p>}
           </div>
+
+          {/* Group Name Dropdown */}
           <div>
-            <label className="font-semibold text-gray-700">Last Name *</label>
-            <input type="text" {...register("lastName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-            {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName.message}</p>}
+            <label className="font-semibold text-gray-700">Group Name</label>
+            <Select options={groupOptions} isSearchable onChange={(option) => setValue("groupName", option.value)} className="w-full" />
           </div>
-        </div>
 
-        {/* Email & Phone */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Date to Contact */}
           <div>
-            <label className="font-semibold text-gray-700">Email *</label>
-            <input type="email" {...register("email")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            <label className="font-semibold text-gray-700">Date to Contact *</label>
+            <input type="date" {...register("dateToContact")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" min={today}/>
+            {errors.dateToContact && <p className="text-red-500 text-sm">{errors.dateToContact.message}</p>}
           </div>
+
+          {/* Time to Contact Dropdown */}
           <div>
-            <label className="font-semibold text-gray-700">Phone *</label>
-            <input type="tel" {...register("phone")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+            <label className="font-semibold text-gray-700">Time to Contact *</label>
+            <Select options={timeOptions} isSearchable onChange={(option) => setValue("timeToContact", option.value)} className="w-full" />
+            {errors.timeToContact && <p className="text-red-500 text-sm">{errors.timeToContact.message}</p>}
           </div>
-        </div>
 
-        {/* Business Name */}
-        <div>
-          <label className="font-semibold text-gray-700">Business Name *</label>
-          <input type="text" {...register("businessName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-          {errors.businessName && <p className="text-red-500 text-sm">{errors.businessName.message}</p>}
-        </div>
+          <div>
+            <label className="font-semibold text-gray-700">Notes</label>
+            <textarea {...register("notes")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" rows="3"></textarea>
+          </div>
 
-        {/* Group Name Dropdown */}
-        <div>
-          <label className="font-semibold text-gray-700">Group Name</label>
-          <Select options={groupOptions} isSearchable onChange={(option) => setValue("groupName", option.value)} className="w-full" />
-        </div>
-
-        {/* Date to Contact */}
-        <div>
-          <label className="font-semibold text-gray-700">Date to Contact *</label>
-          <input type="date" {...register("dateToContact")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" min={today}/>
-          {errors.dateToContact && <p className="text-red-500 text-sm">{errors.dateToContact.message}</p>}
-        </div>
-
-        {/* Time to Contact Dropdown */}
-        <div>
-          <label className="font-semibold text-gray-700">Time to Contact *</label>
-          <Select options={timeOptions} isSearchable onChange={(option) => setValue("timeToContact", option.value)} className="w-full" />
-          {errors.timeToContact && <p className="text-red-500 text-sm">{errors.timeToContact.message}</p>}
-        </div>
-
-        <div>
-          <label className="font-semibold text-gray-700">Notes</label>
-          <textarea {...register("notes")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" rows="3"></textarea>
-        </div>
-
-        {/* Submit Button */}
-        <button type="submit" className="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition duration-300 text-lg font-semibold">
-          Submit
-        </button>
-      </form>
+          {/* Submit Button */}
+          <button type="submit" className="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition duration-300 text-lg font-semibold">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ export default async function Page({ params }) {
   }
 
   // Extract blog data
-  const { title, content, publishedAt, Image } = blog;
+  const { title, content, publishedAt, Image, category } = blog;
   const formattedDate = publishedAt
     ? new Date(publishedAt).toLocaleDateString("en-US", {
         year: "numeric",
@@ -41,22 +41,15 @@ export default async function Page({ params }) {
   // Convert Markdown content to HTML
   const convertedContent = marked(content || "");
 
-  // Static data for recent and popular blogs
-  const recentBlogs = [
-    { id: 1, title: "Recent Blog 1", slug: "recent-blog-1" },
-    { id: 2, title: "Recent Blog 2", slug: "recent-blog-2" },
-    { id: 3, title: "Recent Blog 3", slug: "recent-blog-3" },
-    { id: 4, title: "Recent Blog 4", slug: "recent-blog-4" },
-    { id: 5, title: "Recent Blog 5", slug: "recent-blog-5" },
-  ];
+  // Fetch all blogs from Strapi
+  const allBlogsRes = await fetch(`${API_URL}/api/blogs?populate=*`, { cache: "no-store" });
+  const allBlogsData = await allBlogsRes.json();
+  const allBlogs = allBlogsData?.data.slice(0,5) || [];
 
-  const popularBlogs = [
-    { id: 1, title: "Popular Blog 1", slug: "popular-blog-1" },
-    { id: 2, title: "Popular Blog 2", slug: "popular-blog-2" },
-    { id: 3, title: "Popular Blog 3", slug: "popular-blog-3" },
-    { id: 4, title: "Popular Blog 4", slug: "popular-blog-4" },
-    { id: 5, title: "Popular Blog 5", slug: "popular-blog-5" },
-  ];
+  // Fetch related posts from the same category
+  const relatedRes = await fetch(`${API_URL}/api/blogs?filters[category][id][$eq]=${category.id}&filters[slug][$ne]=${slug}&populate=*`, { cache: "no-store" });
+  const relatedData = await relatedRes.json();
+  const relatedPosts = relatedData?.data || [];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -100,7 +93,7 @@ export default async function Page({ params }) {
           <br />
           <div className=" mx-2 py-4">
             <p className="text-2xl font-semibold pb-2">Related Posts</p>
-            <RelatedPosts />
+            <RelatedPosts posts={relatedPosts} />
           </div>
         </article>
 
@@ -109,11 +102,11 @@ export default async function Page({ params }) {
           <div className="bg-white p-4 rounded-lg shadow-md mb-8">
             <h2 className="text-xl font-bold mb-4">Recent Blogs</h2>
             <ul>
-              {recentBlogs.map((blog) => (
+              {allBlogs.map((blog) => (
                 <li key={blog.id} className="mb-2">
                   <Link href={`/blogs/${blog.slug}`}>
-                    <h3 className="text-blue-600 hover:underline">
-                      {blog.title}
+                    <h3 className="font-serif hover:underline">
+                      {`>> ${blog.title}`}
                     </h3>
                   </Link>
                 </li>
@@ -123,11 +116,11 @@ export default async function Page({ params }) {
           <div className="bg-white p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-4">Popular Blogs</h2>
             <ul>
-              {popularBlogs.map((blog) => (
+              {allBlogs.map((blog) => (
                 <li key={blog.id} className="mb-2">
                   <Link href={`/blogs/${blog.slug}`}>
-                    <h3 className="text-blue-600 hover:underline">
-                      {blog.title}
+                    <h3 className=" font-mono hover:underline">
+                    {`>> ${blog.title}`}
                     </h3>
                   </Link>
                 </li>

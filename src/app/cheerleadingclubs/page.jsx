@@ -2,7 +2,7 @@ import Associations from "@/components/CommonComponents/Associations";
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
-import Features from "@/components/Features";
+import Features from "@/components/homepage/Features";
 import QuoteForm from "@/components/CommonComponents/GetQuote";
 
 const CheerleadingClubs = () => {
@@ -14,7 +14,7 @@ const CheerleadingClubs = () => {
           <>
             <b>Your coverage, your way...</b>
             <p>
-              Aaxel Insurance Brokers Ltd. and Cheerleading Clubs are pleased to offer the
+              Trustwise Insurance Brokers Ltd. and Cheerleading Clubs are pleased to offer the
               following insurance programs for its members and their employees:
             </p>
             <ol className="list-decimal list-inside">
@@ -32,7 +32,7 @@ const CheerleadingClubs = () => {
               of the following numbers:
             </p>
             <br />
-            <b>Aaxel Insurance Brokers Ltd.</b>
+            <b>Trustwise Insurance Brokers Ltd.</b>
             <p>Ontario: 866-358-2860</p>
             <p>Quebec: 888-542-4811</p>
             <p>Rest of Canada: 866-247-7700</p>
