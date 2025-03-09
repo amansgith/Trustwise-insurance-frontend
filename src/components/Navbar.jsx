@@ -367,9 +367,11 @@ const DeskNavbar = () => {
           </ul>
           <span className="opacity-40">|</span>
           <FiSearch className="cursor-pointer text-lg" onClick={toggleSearch} />
+          <Link href='/call-back-request'>
           <button className="bg-secondary text-white px-6 py-4 rounded-r-md hover:bg-primary transition">
             Get a Quote
           </button>
+          </Link>
         </nav>
 
         {/* Right Section: Search, Cart, Get a Quote, and Contact */}

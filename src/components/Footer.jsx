@@ -33,9 +33,9 @@ const footerLinks = [
   {
     title: "Resources",
     sublinks: [
-      { url: "/", text: "Blog" },
-      { url: "/", text: "Get A Quote" },
-      { url: "/", text: "Claim" },
+      { url: "/blogs", text: "Blog" },
+      { url: "/call-back-request", text: "Get A Quote" },
+      { url: "/claims", text: "Claim" },
       { url: "/", text: "Policy Insurances" },
       { url: "/", text: "Regulation" },
       { url: "/how-we-conduct-business", text: "How we Conduct Business?" },
