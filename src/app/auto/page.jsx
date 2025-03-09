@@ -27,7 +27,7 @@ const AutoInsurance = () => {
       <InsuranceIntro
         title="Auto Insurance"
         description="You can buy Auto Insurance through various channels. It is up to you to decide if you want your Automobile Insurance needs met through insurance call centres of multi-nationals, or the option of meeting your Auto Insurance needs through a local independent insurance broker."
-        imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg"
+        imageSrc="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         buttonText="Get a Free Quote"
         extraButtons={[
           { text: "CLASSIC CAR", href: "/auto/classic-car-insurance" },

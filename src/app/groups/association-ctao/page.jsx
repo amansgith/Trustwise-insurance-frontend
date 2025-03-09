@@ -41,8 +41,7 @@ const AssociationCTAO = () => {
         }
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/07/CTAO-Container-Trucking-Association-of-Ontario.jpg"
         buttonText="Get a Quote"
-        buttonLink="#"
-        sectionTitle="Why Choose Trustwise Insurance?"
+        buttonLink="/call-back-request"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
@@ -60,7 +59,6 @@ const AssociationCTAO = () => {
             <p>🔗 Protect your home, auto, and business today with Trustwise Insurance—your trusted partner for comprehensive coverage.</p>
           </>
         }
-        sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"
       />
 
       <TrustBanner />

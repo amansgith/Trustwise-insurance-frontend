@@ -17,7 +17,7 @@ const BoatInsurance = () => {
             Our boat insurance includes coverage for physical damage, liability, medical payments, and more. Trustwise Insurance is committed to providing you with the best service and support, so you can focus on enjoying your time on the water.
           </>
         }
-        imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/03/nikldn-t-6GW8T6Jsc-unsplash.jpg"
+        imageSrc="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         buttonText="Get a Free Quote"
       />
       <TrustBanner />

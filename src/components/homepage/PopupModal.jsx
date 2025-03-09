@@ -66,7 +66,7 @@ const PopupModal = () => {
             </div>
 
             {/* Contact Info */}
-            <p className="mt-3 font-bold text-lg">905 362 8080</p>
+            <p className="mt-3 font-bold text-lg">+1 (780) 255-5252</p>
           </div>
         </div>
       </div>

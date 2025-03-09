@@ -11,22 +11,22 @@ const services = [
   {
     title: "Car insurance",
     description: "Drive with confidence and peace of mind.",
-    image: "https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg",
+    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "🚗",
-    href: "/auto/classic-car-insurance",
+    href: "/auto",
   },
   {
     title: "Life insurance",
     description: "Secure your family's future and live carefree.",
     image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/03/name_-gravity-_AdUs32i0jc-unsplash.jpg",
+      "https://images.unsplash.com/photo-1505816014357-96b5ff457e9a?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "❤️",
     href: "/life-financial",
   },
   {
     title: "Home insurance",
     description: "Protect your home and everything in it.",
-    image: "https://www.aaxel.ca/wp-content/uploads/2023/04/Home-Insurance.jpg",
+    image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "🏡",
     href: "/Home",
   },
@@ -42,7 +42,7 @@ const services = [
     title: "Business insurance",
     description: "Keep your business safe and secure. Evolve your ideas into action.",
     image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/04/Business-Insuranc.jpg",
+      "https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "💼",
     href: "/business",
   },
@@ -50,7 +50,7 @@ const services = [
     title: "Group insurance",
     description: "Get the advantage of group power. Unlock discounts and facilities.",
     image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/04/Group-Insurance.jpg",
+      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "👥",
     href: "/groups",
   },
@@ -58,7 +58,7 @@ const services = [
     title: "Travel insurance",
     description: "Travel with peace of mind. Make your heart leap around the world.",
     image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/03/jeshoots-com-mSESwdMZr-A-unsplash.jpg",
+      "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "✈️",
     href: "/travel",
   },
@@ -66,7 +66,7 @@ const services = [
     title: "Disability insurance",
     description: "Financial support when you need it most. Fastest claims readily available.",
     image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/03/yomex-owo-gRTzhQsiVG0-unsplash.jpg",
+      "https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: "🦽",
     href: "/life-financial/disability-insurance",
   },

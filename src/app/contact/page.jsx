@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Clock, Phone } from "lucide-react";
 import QuoteForm from "@/components/CommonComponents/GetQuote"
 import Link from "next/link";
-import React from "react";
 
 const page = () => {
   return (
@@ -22,12 +19,12 @@ const page = () => {
           {
             icon: Mail,
             title: "Get in Touch",
-            description: "info@trustwise.com",
+            description: "info@trustwiseinsurance.com",
           },
           {
             icon: Phone,
             title: "Phone Numbers",
-            description: "+1 (555) 123-4567",
+            description: "+1 (780) 255-5151",
           },
           {
             icon: Clock,

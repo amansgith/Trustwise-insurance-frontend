@@ -20,7 +20,7 @@ const ClassicCarInsurance = () => {
             </p>
           </>
         }
-        imageSrc="https://www.aaxel.ca/wp-content/uploads/2023/04/car_Store.jpg"
+        imageSrc="https://images.unsplash.com/photo-1587750059638-e7e8c43b99fc?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         buttonText="Get a Free Quote"
       />
       <TrustBanner />

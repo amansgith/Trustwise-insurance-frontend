@@ -105,8 +105,8 @@ export default async function Page({ params }) {
               {allBlogs.map((blog) => (
                 <li key={blog.id} className="mb-2">
                   <Link href={`/blogs/${blog.slug}`}>
-                    <h3 className="font-serif hover:underline">
-                      {`>> ${blog.title}`}
+                    <h3 className="text-blue-600 hover:underline">
+                      {blog.title}
                     </h3>
                   </Link>
                 </li>
@@ -119,8 +119,8 @@ export default async function Page({ params }) {
               {allBlogs.map((blog) => (
                 <li key={blog.id} className="mb-2">
                   <Link href={`/blogs/${blog.slug}`}>
-                    <h3 className=" font-mono hover:underline">
-                    {`>> ${blog.title}`}
+                    <h3 className="text-blue-600 hover:underline">
+                      {blog.title}
                     </h3>
                   </Link>
                 </li>

@@ -12,12 +12,12 @@ export default function Associations({
   extraButtons,
   sectionTitle,
   sectionDescription,
-  sectionImage,
+
 }) {
   return (
-    <div className="bg-gray-50">
+    <>
       {/* 🔹 Hero Section */}
-      <section className="bg-gradient-to-r from-yellow-50 to-blue-100 py-16 px-6 md:px-12">
+      <section className="bg-gradient-to-r from-yellow-50 to-blue-100 py-36 md:py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left Side: Text Content */}
           <div className="md:w-1/2 text-center md:text-left">
@@ -46,7 +46,7 @@ export default function Associations({
       </section>
 
       {/* 🔹 Section Below (Benefits) */}
-      <section className="bg-gradient-to-r from-primary  to-secondary py-12 px-6 md:px-12">
+      <section className="bg-gradient-to-b md:bg-gradient-to-r from-primary  to-secondary py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left Side: Content */}
           <div className="md:w-1/2 bg-primary text-white p-6 rounded-lg shadow-lg">
@@ -57,11 +57,11 @@ export default function Associations({
           {/* Right Side: Section Image */}
           <div className="md:w-1/2 w-full">
             <div className="relative w-full h-[350px] md:h-[500px] shadow-lg rounded-lg overflow-hidden">
-              <Image src={sectionImage} alt={sectionTitle} layout="fill" objectFit="cover" className="rounded-lg" />
+              <Image src="https://images.unsplash.com/photo-1485217988980-11786ced9454?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Why Choose Trustwise Insurance?" layout="fill" objectFit="cover" className="rounded-lg" />
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -149,7 +149,7 @@ const About = () => {
           <div className="flex items-center space-x-2 text-gray-700">
             <span className="text-blue-500 text-2xl">📞</span>
             <div>
-              <p className="text-lg font-semibold">+1 (234) 567-890</p>
+              <p className="text-lg font-semibold">+1 (780) 255-5252</p>
               <p className="text-sm text-gray-500">Call Our Experts</p>
             </div>
           </div>

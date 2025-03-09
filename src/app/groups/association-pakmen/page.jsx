@@ -35,7 +35,6 @@ const AssociationPakmen = () => {
         imageSrc="https://www.aaxel.ca/wp-content/uploads/2024/01/pakmen-vollyball.jpg"
         buttonText="Get a Quote"
         buttonLink="/call-back-request"
-        sectionTitle="Why Choose Trustwise Insurance?"
         sectionDescription={
           <>
             <p className="text-lg font-semibold">
@@ -53,7 +52,6 @@ const AssociationPakmen = () => {
             <p>🔗 Get the right coverage today, protect your assets, and continue supporting your Pakmen community!</p>
           </>
         }
-        sectionImage="https://www.aaxel.ca/wp-content/uploads/2023/04/20210709304edc72-cb57-4c63-eb5b-9ad3a439fe84.jpg"
       />
 
       <TrustBanner />
