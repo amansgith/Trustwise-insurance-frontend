@@ -14,7 +14,8 @@ export default function ContactUs() {
             Trustwise Insurance Brokers Ltd.
           </h3>
           <p className="text-lg">
-            <strong>Address:</strong> #106 5305 Magasin Ave Beaumount, AB T4X 1V8, Canada
+            <strong>Address:</strong> #106 5305 Magasin Ave Beaumount, AB T4X
+            1V8, Canada
           </p>
           <p className="text-lg mt-2">
             <strong>Monday - Friday:</strong> 09:00 am - 05:00 pm
@@ -27,7 +28,10 @@ export default function ContactUs() {
           </div>
           <p className="mt-4 text-lg">
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@trustwiseinsurance.com" className="text-blue-500">
+            <a
+              href="mailto:info@trustwiseinsurance.com"
+              className="text-blue-500"
+            >
               Get in Touch
             </a>
           </p>
@@ -38,7 +42,7 @@ export default function ContactUs() {
           <iframe
             title="Trustwise Insurance Location"
             className="w-full h-full border-0 rounded-lg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.354424927402!2d-79.62579512351845!3d43.636101055939634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b39ad6a6367ff%3A0xe293bb4235b760b6!2sAaxel%20Insurance%20Brokers%20Ltd!5e0!3m2!1sen!2sca!4v1708500000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.9247583074823!2d-113.41893!3d53.3387699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0032cf6acd34b%3A0x3b5a34d098897d17!2s5305%20Magasin%20Ave%20%23106%2C%20Beaumont%2C%20AB%20T4X%201V8%2C%20Canada!5e0!3m2!1sen!2sca!4v1710100000000"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

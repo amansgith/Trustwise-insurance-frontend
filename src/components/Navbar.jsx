@@ -681,11 +681,12 @@ const MobileNavbar = () => {
 
         {/* Phone Contact */}
         <Link
-          href="tel:+18663582860"
+          href="tel:+17802555252"
           className="text-secondary font-bold text-lg mb-4"
         >
-          +1 866-358-2860
+          +1 (780) 255-5252
         </Link>
+        
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 text-white mb-4">
@@ -752,8 +753,21 @@ const MobileNavbar = () => {
           >
             Blog
           </Link>
+          <Link
+          href="tel:+17802555151"
+          className="text-secondary font-bold text-lg mb-4"
+        >
+          +1 (780) 255-5151
+        </Link>
+        <Link
+          href="tel:+17802555353"
+          className="text-secondary font-bold text-lg mb-4"
+        >
+          +1 (780) 255-5353
+        </Link>
         </div>
       </motion.nav>
+      
     </header>
   );
 };

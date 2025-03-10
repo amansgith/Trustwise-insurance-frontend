@@ -8,7 +8,7 @@ class ActionProvider {
 
   provideContactInfo = () => {
     const message = this.createChatBotMessage(
-      `You can reach our customer care team here:📧 **Email:** support@trustwise.com\n📞 **Phone:** +1 800-123-4567`
+      `You can reach our customer care team here:\n 📧 Email: info@trustwiseinsurance.com\n\n📞 Phone: +1 780-255-5151,\n +1 780-255-5252,\n +1 780-255-5353`
     );
 
     this.updateChatbotState(message);
