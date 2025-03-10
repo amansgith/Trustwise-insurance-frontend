@@ -64,7 +64,7 @@ const JoinOurTeam = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen mt-8">
+    <div className="flex flex-col min-h-screen my-16 md:my-8 ">
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative bg-cover bg-opacity-6 text-primary-foreground py-20 text-center" style={{ backgroundImage: "url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg')" }}>

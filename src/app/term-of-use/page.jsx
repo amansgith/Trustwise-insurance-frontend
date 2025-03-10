@@ -3,9 +3,9 @@ import React from 'react'
 
 const TermPage = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 md:px-0 pt-40">
+    <div className="w-full mx-auto py-28 px-6 md:px-16">
       <h2 className="text-3xl md:text-5xl text-primary font-bold px-2 border-l-4 border-secondary my-6">
-        Term of User
+        Term of Use
       </h2>
       <div className="flex flex-col gap-8 py-10 md:text-lg">
         <p>

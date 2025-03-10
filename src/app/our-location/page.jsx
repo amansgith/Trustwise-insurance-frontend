@@ -4,20 +4,21 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function OurLocation() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen mt-16 md:my-12">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-[url('https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/06/07134748/2018-06-11-business-location-ThinkstockPhotos-614503922.jpg')] bg-cover text-white py-32 md:py-40 text-center">
+        <section className="relative bg-[url('https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/06/07134748/2018-06-11-business-location-ThinkstockPhotos-614503922.jpg')] bg-cover text-white pt-20 pb-10 md:py-24 text-center">
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative container mx-auto px-4">
             <h1 className="text-4xl md:text-7xl font-bold mb-4">Our Locations</h1>
-            <p className="text-lg md:text-3xl mb-8 font-semibold text-gray-300">Find us around the world</p>
+            <p className="text-lg md:text-3xl mb-4 font-semibold text-gray-300">Find us around the world</p>
           </div>
         </section>
 
         {/* Map Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
+              <p className="text-xl font-bold uppercase text-center">📍 Find us on the Map 📍</p>
             <div className="mt-8 w-full h-64 md:h-96">
               <iframe
                 title="Trustwise Insurance Location"
@@ -38,23 +39,23 @@ export default function OurLocation() {
               {[
                 {
                   city: "New York",
-                  address: "123 Broadway, New York, NY 10001",
-                  phone: "+1 (212) 555-1234",
-                  email: "nyc@ourcompany.com",
+                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
+                  phone: "+1 (780) 255-5151",
+                  email: "info@trustwiseinsurance.com",
                   hours: "Mon-Fri: 9am-6pm",
                 },
                 {
-                  city: "San Francisco",
-                  address: "456 Market St, San Francisco, CA 94105",
-                  phone: "+1 (415) 555-5678",
-                  email: "sf@ourcompany.com",
+                  city: "Canada",
+                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
+                  phone: "+1 (780) 255-5252",
+                  email: "info@trustwiseinsurance.com",
                   hours: "Mon-Fri: 8am-5pm",
                 },
                 {
                   city: "London",
-                  address: "789 Oxford St, London W1D 1LL, UK",
-                  phone: "+44 20 7123 4567",
-                  email: "london@ourcompany.com",
+                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
+                  phone: "+1 (780) 255-5353",
+                  email: "info@trustwiseinsurance.com",
                   hours: "Mon-Fri: 9am-5:30pm",
                 },
               ].map((location, index) => (

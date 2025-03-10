@@ -49,7 +49,7 @@ const insuranceData = [
   {
     title: "Environmental Impairment",
     imageSrc: "https://www.aaxel.ca/wp-content/uploads/2023/03/matthew-smith-Rfflri94rs8-unsplash.jpg",
-    slug: "business/environment-liability-insurance",
+    slug: "business/environmental-liability-insurance",
   },
   {
     title: "Home Based Business",
@@ -59,7 +59,7 @@ const insuranceData = [
   {
     title: "Legal Expense Insurance",
     imageSrc: "https://www.aaxel.ca/wp-content/uploads/2023/03/alexander-grey-tn57JI3CewI-unsplash.jpg",
-    slug: "business/legal-expense-isnurance",
+    slug: "business/legal-expense-insurance",
   },
   {
     title: "Malpractice Insurance",
@@ -159,9 +159,9 @@ const BusinessInsurance = () => {
           </div>
 
           {/* Call-to-action */}
-          <div className="mt-12 bg-secondary text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-md">
+          <div className="mt-12 bg-secondary text-white py-4 px-8 mx-2 rounded-lg text-lg font-semibold shadow-md">
             <a href="tel:1-866-358-2860" className="text-white">
-              Call for a Quote: <span className="font-bold">1-866-358-2860</span>
+              Call for a Quote: <span className="font-bold">1-780-255-5151</span>
             </a>
           </div>
         </div>
