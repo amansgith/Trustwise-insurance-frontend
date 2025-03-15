@@ -54,7 +54,7 @@ const PopupModal = () => {
             {/* Popular Products */}
             <div className="flex flex-wrap justify-center mt-3 gap-2">
               {["Auto", "Home", "Business", "Life", "Travel"].map((item, index) => (
-                <Link href='/auto' key={index}>
+                <Link href='/Home' key={index}>
                 <span
                   key={index}
                   className="bg-primary text-white px-4 py-1 rounded-full text-sm"
