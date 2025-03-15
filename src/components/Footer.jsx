@@ -23,11 +23,12 @@ const footerLinks = [
   {
     title: "Menu",
     sublinks: [
-      { url: "/auto", text: "Auto Insurance" },
+      // { url: "/auto", text: "Auto Insurance" },
       { url: "/Home", text: "Home Insurance" },
-      { url: "/auto/bundle-insurance", text: "Bundle Insurance" },
+      // { url: "/auto/bundle-insurance", text: "Bundle Insurance" },
       { url: "/business", text: "Business Insurance" },
       { url: "/life-financial", text: "Life & Financial" },
+      { url: "/travel", text: "Travel Insurance" },
     ],
   },
   {

@@ -91,7 +91,7 @@ const slides = [
 export default function Hero  () {
   const swiperRef = useRef(null); 
   return (
-    <div className="relative w-full h-[90vh] mt-8 overflow-hidden z-0">
+    <div className="relative w-full h-[90vh] mt-2 overflow-hidden z-0">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"

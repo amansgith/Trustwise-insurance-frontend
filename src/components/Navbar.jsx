@@ -18,35 +18,36 @@ import Image from "next/image";
 import Link from "next/link";
 import Search from "@/components/Search";
 
-const auto = [
-  { name: "Auto Insurance", href: "/auto" },
-  {
-    name: "Bundle Insurance",
-    href: "/auto/bundle-insurance",
-  },
-  { name: "Boat Insurance", href: "/auto/boat-insurance" },
-  {
-    name: "Classic Car Insurance",
-    href: "/auto/classic-car-insurance",
-  },
-  {
-    name: "Private Client Insurance",
-    href: "/auto/private-client-insurance",
-  },
-  {
-    name: "Motorcycle Insurance",
-    href: "/auto/motorcycle-insurance",
-  },
-  { name: "RV Insurance", href: "/auto/rv-insurance" },
-  {
-    name: "Snowmobile Insurance",
-    href: "/auto/snowmobile-insurance",
-  },
-  {
-    name: "Commercial Automobile Insurance",
-    href: "/auto/commercial-automobile-insurance",
-  },
-];
+// const auto = [
+//   { name: "Auto Insurance", href: "/auto" },
+//   {
+//     name: "Bundle Insurance",
+//     href: "/auto/bundle-insurance",
+//   },
+//   { name: "Boat Insurance", href: "/auto/boat-insurance" },
+//   {
+//     name: "Classic Car Insurance",
+//     href: "/auto/classic-car-insurance",
+//   },
+//   {
+//     name: "Private Client Insurance",
+//     href: "/auto/private-client-insurance",
+//   },
+//   {
+//     name: "Motorcycle Insurance",
+//     href: "/auto/motorcycle-insurance",
+//   },
+//   { name: "RV Insurance", href: "/auto/rv-insurance" },
+//   {
+//     name: "Snowmobile Insurance",
+//     href: "/auto/snowmobile-insurance",
+//   },
+//   {
+//     name: "Commercial Automobile Insurance",
+//     href: "/auto/commercial-automobile-insurance",
+//   },
+// ];
+
 const home = [
   { name: "Home Insurance", href: "/Home" },
   { name: "Condo Insurance", href: "/Home/condo-insurance" },
@@ -64,6 +65,7 @@ const home = [
   },
   { name: "Pet Insurance", href: "/Home/pet-insurance" },
 ];
+
 const business = [
   { name: "Business Insurance", href: "/business" },
   {
@@ -143,55 +145,56 @@ const business = [
     href: "/business/speciality-insurance",
   },
 ];
-const groups = [
-  { name: "Group Insurance", href: "/groups" },
-  {
-    name: "Association – CHPTA",
-    href: "/groups/association-chpta",
-  },
-  {
-    name: "Association – COPA",
-    href: "/groups/association-copa",
-  },
-  {
-    name: "Association – emergiTEL",
-    href: "/groups/association-emergitel",
-  },
-  {
-    name: "Association – SBPA",
-    href: "/groups/association-sbpa",
-  },
-  {
-    name: "Association – PAU Alumni",
-    href: "/groups/association-pau",
-  },
-  {
-    name: "Association – Pakmen Volleyball Club",
-    href: "/groups/association-pakmen",
-  },
-  {
-    name: "Association – IIM",
-    href: "/groups/association-iim",
-  },
-  {
-    name: "Association – CTAO",
-    href: "/groups/association-ctao",
-  },
-  {
-    name: "Association – CASAL",
-    href: "/groups/association-casal",
-  },
-  {
-    name: "Association – PAO",
-    href: "/groups/association-pao",
-  },
-  {
-    name: "Charger Logistics Inc.",
-    href: "/groups/charger-logistics",
-  },
-  { name: "HRAI", href: "/groups/hrai" },
-  { name: "Mobile-Live", href: "/groups/mobilelive" },
-];
+// const groups = [
+//   { name: "Group Insurance", href: "/groups" },
+//   {
+//     name: "Association – CHPTA",
+//     href: "/groups/association-chpta",
+//   },
+//   {
+//     name: "Association – COPA",
+//     href: "/groups/association-copa",
+//   },
+//   {
+//     name: "Association – emergiTEL",
+//     href: "/groups/association-emergitel",
+//   },
+//   {
+//     name: "Association – SBPA",
+//     href: "/groups/association-sbpa",
+//   },
+//   {
+//     name: "Association – PAU Alumni",
+//     href: "/groups/association-pau",
+//   },
+//   {
+//     name: "Association – Pakmen Volleyball Club",
+//     href: "/groups/association-pakmen",
+//   },
+//   {
+//     name: "Association – IIM",
+//     href: "/groups/association-iim",
+//   },
+//   {
+//     name: "Association – CTAO",
+//     href: "/groups/association-ctao",
+//   },
+//   {
+//     name: "Association – CASAL",
+//     href: "/groups/association-casal",
+//   },
+//   {
+//     name: "Association – PAO",
+//     href: "/groups/association-pao",
+//   },
+//   {
+//     name: "Charger Logistics Inc.",
+//     href: "/groups/charger-logistics",
+//   },
+//   { name: "HRAI", href: "/groups/hrai" },
+//   { name: "Mobile-Live", href: "/groups/mobilelive" },
+// ];
+
 const life = [
   { name: "Life Insurance", href: "/life-financial" },
   {
@@ -221,10 +224,10 @@ const life = [
 ];
 
 const navItems = [
-  { name: "Auto", submenu: auto },
+  // { name: "Auto", submenu: auto },
   { name: "Home", submenu: home },
   { name: "Business", submenu: business },
-  { name: "Groups", submenu: groups },
+  // { name: "Groups", submenu: groups },
   { name: "Life", submenu: life },
   { name: "Travel", href: "/travel" },
   { name: "Claims", href: "/claims" },
@@ -317,7 +320,7 @@ const DeskNavbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="bg-zinc-100 border pl-4 rounded-lg border-gray-200 flex gap-6 justify-between items-center">
+        <nav className="bg-zinc-100 border pl-4 rounded-lg border-gray-200 flex gap-8 justify-between items-center">
           {/* Navigation */}
           <ul className="flex space-x-6 z-40">
             {navItems.map((item, index) => (
@@ -424,199 +427,6 @@ const DeskNavbar = () => {
   );
 };
 
-// const DeskNavbar = () => {
-//   const [dropdownOpen, setDropdownOpen] = useState({});
-//   const pathname = usePathname();
-
-//   const toggleDropdown = (title) => {
-//     setDropdownOpen((prev) => ({ ...prev, [title]: !prev[title] }));
-//   };
-
-//   const isActive = (path) => pathname === path;
-
-//   return (
-//     <header className="z-20 font-montserrat shadow-md border-red-50 text-black bg-white rounded-full sticky top-0">
-//       <div className="mx-auto flex items-center pb-3 md:px-8 mb-2 transition-transform duration-300">
-//         {/* Center Section - Logo */}
-//         <div className="flex-1 flex justify-center md:justify-start min-w-60 pl-8 relative overflow-hidden">
-//           <Link href="/">
-//             <Image
-//               src={Navlogo}
-//               alt="Trustwise Insurance"
-//               priority
-//               className="w-full h-auto md:w-3/4"
-//             />
-//           </Link>
-//         </div>
-
-//         {/* Right Section */}
-//         <div className="w-3/4 mr-10">
-//           {/* Top Bar */}
-//           <div className="flex justify-between items-center px-6 py-6 text-sm">
-//             <div className="flex justify-end w-full space-x-6 text-xs px-4">
-//               {[
-//                 { name: "Join Our Team", path: "/careers" },
-//                 { name: "Our Locations", path: "/our-location" },
-//                 { name: "About Us", path: "/about" },
-//                 { name: "Contact Us", path: "/contact" },
-//               ].map((link) => (
-//                 <Link
-//                   key={link.path}
-//                   href={link.path}
-//                   className="relative group"
-//                 >
-//                   <span
-//                     className={`transition duration-300 ${
-//                       isActive(link.path)
-//                         ? "text-primary"
-//                         : "group-hover:text-primary"
-//                     }`}
-//                   >
-//                     {link.name}
-//                   </span>
-//                   <span
-//                     className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
-//                       isActive(link.path)
-//                         ? "scale-x-100"
-//                         : "scale-x-0 group-hover:scale-x-100"
-//                     }`}
-//                   ></span>
-//                 </Link>
-//               ))}
-//             </div>
-//             <div className="flex space-x-4 text-gray-700">
-//               <FaFacebookF className="cursor-pointer hover:text-primary transition duration-300" />
-//               <FaInstagram className="cursor-pointer hover:text-primary transition duration-300" />
-//               <FaLinkedinIn className="cursor-pointer hover:text-primary transition duration-300" />
-//               <FaEnvelope className="cursor-pointer hover:text-primary transition duration-300" />
-//               <FaWhatsapp className="cursor-pointer hover:text-primary transition duration-300" />
-//               <FaTiktok className="cursor-pointer hover:text-primary transition duration-300" />
-//             </div>
-//           </div>
-//           <hr className="w-full" />
-
-//           {/* Bottom Bar - Main Navigation */}
-//           <div className="flex justify-between items-center px-4 pt-5">
-//             <div className="flex space-x-6 font-semibold text-sm">
-//               {[
-//                 {
-//                   title: "AUTO",
-//                   links: auto,
-//                 },
-//                 {
-//                   title: "HOME",
-//                   links: home,
-//                 },
-//                 {
-//                   title: "GROUPS",
-//                   links: groups,
-//                 },
-//                 {
-//                   title: "BUSINESS",
-//                   links: business,
-//                 },
-//                 {
-//                   title: "LIFE & FINANCIAL",
-//                   links: life,
-//                 },
-//               ].map((item) => (
-//                 <Dropdown
-//                   key={item.title}
-//                   title={item.title}
-//                   links={item.links}
-//                   pathname={pathname}
-//                 />
-//               ))}
-
-//               {[
-//                 { name: "TRAVEL", path: "/travel" },
-//                 { name: "CLAIMS", path: "/claims" },
-//                 { name: "BLOG", path: "/blogs" },
-//               ].map((link) => (
-//                 <Link
-//                   key={link.path}
-//                   href={link.path}
-//                   className="relative group"
-//                 >
-//                   <span
-//                     className={`transition duration-300 ${
-//                       isActive(link.path)
-//                         ? "text-primary"
-//                         : "group-hover:text-primary"
-//                     }`}
-//                   >
-//                     {link.name}
-//                   </span>
-//                   <span
-//                     className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
-//                       isActive(link.path)
-//                         ? "scale-x-100"
-//                         : "scale-x-0 group-hover:scale-x-100"
-//                     }`}
-//                   ></span>
-//                 </Link>
-//               ))}
-//             </div>
-
-//             {/* Right - Contact Button */}
-//             <div className="flex items-center space-x-6">
-//               <a
-//                 href="tel:+18663582860"
-//                 className="cursor-pointer bg-secondary hover:bg-primary text-black hover:text-white px-9 py-4 rounded-md transition duration-300"
-//               >
-//                 +1 866-358-2860
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// };
-
-// const Dropdown = ({ title, links, pathname }) => {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <div
-//       className="relative group"
-//       onMouseEnter={() => setOpen(true)}
-//       onMouseLeave={() => setOpen(false)}
-//     >
-//       <button className="flex items-center group-hover:text-primary transition duration-300">
-//         <span className="relative pb-4">
-//           {title}
-//           <span
-//             className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary transition-all duration-300 ${
-//               open || links.some((link) => pathname.startsWith(link.href))
-//                 ? "scale-x-100"
-//                 : "scale-x-0"
-//             }`}
-//           ></span>
-//         </span>
-//         <RiArrowDropDownLine className="text-lg mb-4" />
-//       </button>
-
-//       {open && (
-//         <div className="absolute top-9 -left-20 rounded-lg bg-white shadow-md py-2 w-48 transition-all duration-300 z-10 max-h-80 overflow-y-auto custom-scrollbar">
-//           {links.map((link) => (
-//             <Link
-//               key={link.href}
-//               href={link.href}
-//               className={`relative group block px-4 py-2 text-[10px] font-medium transition duration-300 ${
-//                 pathname.startsWith(link.href)
-//                   ? "text-primary"
-//                   : "hover:text-primary"
-//               }`}
-//             >
-//               {link.name}
-//             </Link>
-//           ))}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
 
 const MobileNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -627,9 +437,9 @@ const MobileNavbar = () => {
   };
 
   const menuItems = [
-    { title: "AUTO", links: auto },
+    // { title: "AUTO", links: auto },
     { title: "HOME", links: home },
-    { title: "GROUPS", links: groups },
+    // { title: "GROUPS", links: groups },
     { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
   ];

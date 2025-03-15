@@ -101,7 +101,7 @@ const JoinOurTeam = () => {
         </section>
 
         {/* Job Openings Section */}
-        <section id="openings" className="py-16 bg-muted">
+        {/* <section id="openings" className="py-16 bg-muted">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl text-primary font-bold text-center mb-12">Current Openings</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -120,7 +120,7 @@ const JoinOurTeam = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Application Form Section */}
         <section className="py-16 bg-background">

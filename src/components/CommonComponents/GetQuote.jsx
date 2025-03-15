@@ -14,35 +14,35 @@ const timeOptions = [
   { label: "Evening (4 PM - 8 PM)", value: "Evening" },
 ];
 
-const groupOptions = [
-  { label: "Association - CHPTA", value: "Association - CHPTA" },
-  { label: "Association - COPA", value: "Asosciation - COPA" },
-  { label: "Association - emergiTEL", value: "Association -" },
-  { label: "Association - SBPA", value: "Association - SBPA" },
-  { label: "Association - PAU Alumni", value: "Association - PAU Alumni-" },
-  { label: "Association - Pakmen Volleyball Club", value: "Association - Pakmen Volleyball Club" },
-  { label: "Association - IIM", value: "Association - IIM" },
-  { label: "Association - CTAO", value: "Association - CTAO" },
-  { label: "Association - CASAL", value: "Association - CASAL" },
-  { label: "Association - PAO", value: "Association - PAO" },
-  { label: "Charger Logistic Inc.", value: "Charging Logistic Inc." },
-  { label: "Cheerleading Clubs", value: "Cheerleading Clubs" },
-  { label: "HRAI", value: "HRAI" },
-  { label: "MobileLive", value: "MobileLive" },
-];
+// const groupOptions = [
+//   { label: "Association - CHPTA", value: "Association - CHPTA" },
+//   { label: "Association - COPA", value: "Asosciation - COPA" },
+//   { label: "Association - emergiTEL", value: "Association -" },
+//   { label: "Association - SBPA", value: "Association - SBPA" },
+//   { label: "Association - PAU Alumni", value: "Association - PAU Alumni-" },
+//   { label: "Association - Pakmen Volleyball Club", value: "Association - Pakmen Volleyball Club" },
+//   { label: "Association - IIM", value: "Association - IIM" },
+//   { label: "Association - CTAO", value: "Association - CTAO" },
+//   { label: "Association - CASAL", value: "Association - CASAL" },
+//   { label: "Association - PAO", value: "Association - PAO" },
+//   { label: "Charger Logistic Inc.", value: "Charging Logistic Inc." },
+//   { label: "Cheerleading Clubs", value: "Cheerleading Clubs" },
+//   { label: "HRAI", value: "HRAI" },
+//   { label: "MobileLive", value: "MobileLive" },
+// ];
 
 const quoteOptions = {
-  "Auto Insurance": [
-    "Automobile Insurance",
-    "Commercial Automobile Insurance",
-    "Motorcycle Insurance",
-    "Bundle Insurance (Home+Auto)",
-    "Classic Car Insurance",
-    "Boat Insurance",
-    "RV Insurance",
-    "Private Client Insurance",
-    "Snowmobile Insurance",
-  ],
+  // "Auto Insurance": [
+  //   "Automobile Insurance",
+  //   "Commercial Automobile Insurance",
+  //   "Motorcycle Insurance",
+  //   "Bundle Insurance (Home+Auto)",
+  //   "Classic Car Insurance",
+  //   "Boat Insurance",
+  //   "RV Insurance",
+  //   "Private Client Insurance",
+  //   "Snowmobile Insurance",
+  // ],
   "Home Insurance": [
     "Home Insurance",
     "Rental Property Insurance",
@@ -51,11 +51,11 @@ const quoteOptions = {
     "Cottage Insurance",
     "Bundle Insurance (Home+Auto)",
   ],
-  "Bundle Insurance (Home+Auto)": [
-    "Auto + Home Insurance",
-    "Auto + Condo Insurance",
-    "Auto + Tenant Insurance",
-  ],
+  // "Bundle Insurance (Home+Auto)": [
+  //   "Auto + Home Insurance",
+  //   "Auto + Condo Insurance",
+  //   "Auto + Tenant Insurance",
+  // ],
   "Business Insurance": [
     "Account Receivable Insurance",
     "Commercial Automobile Insurance",
@@ -136,7 +136,7 @@ const QuoteForm = () => {
   const today = new Date().toISOString().split('T')[0];
 
   return (
-    <div className="max-w-7xl mx-auto p-6 mt-32 md:my-4 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center md:items-start md:gap-12 h-full">
+    <div className="max-w-7xl mx-auto p-6 mt-32 md:my-4 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center md:items-center md:gap-12 h-full">
       {/* Left Side: Agent Woman Image */}
       <div className="relative w-full md:w-1/2 top-0 h-screen hidden md:block">
         <Image
@@ -217,17 +217,17 @@ const QuoteForm = () => {
           </div>
 
           {/* Business Name */}
-          <div>
+          {/* <div>
             <label className="font-semibold text-gray-700">Business Name *</label>
             <input type="text" {...register("businessName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
             {errors.businessName && <p className="text-red-500 text-sm">{errors.businessName.message}</p>}
-          </div>
+          </div> */}
 
           {/* Group Name Dropdown */}
-          <div>
+          {/* <div>
             <label className="font-semibold text-gray-700">Group Name</label>
             <Select options={groupOptions} isSearchable onChange={(option) => setValue("groupName", option.value)} className="w-full" />
-          </div>
+          </div> */}
 
           {/* Date to Contact */}
           <div>

@@ -8,36 +8,13 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
 const services = [
-  {
-    title: "Car insurance",
-    description: "Drive with confidence and peace of mind.",
-    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    icon: "🚗",
-    href: "/auto",
-  },
-  {
-    title: "Life insurance",
-    description: "Secure your family's future and live carefree.",
-    image:
-      "https://images.unsplash.com/photo-1505816014357-96b5ff457e9a?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    icon: "❤️",
-    href: "/life-financial",
-  },
-  {
-    title: "Home insurance",
-    description: "Protect your home and everything in it.",
-    image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    icon: "🏡",
-    href: "/Home",
-  },
-  {
-    title: "Bundle insurance",
-    description: "Combine and save on your insurance plans with additional discounts.",
-    image:
-      "https://www.aaxel.ca/wp-content/uploads/2023/03/Header-Compressed-Webp.webp",
-    icon: "📦",
-    href: "/auto/bundle-insurance",
-  },
+  // {
+  //   title: "Car insurance",
+  //   description: "Drive with confidence and peace of mind.",
+  //   image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   icon: "🚗",
+  //   href: "/auto",
+  // },
   {
     title: "Business insurance",
     description: "Keep your business safe and secure. Evolve your ideas into action.",
@@ -46,6 +23,29 @@ const services = [
     icon: "💼",
     href: "/business",
   },
+  {
+    title: "Life insurance",
+    description: "Secure your family's future and live carefree with the best plans.",
+    image:
+      "https://images.unsplash.com/photo-1505816014357-96b5ff457e9a?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: "❤️",
+    href: "/life-financial",
+  },
+  {
+    title: "Home insurance",
+    description: "Protect your home and everything in it from today to coming generations.",
+    image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    icon: "🏡",
+    href: "/Home",
+  },
+  // {
+  //   title: "Bundle insurance",
+  //   description: "Combine and save on your insurance plans with additional discounts.",
+  //   image:
+  //     "https://www.aaxel.ca/wp-content/uploads/2023/03/Header-Compressed-Webp.webp",
+  //   icon: "📦",
+  //   href: "/auto/bundle-insurance",
+  // },
   {
     title: "Group insurance",
     description: "Get the advantage of group power. Unlock discounts and facilities.",
@@ -137,7 +137,7 @@ const PopularServices = () => {
       </div>
 
       {/* Responsive Grid Layout */}
-      <div className="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-12 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <Link key={index} href={service.href}>
             <motion.div
