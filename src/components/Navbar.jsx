@@ -456,6 +456,8 @@ const MobileNavbar = () => {
     // { title: "GROUPS", links: groups },
     { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
+    {title:"Investments", links: investments},
+    {title:"Travel", links: travel},
   ];
 
   return (
@@ -556,13 +558,7 @@ const MobileNavbar = () => {
           ))}
 
           {/* Additional Links */}
-          <Link
-            href="/travel"
-            className="block hover:text-cyan-700 transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Travel
-          </Link>
+          
           <Link
             href="/claims"
             className="block hover:text-cyan-700 transition"
