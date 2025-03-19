@@ -4,25 +4,26 @@ import FAQSection from "@/components/CommonComponents/FAQ";
 import Features from "@/components/homepage/Features";
 import Image from "next/image";
 import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
+import Link from "next/link";
 
 const quotes = [
   {
     title: "SINGLE OR MULTI TRIP PLAN",
     imageSrc:
       "https://www.aaxel.ca/wp-content/uploads/2023/04/Auto-Insurance.jpg",
-    link: "#",
+    link: "/travel/travel-insurance",
   },
   {
-    title: "SUPER VISA / VISITORS TO CANADA",
+    title: "SUPER VISA",
     imageSrc:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/dylan-gillis-KdeqA3aTnBY-unsplash.jpg",
-    link: "#",
+    link: "/travel/super-visa",
   },
   {
-    title: "HEALTH INSURANCE",
+    title: "Visitor Visa to Canada",
     imageSrc:
       "https://www.aaxel.ca/wp-content/uploads/2023/03/20200114b62bf4b2-54e2-9767-1438-86275178d5ec.jpg",
-    link: "#",
+    link: "/travel/visitor-visa",
   },
 ];
 
@@ -49,12 +50,12 @@ const TravelInsurance = () => {
         <div className="container mx-auto text-center">
           {/* Title */}
           <h2 className="text-3xl font-bold text-gray-900">Get A Quote</h2>
-          <div className="w-16 h-1 bg-green-500 mx-auto mt-2"></div>
+          <div className="w-16 h-1 bg-primary mx-auto mt-2"></div>
 
           {/* Cards */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
             {quotes.map((quote, index) => (
-              <a
+              <Link
                 key={index}
                 href={quote.link}
                 className="block bg-white shadow-md rounded-lg p-5 transition-all hover:shadow-xl hover:-translate-y-2"
@@ -70,7 +71,7 @@ const TravelInsurance = () => {
                     objectFit="cover"
                   />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
