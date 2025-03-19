@@ -223,13 +223,27 @@ const life = [
   },
 ];
 
+const investments=[
+  {name: "Segregated Funds", href: "/investments/segregated-funds"},
+  {name:"TFSA", href: "/investments/tfsa"},
+  {name:"RESP", href: "/investments/resp"},
+  {name:"FHSA", href: "/investments/fhsa"},
+];
+
+const travel=[
+  {name: "Travel Insurance", href: "/travel/travel-insurance"},
+  {name: "Super Visa", href: "/travel/super-visa"},
+  {name:"Visitor Visa", href: "/travel/visitor-visa"},
+];
+
 const navItems = [
   // { name: "Auto", submenu: auto },
   { name: "Home", submenu: home },
   { name: "Business", submenu: business },
   // { name: "Groups", submenu: groups },
   { name: "Life", submenu: life },
-  { name: "Travel", href: "/travel" },
+  { name: "Investments", submenu: investments },
+  { name: "Travel", submenu: travel },
   { name: "Claims", href: "/claims" },
   { name: "Blog", href: "/blogs" },
 ];
