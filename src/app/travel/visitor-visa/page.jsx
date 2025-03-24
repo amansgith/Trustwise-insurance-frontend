@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import InsuranceIntro from "@/components/CommonComponents/InsuranceIntro";
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";

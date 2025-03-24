@@ -1,6 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+"use client"
 import RelatedPosts from "./components/RelatedPosts";
-import CommentSection from "./components/CommentSection";
 import Link from "next/link";
 import { marked } from "marked";
 

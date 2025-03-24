@@ -1,3 +1,4 @@
+"use client"
 import { FaCreditCard, FaMoneyCheck, FaExchangeAlt } from 'react-icons/fa';
 import ContactUs from "@/components/CommonComponents/ContactUs";
 

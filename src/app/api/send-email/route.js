@@ -22,19 +22,20 @@ export async function POST(req) {
     // Define email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "example@email.com", // Change this to your recipient's email
+      to: process.env.EMAIL_USER, // Change this to your recipient's email
       subject: `New Quote Request - ${quoteFor}`,
-      text: `
-        Quote For: ${quoteFor}
-        Sub Quote: ${subQuote}
-        Name: ${firstName} ${lastName}
-        Email: ${email}
-        Phone: ${phone}
-        Business Name: ${businessName}
-        Date to Contact: ${dateToContact}
-        Time to Contact: ${timeToContact}
-        Group Name: ${groupName || "N/A"}
-        Notes: ${notes || "N/A"}
+      html: `
+        <h2>New Quote Request</h2>
+        <p><strong>Quote For:</strong> ${quoteFor}</p>
+        <p><strong>Sub Quote:</strong> ${subQuote}</p>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Business Name:</strong> ${businessName}</p>
+        <p><strong>Date to Contact:</strong> ${dateToContact}</p>
+        <p><strong>Time to Contact:</strong> ${timeToContact}</p>
+        <p><strong>Group Name:</strong> ${groupName || "N/A"}</p>
+        <p><strong>Notes:</strong> ${notes || "N/A"}</p>
       `,
     };
 

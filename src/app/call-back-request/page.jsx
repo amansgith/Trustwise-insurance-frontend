@@ -1,3 +1,4 @@
+"use client"
 import QuoteForm from '@/components/CommonComponents/GetQuote'
 import ContactUs from '@/components/homepage/ContactCard'
 import Values from '@/components/CommonComponents/Values'

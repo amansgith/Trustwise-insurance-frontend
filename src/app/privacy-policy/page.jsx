@@ -1,3 +1,4 @@
+"use client"
 import ContactUs from "@/components/homepage/ContactCard";
 import React from "react";
 

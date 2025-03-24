@@ -1,3 +1,4 @@
+"use client";
 import { FaFileDownload } from "react-icons/fa";
 import { MdOutlineDescription } from "react-icons/md";
 

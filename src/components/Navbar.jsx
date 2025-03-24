@@ -254,7 +254,7 @@ const Navbar = () => {
       <div className="hidden lg:block">
         <DeskNavbar />
       </div>
-      <div className="block lg:hidden">
+      <div className="block w-full lg:hidden">
         <MobileNavbar />
       </div>
     </>
@@ -461,7 +461,7 @@ const MobileNavbar = () => {
   ];
 
   return (
-    <header className="container mx-auto z-50 bg-white fixed top-0 w-full px-4 py-3 flex justify-between items-center">
+    <header className="container-fluid mx-auto z-50 bg-white fixed top-0 w-full px-4 py-3 flex justify-between items-center">
       {/* Logo on Left */}
       <Link href="/">
         <Image

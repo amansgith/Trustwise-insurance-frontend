@@ -1,3 +1,4 @@
+"use client"
 import TrustBanner from "@/components/CommonComponents/Banner";
 import ContactUs from "@/components/CommonComponents/ContactUs";
 import FAQSection from "@/components/CommonComponents/FAQ";
