@@ -469,6 +469,7 @@ const MobileNavbar = () => {
     { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
     { title: "Investments", links: investments },
+    { title: "ickets", links: investments },
     { title: "Travel", links: travel },
   ];
 
@@ -527,12 +528,21 @@ const MobileNavbar = () => {
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 text-white mb-4">
-          <FaFacebookF className="hover:text-blue-500 transition duration-300" />
-          <FaInstagram className="hover:text-pink-500 transition duration-300" />
-          <FaLinkedinIn className="hover:text-blue-700 transition duration-300" />
-          <FaEnvelope className="hover:text-red-500 transition duration-300" />
-          <FaWhatsapp className="hover:text-green-600 transition duration-300" />
-          <FaTiktok className="hover:text-black transition duration-300" />
+        <Link href="https://www.facebook.com/trustwiseinsurance/">
+              <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
+            </Link>
+            <Link href="https://www.instagram.com/trustwise_insurance/">
+              <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
+            </Link>
+            <Link href="https://www.linkedin.com">
+              <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
+            </Link>
+            <Link href="mailto:info@trustwiseinsurance.com">
+              <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+            </Link>
+            <Link href="https://wa.me/17802555151">
+              <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+            </Link>
         </div>
 
         {/* Menu Items */}
@@ -570,6 +580,13 @@ const MobileNavbar = () => {
 
           {/* Additional Links */}
 
+          <Link
+            href="/tickets"
+            className="block hover:text-cyan-700 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Tickets
+          </Link>
           <Link
             href="/claims"
             className="block hover:text-cyan-700 transition"

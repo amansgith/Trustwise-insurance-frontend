@@ -22,7 +22,7 @@ export async function POST(req) {
     // Define email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Change this to your recipient's email
+      to: 'amankhancompq2002@gmail.com', // Change this to your recipient's email
       subject: `New Quote Request - ${quoteFor}`,
       html: `
         <h2>New Quote Request</h2>
