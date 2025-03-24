@@ -527,21 +527,21 @@ const MobileNavbar = () => {
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 text-white mb-4">
-        <Link href="https://www.facebook.com/trustwiseinsurance/">
-              <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
-            </Link>
-            <Link href="https://www.instagram.com/trustwise_insurance/">
-              <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
-            </Link>
-            <Link href="https://www.linkedin.com">
-              <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
-            </Link>
-            <Link href="mailto:info@trustwiseinsurance.com">
-              <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
-            </Link>
-            <Link href="https://wa.me/17802555151">
-              <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
-            </Link>
+          <Link href="https://www.facebook.com/trustwiseinsurance/">
+            <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
+          </Link>
+          <Link href="https://www.instagram.com/trustwise_insurance/">
+            <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
+          </Link>
+          <Link href="https://www.linkedin.com">
+            <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
+          </Link>
+          <Link href="mailto:info@trustwiseinsurance.com">
+            <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+          </Link>
+          <Link href="https://wa.me/17802555151">
+            <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+          </Link>
         </div>
 
         {/* Menu Items */}
@@ -584,7 +584,7 @@ const MobileNavbar = () => {
             className="block hover:text-cyan-700 transition"
             onClick={() => setMenuOpen(false)}
           >
-            book Tickets
+            Book Tickets
           </Link>
           <Link
             href="/claims"

@@ -65,7 +65,7 @@ const TravelBookingForm = () => {
   return (
     <div className="flex flex-col items-center min-h-screen py-16 bg-gray-100">
       {/* Fancy Heading */}
-      <h1 className="text-5xl font-bold text-primary mb-8">Plan Your Dream Vacation with Trustwise Insurance</h1>
+      <h1 className="md:text-5xl font-bold text-primary mb-8">Plan Your Dream Vacation with Trustwise Insurance</h1>
 
       {/* Content, Logo, and Form */}
       <div className="flex flex-col md:flex-row items-center w-full max-w-6xl bg-white p-8 rounded-lg shadow-lg">
