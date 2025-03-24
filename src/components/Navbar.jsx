@@ -469,7 +469,6 @@ const MobileNavbar = () => {
     { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
     { title: "Investments", links: investments },
-    { title: "ickets", links: investments },
     { title: "Travel", links: travel },
   ];
 
@@ -585,7 +584,7 @@ const MobileNavbar = () => {
             className="block hover:text-cyan-700 transition"
             onClick={() => setMenuOpen(false)}
           >
-            Tickets
+            book Tickets
           </Link>
           <Link
             href="/claims"
