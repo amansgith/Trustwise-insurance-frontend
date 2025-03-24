@@ -115,21 +115,21 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex space-x-6 text-gray-600">
-            <Link href="#" className="hover:text-blue-600">
+            {/* <Link href="#" className="hover:text-blue-600">
               <FaTwitter size={24} />
-            </Link>
-            <Link href="#" className="hover:text-blue-600">
+            </Link> */}
+            <Link href="https://www.facebook.com/trustwiseinsurance/" className="hover:text-blue-600">
               <FaFacebookF size={24} />
             </Link>
-            <Link href="#" className="hover:text-red-500">
+            <Link href="https://www.instagram.com/trustwise_insurance/" className="hover:text-red-500">
               <FaInstagram size={24} />
             </Link>
-            <Link href="#" className="hover:text-blue-700">
+            {/* <Link href="#" className="hover:text-blue-700">
               <FaLinkedin size={24} />
-            </Link>
-            <Link href="#" className="hover:text-red-600">
+            </Link> */}
+            {/* <Link href="#" className="hover:text-red-600">
               <FaYoutube size={24} />
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -142,8 +142,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="py-2 mt-6">
           <h3 className="font-extrabold text-lg text-center mb-8">
-            &copy; {new Date().getFullYear()} Trustwise Insurance Brokers Ltd. All
-            Rights Reserved.
+            Managed and Maintained by Techzoto Solutions Inc.
           </h3>
         </div>
       </div>

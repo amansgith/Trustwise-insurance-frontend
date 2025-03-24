@@ -244,6 +244,7 @@ const navItems = [
   { name: "Life", submenu: life },
   { name: "Investments", submenu: investments },
   { name: "Travel", submenu: travel },
+  { name: "Tickets", href:"/tickets" },
   { name: "Claims", href: "/claims" },
   { name: "Blog", href: "/blogs" },
 ];
@@ -288,38 +289,50 @@ const DeskNavbar = () => {
   return (
     <header className="z-[9999] font-montserrat text-black navbar-animation">
       {/* Top Navbar */}
-      <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
-        <div className="flex space-x-6">
-          <a
-            href="mailto:info@trustwiseinsurance.com"
-            className="flex items-center"
-          >
-            ✉️ info@trustwiseinsurance.com
-          </a>
-        </div>
-        <div className="flex space-x-6">
-          {[
-            { name: "Join Our Team", path: "/careers" },
-            { name: "Our Locations", path: "/our-location" },
-            { name: "About Us", path: "/about" },
-            { name: "Contact Us", path: "/contact" },
-          ].map((link) => (
-            <Link key={link.path} href={link.path} className="hover:underline">
-              {link.name}
-            </Link>
-          ))}
-          <div className="flex space-x-4">
+        <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
+          <div className="flex space-x-6">
+            <a
+          href="mailto:info@trustwiseinsurance.com"
+          className="flex items-center"
+            >
+          ✉️ info@trustwiseinsurance.com
+            </a>
+          </div>
+          <div className="flex space-x-6">
+            {[
+          { name: "Join Our Team", path: "/careers" },
+          { name: "Our Locations", path: "/our-location" },
+          { name: "About Us", path: "/about" },
+          { name: "Contact Us", path: "/contact" },
+            ].map((link) => (
+          <Link key={link.path} href={link.path} className="hover:underline">
+            {link.name}
+          </Link>
+            ))}
+            <div className="flex space-x-4">
+          <Link href="https://www.facebook.com/trustwiseinsurance/">
             <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
+          </Link>
+          <Link href="https://www.instagram.com/trustwise_insurance/">
             <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
+          </Link>
+          <Link href="https://www.linkedin.com">
             <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
+          </Link>
+          <Link href="mailto:info@trustwiseinsurance.com">
             <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+          </Link>
+          {/* <Link href="https://www.whatsapp.com">
             <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+          </Link> */}
+          {/* <Link href="https://www.tiktok.com">
             <FaTiktok className="cursor-pointer hover:text-red-400 transition duration-300" />
+          </Link> */}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Navbar */}
+        {/* Bottom Navbar */}
       <div className="container mx-auto flex justify-between items-center py-2">
         {/* Logo */}
         <div>

@@ -50,25 +50,11 @@ export default function OurLocation() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  city: "New York",
-                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
-                  phone: "+1 (780) 255-5151",
-                  email: "info@trustwiseinsurance.com",
-                  hours: "Mon-Fri: 9am-6pm",
-                },
-                {
                   city: "Canada",
                   address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
                   phone: "+1 (780) 255-5252",
                   email: "info@trustwiseinsurance.com",
                   hours: "Mon-Fri: 8am-5pm",
-                },
-                {
-                  city: "London",
-                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
-                  phone: "+1 (780) 255-5353",
-                  email: "info@trustwiseinsurance.com",
-                  hours: "Mon-Fri: 9am-5:30pm",
                 },
               ].map((location, index) => (
                 <Card key={index}>
