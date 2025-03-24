@@ -6,6 +6,8 @@ import {
   FaTwitter,
   FaFacebookF,
   FaInstagram,
+  FaEnvelope,
+  FaWhatsapp,
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
@@ -124,12 +126,12 @@ const Footer = () => {
             <Link href="https://www.instagram.com/trustwise_insurance/" className="hover:text-red-500">
               <FaInstagram size={24} />
             </Link>
-            {/* <Link href="#" className="hover:text-blue-700">
-              <FaLinkedin size={24} />
-            </Link> */}
-            {/* <Link href="#" className="hover:text-red-600">
-              <FaYoutube size={24} />
-            </Link> */}
+            <Link href="https://wa.me/17802555151">
+              <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+            </Link>
+            <Link href="mailto:info@trustwiseinsurance.com">
+              <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+            </Link>
           </div>
         </div>
 

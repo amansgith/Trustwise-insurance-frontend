@@ -223,17 +223,17 @@ const life = [
   },
 ];
 
-const investments=[
-  {name: "Segregated Funds", href: "/investments/segregated-funds"},
-  {name:"TFSA", href: "/investments/tfsa"},
-  {name:"RESP", href: "/investments/resp"},
-  {name:"FHSA", href: "/investments/fhsa"},
+const investments = [
+  { name: "Segregated Funds", href: "/investments/segregated-funds" },
+  { name: "TFSA", href: "/investments/tfsa" },
+  { name: "RESP", href: "/investments/resp" },
+  { name: "FHSA", href: "/investments/fhsa" },
 ];
 
-const travel=[
-  {name: "Travel Insurance", href: "/travel/travel-insurance"},
-  {name: "Super Visa", href: "/travel/super-visa"},
-  {name:"Visitor Visa", href: "/travel/visitor-visa"},
+const travel = [
+  { name: "Travel Insurance", href: "/travel/travel-insurance" },
+  { name: "Super Visa", href: "/travel/super-visa" },
+  { name: "Visitor Visa", href: "/travel/visitor-visa" },
 ];
 
 const navItems = [
@@ -244,7 +244,7 @@ const navItems = [
   { name: "Life", submenu: life },
   { name: "Investments", submenu: investments },
   { name: "Travel", submenu: travel },
-  { name: "Tickets", href:"/tickets" },
+  { name: "Tickets", href: "/tickets" },
   { name: "Claims", href: "/claims" },
   { name: "Blog", href: "/blogs" },
 ];
@@ -289,50 +289,50 @@ const DeskNavbar = () => {
   return (
     <header className="z-[9999] font-montserrat text-black navbar-animation">
       {/* Top Navbar */}
-        <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
-          <div className="flex space-x-6">
-            <a
-          href="mailto:info@trustwiseinsurance.com"
-          className="flex items-center"
-            >
-          ✉️ info@trustwiseinsurance.com
-            </a>
-          </div>
-          <div className="flex space-x-6">
-            {[
-          { name: "Join Our Team", path: "/careers" },
-          { name: "Our Locations", path: "/our-location" },
-          { name: "About Us", path: "/about" },
-          { name: "Contact Us", path: "/contact" },
-            ].map((link) => (
-          <Link key={link.path} href={link.path} className="hover:underline">
-            {link.name}
-          </Link>
-            ))}
-            <div className="flex space-x-4">
-          <Link href="https://www.facebook.com/trustwiseinsurance/">
-            <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
-          </Link>
-          <Link href="https://www.instagram.com/trustwise_insurance/">
-            <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
-          </Link>
-          <Link href="https://www.linkedin.com">
-            <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
-          </Link>
-          <Link href="mailto:info@trustwiseinsurance.com">
-            <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
-          </Link>
-          {/* <Link href="https://www.whatsapp.com">
-            <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
-          </Link> */}
-          {/* <Link href="https://www.tiktok.com">
+      <div className="bg-[#0E1E40] text-sm text-gray-300 py-2 px-8 flex justify-between items-center">
+        <div className="flex space-x-6">
+          <a
+            href="mailto:info@trustwiseinsurance.com"
+            className="flex items-center"
+          >
+            ✉️ info@trustwiseinsurance.com
+          </a>
+        </div>
+        <div className="flex space-x-6">
+          {[
+            { name: "Join Our Team", path: "/careers" },
+            { name: "Our Locations", path: "/our-location" },
+            { name: "About Us", path: "/about" },
+            { name: "Contact Us", path: "/contact" },
+          ].map((link) => (
+            <Link key={link.path} href={link.path} className="hover:underline">
+              {link.name}
+            </Link>
+          ))}
+          <div className="flex space-x-4">
+            <Link href="https://www.facebook.com/trustwiseinsurance/">
+              <FaFacebookF className="cursor-pointer hover:text-blue-500 transition duration-300" />
+            </Link>
+            <Link href="https://www.instagram.com/trustwise_insurance/">
+              <FaInstagram className="cursor-pointer hover:text-red-500 transition duration-300" />
+            </Link>
+            <Link href="https://www.linkedin.com">
+              <FaLinkedinIn className="cursor-pointer hover:text-blue-700 transition duration-300" />
+            </Link>
+            <Link href="mailto:info@trustwiseinsurance.com">
+              <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+            </Link>
+            <Link href="https://wa.me/17802555151">
+              <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+            </Link>
+            {/* <Link href="https://www.tiktok.com">
             <FaTiktok className="cursor-pointer hover:text-red-400 transition duration-300" />
           </Link> */}
-            </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Navbar */}
+      {/* Bottom Navbar */}
       <div className="container mx-auto flex justify-between items-center py-2">
         {/* Logo */}
         <div>
@@ -454,7 +454,6 @@ const DeskNavbar = () => {
   );
 };
 
-
 const MobileNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -469,8 +468,8 @@ const MobileNavbar = () => {
     // { title: "GROUPS", links: groups },
     { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
-    {title:"Investments", links: investments},
-    {title:"Travel", links: travel},
+    { title: "Investments", links: investments },
+    { title: "Travel", links: travel },
   ];
 
   return (
@@ -525,7 +524,6 @@ const MobileNavbar = () => {
         >
           +1 (780) 255-5252
         </Link>
-        
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 text-white mb-4">
@@ -571,7 +569,7 @@ const MobileNavbar = () => {
           ))}
 
           {/* Additional Links */}
-          
+
           <Link
             href="/claims"
             className="block hover:text-cyan-700 transition"
@@ -587,20 +585,19 @@ const MobileNavbar = () => {
             Blog
           </Link>
           <Link
-          href="tel:+17802555151"
-          className="text-secondary font-bold text-lg mb-4"
-        >
-          +1 (780) 255-5151
-        </Link>
-        <Link
-          href="tel:+17802555353"
-          className="text-secondary font-bold text-lg mb-4"
-        >
-          +1 (780) 255-5353
-        </Link>
+            href="tel:+17802555151"
+            className="text-secondary font-bold text-lg mb-4"
+          >
+            +1 (780) 255-5151
+          </Link>
+          <Link
+            href="tel:+17802555353"
+            className="text-secondary font-bold text-lg mb-4"
+          >
+            +1 (780) 255-5353
+          </Link>
         </div>
       </motion.nav>
-      
     </header>
   );
 };

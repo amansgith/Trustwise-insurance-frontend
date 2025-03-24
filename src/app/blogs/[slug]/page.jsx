@@ -1,4 +1,3 @@
-"use client"
 import RelatedPosts from "./components/RelatedPosts";
 import Link from "next/link";
 import { marked } from "marked";

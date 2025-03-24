@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Card,
   CardContent,
@@ -47,43 +47,33 @@ export default function OurLocation() {
         {/* Location Details Section */}
         <section className="py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  city: "Canada",
-                  address: "#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada",
-                  phone: "+1 (780) 255-5252",
-                  email: "info@trustwiseinsurance.com",
-                  hours: "Mon-Fri: 8am-5pm",
-                },
-              ].map((location, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <CardTitle>{location.city}</CardTitle>
-                    <CardDescription>Office Location</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center">
-                        <MapPin className="w-5 h-5 mr-2 text-primary" />
-                        <span>{location.address}</span>
-                      </li>
-                      <li className="flex items-center">
-                        <Phone className="w-5 h-5 mr-2 text-primary" />
-                        <span>{location.phone}</span>
-                      </li>
-                      <li className="flex items-center">
-                        <Mail className="w-5 h-5 mr-2 text-primary" />
-                        <span>{location.email}</span>
-                      </li>
-                      <li className="flex items-center">
-                        <Clock className="w-5 h-5 mr-2 text-primary" />
-                        <span>{location.hours}</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="flex justify-center">
+              <Card className="w-full max-w-4xl">
+                <CardHeader>
+                  <CardTitle>Canada</CardTitle>
+                  <CardDescription>Office Location</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <MapPin className="w-5 h-5 mr-2 text-primary" />
+                      <span>#106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Phone className="w-5 h-5 mr-2 text-primary" />
+                      <span>+1 (780) 255-5252</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Mail className="w-5 h-5 mr-2 text-primary" />
+                      <span>info@trustwiseinsurance.com</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Clock className="w-5 h-5 mr-2 text-primary" />
+                      <span>Mon-Fri: 8am-5pm</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

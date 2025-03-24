@@ -6,14 +6,61 @@ import logo from '../../../public/wings.jpg'; // Adjust the path to your logo
 const TravelBookingForm = () => {
   const [isOneWay, setIsOneWay] = useState(true);
   const [isAbroad, setIsAbroad] = useState(false);
+  const [formData, setFormData] = useState({
+    departureDate: '',
+    tripType: 'one-way',
+    returnDate: '',
+    location: 'canada',
+    country: '',
+    region: '',
+    numberOfTravellers: 1,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleTripTypeChange = (e) => {
-    setIsOneWay(e.target.value === 'one-way');
+    const tripType = e.target.value;
+    setIsOneWay(tripType === 'one-way');
+    setFormData({ ...formData, tripType, returnDate: '' });
   };
 
   const handleLocationChange = (e) => {
-    setIsAbroad(e.target.value === 'abroad');
+    const location = e.target.value;
+    setIsAbroad(location === 'abroad');
+    setFormData({ ...formData, location, country: '', region: '' });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('/api/send-ticket', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert('Booking request sent successfully!');
+      setFormData({
+        departureDate: '',
+        tripType: 'one-way',
+        returnDate: '',
+        location: 'canada',
+        country: '',
+        region: '',
+        numberOfTravellers: 1,
+      });
+    } else {
+      alert('Failed to send booking request.');
+    }
+  };
+
+  // Get today's date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="flex flex-col items-center min-h-screen py-16 bg-gray-100">
@@ -38,17 +85,29 @@ const TravelBookingForm = () => {
         {/* Travel Booking Form */}
         <div className="md:w-1/2 p-4">
           <h2 className="text-2xl font-bold text-center mb-6">Travel Ticket Booking Form</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <fieldset className="border border-gray-300 p-4 rounded">
               <legend className="text-lg font-medium text-gray-700">Trip Details</legend>
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Departure Date</label>
-                  <input type="date" className="w-full p-2 border rounded" />
+                  <input
+                    type="date"
+                    name="departureDate"
+                    value={formData.departureDate}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    min={today} // Set the minimum date to today
+                  />
                 </div>
                 <div>
                   <label className="block text-gray-700">Trip Type</label>
-                  <select onChange={handleTripTypeChange} className="w-full p-2 border rounded">
+                  <select
+                    name="tripType"
+                    value={formData.tripType}
+                    onChange={handleTripTypeChange}
+                    className="w-full p-2 border rounded"
+                  >
                     <option value="one-way">One Way</option>
                     <option value="round-trip">Round Trip</option>
                   </select>
@@ -56,7 +115,14 @@ const TravelBookingForm = () => {
                 {!isOneWay && (
                   <div>
                     <label className="block text-gray-700">Return Date</label>
-                    <input type="date" className="w-full p-2 border rounded" />
+                    <input
+                      type="date"
+                      name="returnDate"
+                      value={formData.returnDate}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      min={formData.departureDate || today} // Set the minimum date to the departure date or today
+                    />
                   </div>
                 )}
               </div>
@@ -67,7 +133,12 @@ const TravelBookingForm = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Location</label>
-                  <select onChange={handleLocationChange} className="w-full p-2 border rounded">
+                  <select
+                    name="location"
+                    value={formData.location}
+                    onChange={handleLocationChange}
+                    className="w-full p-2 border rounded"
+                  >
                     <option value="canada">Within Canada</option>
                     <option value="abroad">Abroad</option>
                   </select>
@@ -75,14 +146,35 @@ const TravelBookingForm = () => {
                 {isAbroad ? (
                   <div>
                     <label className="block text-gray-700">Country</label>
-                    <input type="text" className="w-full p-2 border rounded" placeholder="Enter country" />
+                    <input
+                      type="text"
+                      name="country"
+                      value={formData.country}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      placeholder="Enter country"
+                    />
                     <label className="block text-gray-700 mt-4">Region</label>
-                    <input type="text" className="w-full p-2 border rounded" placeholder="Enter region" />
+                    <input
+                      type="text"
+                      name="region"
+                      value={formData.region}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      placeholder="Enter region"
+                    />
                   </div>
                 ) : (
                   <div>
                     <label className="block text-gray-700">Region in Canada</label>
-                    <input type="text" className="w-full p-2 border rounded" placeholder="Enter region" />
+                    <input
+                      type="text"
+                      name="region"
+                      value={formData.region}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      placeholder="Enter region"
+                    />
                   </div>
                 )}
               </div>
@@ -93,7 +185,15 @@ const TravelBookingForm = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Number of Travellers</label>
-                  <input type="number" className="w-full p-2 border rounded" min="1" placeholder="Enter number of travellers" />
+                  <input
+                    type="number"
+                    name="numberOfTravellers"
+                    value={formData.numberOfTravellers}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    min="1"
+                    placeholder="Enter number of travellers"
+                  />
                 </div>
               </div>
             </fieldset>

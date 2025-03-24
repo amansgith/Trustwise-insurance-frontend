@@ -4,59 +4,90 @@ import Image from "next/image";
 const claimsData = [
   {
     name: "AVIVA",
-    phone: "1-866-692-8482",
-    email: true,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Aviva-Elite.jpg",
   },
   {
     name: "CHUBB",
-    phone: "1-800-532-4822",
-    email: false,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Chubb-Insurance.jpg",
   },
   {
     name: "Echelon",
-    phone: "1-866-252-2854",
-    email: false,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Echelon-Insurance.jpg",
   },
   {
     name: "Pembridge",
-    phone: "1-800-387-0462",
-    email: true,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Pembridge-Insurance.jpg",
   },
   {
     name: "Intact",
-    phone: "1-866-464-2424",
-    email: true,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Intact-insurance.jpg",
   },
   {
     name: "Economical",
-    phone: "1-866-252-2854",
-    email: true,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Economical-Insurance.jpg",
   },
   {
     name: "Travelers",
-    phone: "1-800-661-5522",
-    email: true,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Travelers-Insurance.jpg",
   },
   {
     name: "Unica",
-    phone: "1-800-676-0967",
-    email: false,
     logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Unica-Insurance.jpg",
+  },
+  {
+    name: "Ivari",
+    logo: "/companies/ivari.jpeg",
+  },
+  {
+    name: "Equitable",
+    logo: "/companies/equi.jpeg",
+  },
+  {
+    name: "IA Financial Group",
+    logo: "/companies/iafinancial.png",
+  },
+  {
+    name: "Forester",
+    logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Forester-Insurance.jpg",
+  },
+  {
+    name: "Travelance",
+    logo: "/companies/travelance.jpeg",
+  },
+  {
+    name: "Rimi Insurance",
+    logo: "/companies/rimi.avif",
+  },
+  {
+    name: "GMS",
+    logo: "/companies/gms.png",
+  },
+  {
+    name: "RBC Insurance",
+    logo: "/companies/rbc.png",
+  },
+  {
+    name: "Destination",
+    logo: "https://www.aaxel.ca/wp-content/uploads/2023/05/Destination-Insurance.jpg",
+  },
+  {
+    name: "21st Century",
+    logo: "/companies/twenty.png",
   },
 ];
 
 const Claims = () => {
   return (
     <>
-      <section className="bg-[url('https://www.hashtagmotion.co.uk/wp-content/uploads/2018/06/about_us_background.jpg')] bg-cover text-white md:py-16 pt-32 pb-4 text-center">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-cover text-white md:py-16 pt-32 pb-4 text-center">
+        <Image
+          src="/claimsbg.jpg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 z-[-1]"
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-7xl font-extrabold mb-4 uppercase">
             Claims
           </h1>
@@ -132,7 +163,7 @@ const Claims = () => {
 
               {/* Phone Number */}
               <p className="mt-4 text-lg font-semibold text-gray-900">
-                {company.phone}
+                {company.name}
               </p>
 
               {/* Email Link */}
