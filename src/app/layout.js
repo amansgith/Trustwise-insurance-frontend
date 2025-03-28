@@ -23,7 +23,7 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/favicon.ico', // Path to the favicon in the public folder
+    icon: '/favicon.ico',
   },
 };
 
