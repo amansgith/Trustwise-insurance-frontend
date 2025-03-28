@@ -136,6 +136,9 @@ const schema = yup.object().shape({
 
 const QuoteForm = () => {
   const [selectedQuote, setSelectedQuote] = useState(null);
+  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
   const {
     register,
     handleSubmit,
@@ -146,33 +149,40 @@ const QuoteForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const sheetUrl = process.env.NEXT_PUBLIC_SHEET_URL
-  
+  const sheetUrl = process.env.NEXT_PUBLIC_SHEET_URL;
+
   const onSubmit = async (data) => {
-    const responseforMail = await fetch("/api/send-quote", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    setIsLoading(true); // Start loader
+    setSuccessMessage(""); // Clear previous success message
+    setErrorMessage(""); // Clear previous error message
+
     try {
-      const responseForSheet = await fetch(
-        sheetUrl, // Replace with your Web App URL
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-          mode: "no-cors", // Add this to avoid CORS issues (Apps Script handles it)
-        }
-      );
-  
-      // Since "no-cors" mode doesn't return a readable response, assume success unless an error occurs
-      alert("Form submitted successfully!");
-      reset();
+      const responseForMail = await fetch("/api/send-quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const responseForSheet = await fetch(sheetUrl, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors", // Add this to avoid CORS issues (Apps Script handles it)
+      });
+
+      if (responseForMail.ok) {
+        setSuccessMessage("Form submitted successfully!");
+        reset();
+      } else {
+        setErrorMessage("Failed to submit the form. Please try again.");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error submitting form");
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false); // Stop loader
     }
   };
 
@@ -186,7 +196,6 @@ const QuoteForm = () => {
           src={advertbanner}
           alt="Agent Woman"
           layout="contain"
-          // objectFit="cover"
           className="rounded-lg"
         />
       </div>
@@ -308,19 +317,6 @@ const QuoteForm = () => {
             </div>
           </div>
 
-          {/* Business Name */}
-          {/* <div>
-            <label className="font-semibold text-gray-700">Business Name *</label>
-            <input type="text" {...register("businessName")} className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400" />
-            {errors.businessName && <p className="text-red-500 text-sm">{errors.businessName.message}</p>}
-          </div> */}
-
-          {/* Group Name Dropdown */}
-          {/* <div>
-            <label className="font-semibold text-gray-700">Group Name</label>
-            <Select options={groupOptions} isSearchable onChange={(option) => setValue("groupName", option.value)} className="w-full" />
-          </div> */}
-
           {/* Date to Contact */}
           <div>
             <label className="font-semibold text-gray-700">
@@ -369,11 +365,26 @@ const QuoteForm = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition duration-300 text-lg font-semibold"
+            className={`w-full py-3 rounded-lg text-lg font-semibold ${
+              isLoading
+                ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                : "bg-primary text-white hover:bg-secondary transition duration-300"
+            }`}
+            disabled={isLoading}
           >
-            Submit
+            {isLoading ? "Submitting..." : "Submit"}
           </button>
         </form>
+
+        {/* Success Message */}
+        {successMessage && (
+          <p className="text-green-500 text-center mt-4">{successMessage}</p>
+        )}
+
+        {/* Error Message */}
+        {errorMessage && (
+          <p className="text-red-500 text-center mt-4">{errorMessage}</p>
+        )}
       </div>
     </div>
   );

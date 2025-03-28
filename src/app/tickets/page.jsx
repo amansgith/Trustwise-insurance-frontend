@@ -1,21 +1,24 @@
 "use client";
-import React, { useState } from 'react';
-import Image from 'next/image';
-import logo from '../../../public/wings.jpg'; // Adjust the path to your logo
+import React, { useState } from "react";
+import Image from "next/image";
+import logo from "../../../public/wings.jpg"; // Adjust the path to your logo
 
 const TravelBookingForm = () => {
   const [isOneWay, setIsOneWay] = useState(true);
   const [isAbroad, setIsAbroad] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
   const [formData, setFormData] = useState({
-    contactName:'',
-    contactMobile: '',
-    contactEmail: '',
-    departureDate: '',
-    tripType: 'one-way',
-    returnDate: '',
-    location: 'canada',
-    country: '',
-    region: '',
+    contactName: "",
+    contactMobile: "",
+    contactEmail: "",
+    departureDate: "",
+    tripType: "one-way",
+    returnDate: "",
+    location: "canada",
+    country: "",
+    region: "",
     numberOfTravellers: 1,
   });
 
@@ -26,77 +29,106 @@ const TravelBookingForm = () => {
 
   const handleTripTypeChange = (e) => {
     const tripType = e.target.value;
-    setIsOneWay(tripType === 'one-way');
-    setFormData({ ...formData, tripType, returnDate: '' });
+    setIsOneWay(tripType === "one-way");
+    setFormData({ ...formData, tripType, returnDate: "" });
   };
 
   const handleLocationChange = (e) => {
     const location = e.target.value;
-    setIsAbroad(location === 'abroad');
-    setFormData({ ...formData, location, country: '', region: '' });
+    setIsAbroad(location === "abroad");
+    setFormData({ ...formData, location, country: "", region: "" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('/api/send-ticket', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    setIsLoading(true); // Start loader
+    setSuccessMessage(""); // Clear previous success message
+    setErrorMessage(""); // Clear previous error message
 
-    if (response.ok) {
-      alert('Booking request sent successfully!');
-      setFormData({
-        contactName:'',
-        contactMobile: '',
-        contactEmail: '',
-        departureDate: '',
-        tripType: 'one-way',
-        returnDate: '',
-        location: 'canada',
-        country: '',
-        region: '',
-        numberOfTravellers: 1,
+    try {
+      const response = await fetch("/api/send-ticket", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert('Failed to send booking request.');
+
+      if (response.ok) {
+        setSuccessMessage("Booking request sent successfully!");
+        setFormData({
+          contactName: "",
+          contactMobile: "",
+          contactEmail: "",
+          departureDate: "",
+          tripType: "one-way",
+          returnDate: "",
+          location: "canada",
+          country: "",
+          region: "",
+          numberOfTravellers: 1,
+        });
+      } else {
+        setErrorMessage("Failed to send booking request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false); // Stop loader
     }
   };
 
   // Get today's date in YYYY-MM-DD format
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split("T")[0];
 
   return (
     <div className="flex flex-col items-center min-h-screen py-16 bg-gray-100">
       {/* Fancy Heading */}
-      <h1 className="md:text-5xl font-bold text-primary mb-8">Plan Your Dream Vacation with Trustwise Insurance</h1>
+      <h1 className="md:text-5xl font-bold text-primary mb-8">
+        Plan Your Dream Vacation with Trustwise Insurance
+      </h1>
 
       {/* Content, Logo, and Form */}
       <div className="flex flex-col md:flex-row items-center w-full max-w-6xl bg-white p-8 rounded-lg shadow-lg">
         {/* Content and Logo */}
         <div className="md:w-1/2 p-4">
           <div className="flex flex-col items-center md:items-start">
-            <Image src={logo} alt="Wings Travels Logo" width={300} height={300} className="mb-4" />
+            <Image
+              src={logo}
+              alt="Wings Travels Logo"
+              width={300}
+              height={300}
+              className="mb-4"
+            />
             <p className="text-lg text-gray-700 mb-4">
-              At Trustwise Insurance, we partner with Wings Travels to provide comprehensive travel planning services. Whether you're traveling within Canada or exploring international destinations, Wings Travels ensures your vacation is stress-free and enjoyable.
+              At Trustwise Insurance, we partner with Wings Travels to provide
+              comprehensive travel planning services. Whether you're traveling
+              within Canada or exploring international destinations, Wings
+              Travels ensures your vacation is stress-free and enjoyable.
             </p>
             <p className="text-lg text-gray-700">
-              Our team of experts will help you book your travel tickets, arrange accommodations, and provide travel insurance for a worry-free experience. Let's make your dream vacation a reality with the help of Wings Travels!
+              Our team of experts will help you book your travel tickets,
+              arrange accommodations, and provide travel insurance for a
+              worry-free experience. Let's make your dream vacation a reality
+              with the help of Wings Travels!
             </p>
           </div>
         </div>
 
         {/* Travel Booking Form */}
         <div className="md:w-1/2 p-4">
-          <h2 className="text-2xl font-bold text-center mb-6">Travel Ticket Booking Form</h2>
+          <h2 className="text-2xl font-bold text-center mb-6">
+            Travel Ticket Booking Form
+          </h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             {/* Contact Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
-              <legend className="text-lg font-medium text-gray-700">Contact Details</legend>
+              <legend className="text-lg font-medium text-gray-700">
+                Contact Details
+              </legend>
               <div className="space-y-4">
-              <div>
+                <div>
                   <label className="block text-gray-700">Full Name</label>
                   <input
                     type="text"
@@ -136,7 +168,9 @@ const TravelBookingForm = () => {
 
             {/* Trip Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
-              <legend className="text-lg font-medium text-gray-700">Trip Details</legend>
+              <legend className="text-lg font-medium text-gray-700">
+                Trip Details
+              </legend>
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Departure Date</label>
@@ -179,7 +213,9 @@ const TravelBookingForm = () => {
 
             {/* Location Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
-              <legend className="text-lg font-medium text-gray-700">Location Details</legend>
+              <legend className="text-lg font-medium text-gray-700">
+                Location Details
+              </legend>
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Location</label>
@@ -232,7 +268,9 @@ const TravelBookingForm = () => {
 
             {/* Traveller Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
-              <legend className="text-lg font-medium text-gray-700">Traveller Details</legend>
+              <legend className="text-lg font-medium text-gray-700">
+                Traveller Details
+              </legend>
               <div className="space-y-4">
                 <div>
                   <label className="block text-gray-700">Number of Travellers</label>
@@ -249,8 +287,26 @@ const TravelBookingForm = () => {
               </div>
             </fieldset>
 
-            <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300">Submit</button>
+            <button
+              type="submit"
+              className={`w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300 ${
+                isLoading ? "cursor-not-allowed opacity-50" : ""
+              }`}
+              disabled={isLoading}
+            >
+              {isLoading ? "Submitting..." : "Submit"}
+            </button>
           </form>
+
+          {/* Success Message */}
+          {successMessage && (
+            <p className="text-green-500 text-center mt-4">{successMessage}</p>
+          )}
+
+          {/* Error Message */}
+          {errorMessage && (
+            <p className="text-red-500 text-center mt-4">{errorMessage}</p>
+          )}
         </div>
       </div>
     </div>

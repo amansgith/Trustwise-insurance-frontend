@@ -1,46 +1,56 @@
 "use client";
-import Link from 'next/link';
-import { memo, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Users, Briefcase, Heart, Zap } from 'lucide-react';
+import Link from "next/link";
+import { memo, useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Users, Briefcase, Heart, Zap } from "lucide-react";
 
 const JoinOurTeam = () => {
   const cultureItems = [
     {
       icon: Users,
-      title: 'Collaborative Environment',
-      description: 'Work with a diverse team of passionate individuals',
+      title: "Collaborative Environment",
+      description: "Work with a diverse team of passionate individuals",
     },
     {
       icon: Briefcase,
-      title: 'Career Growth',
-      description: 'Opportunities for learning and advancement',
+      title: "Career Growth",
+      description: "Opportunities for learning and advancement",
     },
     {
       icon: Heart,
-      title: 'Work-Life Balance',
-      description: 'Flexible hours and remote work options',
+      title: "Work-Life Balance",
+      description: "Flexible hours and remote work options",
     },
     {
       icon: Zap,
-      title: 'Innovative Projects',
-      description: 'Work on cutting-edge technologies and solutions',
+      title: "Innovative Projects",
+      description: "Work on cutting-edge technologies and solutions",
     },
   ];
 
   const [formData, setFormData] = useState({
-    firstName: '',
-    middleName: '',
-    lastName: '',
-    immigrationStatus: '',
-    languages: [{ language: '', proficiency: '' }],
-    phone: '',
-    email: '',
-    coverLetter: '',
+    firstName: "",
+    middleName: "",
+    lastName: "",
+    immigrationStatus: "",
+    languages: [{ language: "", proficiency: "" }],
+    phone: "",
+    email: "",
+    coverLetter: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -56,7 +66,7 @@ const JoinOurTeam = () => {
   const addLanguage = () => {
     setFormData({
       ...formData,
-      languages: [...formData.languages, { language: '', proficiency: '' }],
+      languages: [...formData.languages, { language: "", proficiency: "" }],
     });
   };
 
@@ -67,33 +77,53 @@ const JoinOurTeam = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('/api/apply', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    setIsLoading(true); // Start loader
+    setSuccessMessage(""); // Clear previous success message
+    setErrorMessage(""); // Clear previous error message
 
-    if (response.ok) {
-      alert('Application submitted successfully!');
-      setFormData({
-        firstName: '',
-        middleName: '',
-        lastName: '',
-        immigrationStatus: '',
-        languages: [{ language: '', proficiency: '' }],
-        phone: '',
-        email: '',
-        coverLetter: '',
+    try {
+      const response = await fetch("/api/apply", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert('Failed to submit application.');
+
+      if (response.ok) {
+        setSuccessMessage("Application submitted successfully!");
+        setFormData({
+          firstName: "",
+          middleName: "",
+          lastName: "",
+          immigrationStatus: "",
+          languages: [{ language: "", proficiency: "" }],
+          phone: "",
+          email: "",
+          coverLetter: "",
+        });
+      } else {
+        setErrorMessage("Failed to submit application. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false); // Stop loader
     }
   };
 
   const languageOptions = [
-    "English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Hindi", "Arabic", "Portuguese"
+    "English",
+    "Spanish",
+    "French",
+    "German",
+    "Chinese",
+    "Japanese",
+    "Korean",
+    "Hindi",
+    "Arabic",
+    "Portuguese",
   ];
 
   const proficiencyOptions = [
@@ -108,12 +138,19 @@ const JoinOurTeam = () => {
     <div className="flex flex-col min-h-screen my-16 md:my-8 ">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-cover bg-opacity-6 text-primary-foreground py-20 text-center" style={{ backgroundImage: "url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg')" }}>
+        <section
+          className="relative bg-cover bg-opacity-6 text-primary-foreground py-20 text-center"
+          style={{
+            backgroundImage:
+              "url('https://highrise.mikado-themes.com/wp-content/uploads/2016/10/Team-Title-1-1.jpg')",
+          }}
+        >
           <div className="absolute inset-0 bg-gray-500 bg-opacity-50"></div>
           <div className="relative container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
             <p className="text-xl text-white mb-8">
-              Be part of something extraordinary. We're looking for talented individuals to help shape the future.
+              Be part of something extraordinary. We're looking for talented
+              individuals to help shape the future.
             </p>
             <Button asChild size="lg">
               <Link href="#openings">View Open Positions</Link>
@@ -124,7 +161,9 @@ const JoinOurTeam = () => {
         {/* Company Culture Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Why Work With Us?
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {cultureItems.map((item, index) => (
                 <Card key={index}>
@@ -144,7 +183,9 @@ const JoinOurTeam = () => {
         {/* Application Form Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 max-w-2xl">
-            <h2 className="text-3xl text-primary font-bold text-center mb-12">Apply Today</h2>
+            <h2 className="text-3xl text-primary font-bold text-center mb-12">
+              Apply Today
+            </h2>
             <Card>
               <CardHeader />
               <CardContent>
@@ -181,37 +222,64 @@ const JoinOurTeam = () => {
                   />
                   <div className="space-y-4">
                     {formData.languages.map((language, index) => (
-                      <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                      <div
+                        key={index}
+                        className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center"
+                      >
                         <select
                           name={`language-${index}`}
                           value={language.language}
-                          onChange={(e) => handleLanguageChange(index, 'language', e.target.value)}
+                          onChange={(e) =>
+                            handleLanguageChange(index, "language", e.target.value)
+                          }
                           className="w-full p-2 border rounded"
                           aria-label="Language"
                         >
                           <option value="">Select Language</option>
                           {languageOptions.map((lang) => (
-                            <option key={lang} value={lang}>{lang}</option>
+                            <option key={lang} value={lang}>
+                              {lang}
+                            </option>
                           ))}
                         </select>
                         <div className="flex items-center">
                           <select
                             name={`proficiency-${index}`}
                             value={language.proficiency}
-                            onChange={(e) => handleLanguageChange(index, 'proficiency', e.target.value)}
+                            onChange={(e) =>
+                              handleLanguageChange(
+                                index,
+                                "proficiency",
+                                e.target.value
+                              )
+                            }
                             className="w-full p-2 border rounded"
                             aria-label="Proficiency"
                           >
                             <option value="">Select Proficiency</option>
                             {proficiencyOptions.map((option) => (
-                              <option key={option.value} value={option.value}>{option.label}</option>
+                              <option key={option.value} value={option.value}>
+                                {option.label}
+                              </option>
                             ))}
                           </select>
-                          <button type="button" onClick={() => removeLanguage(index)} className="ml-2 text-red-500">Remove</button>
+                          <button
+                            type="button"
+                            onClick={() => removeLanguage(index)}
+                            className="ml-2 text-red-500"
+                          >
+                            Remove
+                          </button>
                         </div>
                       </div>
                     ))}
-                    <button type="button" onClick={addLanguage} className="text-blue-500">Add Language</button>
+                    <button
+                      type="button"
+                      onClick={addLanguage}
+                      className="text-blue-500"
+                    >
+                      Add Language
+                    </button>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Input
@@ -237,8 +305,28 @@ const JoinOurTeam = () => {
                     placeholder="Tell us about your experience and why you'd be a great fit"
                     aria-label="Cover Letter"
                   />
-                  <Button type="submit" className="w-full">Submit Application</Button>
+                  <Button
+                    type="submit"
+                    className={`w-full ${
+                      isLoading
+                        ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                        : "bg-primary text-white hover:bg-secondary"
+                    }`}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Submitting..." : "Submit Application"}
+                  </Button>
                 </form>
+                {/* Success Message */}
+                {successMessage && (
+                  <p className="text-green-500 text-center mt-4">
+                    {successMessage}
+                  </p>
+                )}
+                {/* Error Message */}
+                {errorMessage && (
+                  <p className="text-red-500 text-center mt-4">{errorMessage}</p>
+                )}
               </CardContent>
             </Card>
           </div>
@@ -246,6 +334,6 @@ const JoinOurTeam = () => {
       </main>
     </div>
   );
-}
+};
 
 export default memo(JoinOurTeam);
