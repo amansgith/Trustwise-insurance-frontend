@@ -7,6 +7,9 @@ const TravelBookingForm = () => {
   const [isOneWay, setIsOneWay] = useState(true);
   const [isAbroad, setIsAbroad] = useState(false);
   const [formData, setFormData] = useState({
+    contactName:'',
+    contactMobile: '',
+    contactEmail: '',
     departureDate: '',
     tripType: 'one-way',
     returnDate: '',
@@ -46,6 +49,9 @@ const TravelBookingForm = () => {
     if (response.ok) {
       alert('Booking request sent successfully!');
       setFormData({
+        contactName:'',
+        contactMobile: '',
+        contactEmail: '',
         departureDate: '',
         tripType: 'one-way',
         returnDate: '',
@@ -86,6 +92,49 @@ const TravelBookingForm = () => {
         <div className="md:w-1/2 p-4">
           <h2 className="text-2xl font-bold text-center mb-6">Travel Ticket Booking Form</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
+            {/* Contact Details Section */}
+            <fieldset className="border border-gray-300 p-4 rounded">
+              <legend className="text-lg font-medium text-gray-700">Contact Details</legend>
+              <div className="space-y-4">
+              <div>
+                  <label className="block text-gray-700">Full Name</label>
+                  <input
+                    type="text"
+                    name="contactName"
+                    value={formData.contactName}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    placeholder="Enter your Full Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Mobile Number</label>
+                  <input
+                    type="tel"
+                    name="contactMobile"
+                    value={formData.contactMobile}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    placeholder="Enter your mobile number"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Email (Optional)</label>
+                  <input
+                    type="email"
+                    name="contactEmail"
+                    value={formData.contactEmail}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            {/* Trip Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
               <legend className="text-lg font-medium text-gray-700">Trip Details</legend>
               <div className="space-y-4">
@@ -121,13 +170,14 @@ const TravelBookingForm = () => {
                       value={formData.returnDate}
                       onChange={handleInputChange}
                       className="w-full p-2 border rounded"
-                      min={formData.departureDate || today} // Set the minimum date to the departure date or today
+                      min={formData.departureDate || today}
                     />
                   </div>
                 )}
               </div>
             </fieldset>
 
+            {/* Location Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
               <legend className="text-lg font-medium text-gray-700">Location Details</legend>
               <div className="space-y-4">
@@ -180,6 +230,7 @@ const TravelBookingForm = () => {
               </div>
             </fieldset>
 
+            {/* Traveller Details Section */}
             <fieldset className="border border-gray-300 p-4 rounded">
               <legend className="text-lg font-medium text-gray-700">Traveller Details</legend>
               <div className="space-y-4">

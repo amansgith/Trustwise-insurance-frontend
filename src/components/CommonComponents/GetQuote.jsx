@@ -149,7 +149,7 @@ const QuoteForm = () => {
   const sheetUrl = process.env.NEXT_PUBLIC_SHEET_URL
   
   const onSubmit = async (data) => {
-    const responseforMail = await fetch("/api/send-email", {
+    const responseforMail = await fetch("/api/send-quote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
