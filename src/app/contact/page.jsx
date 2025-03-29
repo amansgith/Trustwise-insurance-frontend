@@ -1,11 +1,54 @@
-"use client"
+"use client";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mail, Clock, Phone } from "lucide-react";
-import QuoteForm from "@/components/CommonComponents/GetQuote"
 import Link from "next/link";
 
-const page = () => {
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true); // Start loader
+    setSuccessMessage(""); // Clear previous success message
+    setErrorMessage(""); // Clear previous error message
+
+    try {
+      const response = await fetch("/api/send-query", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSuccessMessage("Your message has been sent successfully!");
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+      } else {
+        setErrorMessage("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false); // Stop loader
+    }
+  };
+
   return (
     <div className="py-16 md:py-6">
       <div className="px-4 md:px-10 flex flex-col gap-3">
@@ -47,53 +90,70 @@ const page = () => {
 
       <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Call Back Request
-          </h2>
-          <QuoteForm/>
-        </div>
-      </section>
-
-      {/* Find Us Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Find Us</h2>
-          <div className="grid md:grid-cols-2 gap-8 justify-center items-center">
+          <h2 className="text-3xl font-bold text-center mb-12">Send Us a Message</h2>
+          <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Our Locations</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <MapPin className="w-6 h-6 mr-2 text-primary" />
-                  <span>New York, NY</span>
-                </li>
-                <li className="flex items-center">
-                  <MapPin className="w-6 h-6 mr-2 text-primary" />
-                  <span>San Francisco, CA</span>
-                </li>
-                <li className="flex items-center">
-                  <MapPin className="w-6 h-6 mr-2 text-primary" />
-                  <span>London, UK</span>
-                </li>
-              </ul>
-              <Button asChild className="mt-6">
-                <Link href="/our-location">View Detailed Map</Link>
-              </Button>
+              <label className="block text-gray-700 font-semibold mb-2">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+                placeholder="Enter your name"
+                required
+              />
             </div>
-            <div className="mt-8 w-full h-96">
-              <iframe
-                title="Trustwise Insurance Location"
-                className="w-full h-full border-0 rounded-lg"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.9247583074823!2d-113.41893!3d53.3387699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0032cf6acd34b%3A0x3b5a34d098897d17!2s5305%20Magasin%20Ave%20%23106%2C%20Beaumont%2C%20AB%20T4X%201V8%2C%20Canada!5e0!3m2!1sen!2sca!4v1710100000000"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div>
+              <label className="block text-gray-700 font-semibold mb-2">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+                placeholder="Enter your email"
+                required
+              />
             </div>
-          </div>
+            <div>
+              <label className="block text-gray-700 font-semibold mb-2">Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+                rows="5"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <Button
+              type="submit"
+              className={`w-full py-3 rounded-lg text-lg font-semibold ${
+                isLoading
+                  ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                  : "bg-primary text-white hover:bg-secondary transition duration-300"
+              }`}
+              disabled={isLoading}
+            >
+              {isLoading ? "Sending..." : "Send Message"}
+            </Button>
+          </form>
+
+          {/* Success Message */}
+          {successMessage && (
+            <p className="text-green-500 text-center mt-4">{successMessage}</p>
+          )}
+
+          {/* Error Message */}
+          {errorMessage && (
+            <p className="text-red-500 text-center mt-4">{errorMessage}</p>
+          )}
         </div>
       </section>
     </div>
   );
 };
 
-export default page;
+export default ContactPage;

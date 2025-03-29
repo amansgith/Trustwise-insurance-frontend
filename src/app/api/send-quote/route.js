@@ -67,8 +67,37 @@ export async function POST(req) {
       `,
     };
 
+    const mailToUser = {
+      from: process.env.EMAIL_USER,
+      to: email, // User's email address
+      subject: 'We have received your request',
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
+          <h2 style="font-size: 16px; color: #555;">Dear ${firstName},</h2>
+          <h2 style="text-align: center; color: #4CAF50;">Thank you for your request!</h2>
+          <p style="font-size: 16px; color: #555;">We have received your quote request for <strong>${quoteFor}</strong>. Our team will review your request and get back to you shortly.</p>
+          <p style="font-size: 16px; color: #555;">Best regards,</p>
+          <p style="font-size: 16px; color: #555;">The Trustwise Insurance Team</p>
+          <div style="text-align: center; margin-top: 20px;">
+            <img src="cid:logo" alt="Trustwise Insurance Logo" style="width: 150px; height: auto;" />
+          </div>
+          <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #888;">This email was generated automatically. Please do not reply to this email.</p>
+        </div>
+      `,
+      attachments: [
+        {
+          filename: 'logo.png',
+          path: './public/Navlogo.png',
+          cid: 'logo',
+        },
+      ],
+    };
+
     // Send email
-    await transporter.sendMail(mailOptions);
+    await Promise.all([
+      transporter.sendMail(mailOptions),
+      transporter.sendMail(mailToUser),
+    ]);
 
     return new Response(JSON.stringify({ message: "Email sent successfully!" }), { status: 200 });
   } catch (error) {

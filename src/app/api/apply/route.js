@@ -81,6 +81,7 @@ export async function POST(req) {
           <p style="font-size: 16px; color: #555;">Please Note only selected candidates would receive a follow-up email.</p>
           <p style="font-size: 16px; color: #555;">Best regards,</p>
           <p style="font-size: 16px; color: #555;">The Trustwise Insurance Team</p>
+          <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #888;">This email was generated automatically. Please do not reply to this email.</p>
         </div>
       `,
     };

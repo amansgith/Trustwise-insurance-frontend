@@ -31,6 +31,7 @@ const footerLinks = [
       { url: "/business", text: "Business Insurance" },
       { url: "/life-financial", text: "Life & Financial" },
       { url: "/travel", text: "Travel Insurance" },
+      { url: "/tickets", text: "Book Tickets" },
     ],
   },
   {
@@ -91,7 +92,7 @@ const Footer = () => {
         {/* Row 2: Newsletter Subscription & Social Icons */}
         <div className="flex flex-col md:flex-row items-center justify-between mt-12 space-y-6 md:space-y-0">
           {/* Newsletter Subscription */}
-          <div className="w-full md:w-2/3 text-center md:text-left">
+          {/* <div className="w-full md:w-2/3 text-center md:text-left">
             <h3 className="text-lg font-semibold">Subscribe to our Newsletter</h3>
             <p className="text-gray-600 text-sm mt-1">Get the latest updates and news.</p>
             <form
@@ -113,6 +114,49 @@ const Footer = () => {
                 Subscribe
               </button>
             </form>
+          </div> */}
+
+          {/* Contact Information Section */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <p className="text-gray-600 text-sm mt-1">
+              Reach out to us for any inquiries or support.
+            </p>
+            <div className="mt-4 space-y-2">
+              <p className="flex flex-col md:flex-row items-center gap-4 text-gray-600">
+                <strong>Phone:</strong>{" "}
+                <a
+                  href="tel:+17802555151"
+                  className="text-primary hover:underline"
+                >
+                  +1 (780) 255-5151
+                </a>
+                <a
+                  href="tel:+17802555151"
+                  className="text-primary hover:underline"
+                >
+                  +1 (780) 255-5252
+                </a>
+                <a
+                  href="tel:+17802555151"
+                  className="text-primary hover:underline"
+                >
+                  +1 (780) 255-5353
+                </a>
+              </p>
+              <p className="text-gray-600">
+                <strong>Email:</strong>{" "}
+                <a
+                  href="mailto:info@trustwiseinsurance.com"
+                  className="text-primary hover:underline"
+                >
+                  info@trustwiseinsurance.com
+                </a>
+              </p>
+              <p className="text-gray-600">
+                <strong>Location:</strong> 123 Trustwise Street, Edmonton, AB,
+                Canada
+              </p>
+            </div>
           </div>
 
           {/* Social Media Icons */}
@@ -120,17 +164,29 @@ const Footer = () => {
             {/* <Link href="#" className="hover:text-blue-600">
               <FaTwitter size={24} />
             </Link> */}
-            <Link href="https://www.facebook.com/trustwiseinsurance/" className="hover:text-blue-600">
+            <Link
+              href="https://www.facebook.com/trustwiseinsurance/"
+              className="hover:text-blue-600"
+            >
               <FaFacebookF size={24} />
             </Link>
-            <Link href="https://www.instagram.com/trustwise_insurance/" className="hover:text-red-500">
+            <Link
+              href="https://www.instagram.com/trustwise_insurance/"
+              className="hover:text-red-500"
+            >
               <FaInstagram size={24} />
             </Link>
-            <Link href="https://wa.me/17802555151">
-              <FaWhatsapp className="cursor-pointer hover:text-green-500 transition duration-300" />
+            <Link
+              href="https://wa.me/17802555151"
+              className="cursor-pointer hover:text-green-500 transition duration-300"
+            >
+              <FaWhatsapp size={24} />
             </Link>
-            <Link href="mailto:info@trustwiseinsurance.com">
-              <FaEnvelope className="cursor-pointer hover:text-orange-300 transition duration-300" />
+            <Link
+              href="mailto:info@trustwiseinsurance.com"
+              className="cursor-pointer hover:text-orange-300 transition duration-300"
+            >
+              <FaEnvelope size={24} />
             </Link>
           </div>
         </div>

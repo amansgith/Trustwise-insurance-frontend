@@ -40,9 +40,9 @@ const TrustBanner = () => {
               </div>
             </div>
             {/* Numbering in background */}
-            <span className="absolute top-4 right-6 text-5xl font-bold text-gray-200 group-hover:text-white transition duration-300">
+            {/* <span className="absolute top-4 right-6 text-5xl font-bold text-gray-200 group-hover:text-white transition duration-300">
               0{index + 1}
-            </span>
+            </span> */}
           </div>
         ))}
       </div>

@@ -83,11 +83,21 @@ const quoteOptions = {
     "Critical Illness Insurance",
     "Disability Insurance",
     "Mortgage Insurance",
-    "Travel Insurance",
     "Long-Term Care Insurance",
     "Group Benefits",
     "Investments",
     "Travel",
+  ],
+  "Travel Insurance": [
+    "Travel Insurance",
+    "Super Visa Insurance",
+    "Visitor Visa Insurance",
+  ],
+  "Investments":[
+    "Aggregated Funds",
+    "TFSA",
+    "RESP",
+    "FHSA",
   ],
 };
 
