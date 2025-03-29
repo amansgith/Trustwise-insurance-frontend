@@ -1,9 +1,16 @@
 import { createChatBotMessage } from "react-chatbot-kit";
+import ContactOptions from "./widget/ContactOptions";
 
 const config = {
-  botName: "Trustwise Assistant",
+  botName: "TrustwiseBot",
   initialMessages: [
-    createChatBotMessage("Hello! How can I assist you today?"),
+    createChatBotMessage("Hi! How can I assist you today?"),
+  ],
+  widgets: [
+    {
+      widgetName: "contactOptions",
+      widgetFunc: (props) => <ContactOptions {...props} />,
+    },
   ],
 };
 

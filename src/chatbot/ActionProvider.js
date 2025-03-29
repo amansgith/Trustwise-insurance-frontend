@@ -8,14 +8,19 @@ class ActionProvider {
 
   provideContactInfo = () => {
     const message = this.createChatBotMessage(
-      `You can reach our customer care team here:\n 📧 Email: info@trustwiseinsurance.com\n\n📞 Phone: +1 780-255-5151,\n +1 780-255-5252,\n +1 780-255-5353`
+      "You can reach our customer care team here:",
+      {
+        widget: "contactOptions", // Add a widget for contact options
+      }
     );
 
     this.updateChatbotState(message);
   };
 
   handleUnknownMessage = () => {
-    const message = this.createChatBotMessage("I'm not sure about that. You can ask for 'contact' or 'customer care'.");
+    const message = this.createChatBotMessage(
+      "I'm not sure about that. You can ask for 'contact' or 'customer care'."
+    );
 
     this.updateChatbotState(message);
   };

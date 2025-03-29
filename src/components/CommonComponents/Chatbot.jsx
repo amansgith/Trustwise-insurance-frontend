@@ -3,6 +3,7 @@ import { useState } from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
 import config from "../../chatbot/config";
+import "../../styles/globals.css"
 import MessageParser from "../../chatbot/MessageParser";
 import ActionProvider from "../../chatbot/ActionProvider";
 import Image from "next/image";
@@ -23,7 +24,7 @@ const ChatbotComponent = () => {
 
       {/* Chatbot Window */}
       {showChat && (
-        <div className="absolute bottom-12 text-sm right-0 w-120 bg-white shadow-lg rounded-lg p-4">
+        <div className="absolute bottom-12 text-sm right-0 w-200 bg-white shadow-lg rounded-lg p-4">
           <Chatbot
             config={config}
             messageParser={MessageParser}

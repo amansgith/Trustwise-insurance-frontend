@@ -123,3 +123,19 @@ body{
 }
 
 
+/* Chatbot Window */
+.react-chatbot-kit-chat-container {
+  padding: 10px; /* Add padding to the chat container */
+  width: 100%; /* Full width */
+}
+
+/* Bot messages */
+.react-chatbot-kit-chat-bot-message-container {
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 0px; /* Add padding to the message */
+  margin: 5px 0; /* Add margin between messages */
+  max-width:100%; /* Prevent the message from stretching too wide */
+  word-wrap: break-word; /* Ensure long words wrap properly */
+   /* Handle word wrapping */
+}
+

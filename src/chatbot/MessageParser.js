@@ -7,7 +7,7 @@ class MessageParser {
       const lowerCaseMessage = message.toLowerCase();
   
       // Keywords for contact information
-      const contactKeywords = ["contact", "customer care", "help", "support", "assistance", "service", "inquiry", "question"];
+      const contactKeywords = ["hi","hello","number","email","help me","contact", "customer care", "help", "support", "assistance", "service", "inquiry", "question"];
   
       // Check if the message includes any of the contact keywords
       const isContactMessage = contactKeywords.some(keyword => lowerCaseMessage.includes(keyword));
