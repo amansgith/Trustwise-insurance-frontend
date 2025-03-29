@@ -90,10 +90,11 @@ const TravelBookingForm = () => {
       </h1>
 
       {/* Content, Logo, and Form */}
-      <div className="flex flex-col md:flex-row items-center w-full max-w-6xl bg-white p-8 rounded-lg shadow-lg">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-7xl bg-white p-8 rounded-lg shadow-lg">
         {/* Content and Logo */}
         <div className="md:w-1/2 p-4">
           <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-row items-center mb-4">
             <Image
               src={logo}
               alt="Wings Travels Logo"
@@ -101,6 +102,14 @@ const TravelBookingForm = () => {
               height={300}
               className="mb-4"
             />
+            <Image
+            src="/Navlogo.jpg"
+            width={300}
+            height={300}
+            alt="Trustwise Insurance Logo"
+            className="mb-4"
+            />
+            </div>
             <p className="text-lg text-gray-700 mb-4">
               At Trustwise Insurance, we partner with Wings Travels to provide
               comprehensive travel planning services. Whether you're traveling
@@ -289,7 +298,7 @@ const TravelBookingForm = () => {
 
             <button
               type="submit"
-              className={`w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300 ${
+              className={`w-full bg-primary text-white p-2 rounded hover:bg-secondary transition duration-300 ${
                 isLoading ? "cursor-not-allowed opacity-50" : ""
               }`}
               disabled={isLoading}

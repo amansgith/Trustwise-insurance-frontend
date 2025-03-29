@@ -6,7 +6,7 @@ import Select from "react-select";
 import * as yup from "yup";
 import validator from "validator";
 import Image from "next/image";
-import advertbanner from "../../../public/modalimage.png"; // Add your agent woman image here
+import advertbanner from "../../../public/modalimage.png";
 
 const timeOptions = [
   { label: "Morning (9 AM - 12 PM)", value: "Morning" },
@@ -14,48 +14,14 @@ const timeOptions = [
   { label: "Evening (4 PM - 8 PM)", value: "Evening" },
 ];
 
-// const groupOptions = [
-//   { label: "Association - CHPTA", value: "Association - CHPTA" },
-//   { label: "Association - COPA", value: "Asosciation - COPA" },
-//   { label: "Association - emergiTEL", value: "Association -" },
-//   { label: "Association - SBPA", value: "Association - SBPA" },
-//   { label: "Association - PAU Alumni", value: "Association - PAU Alumni-" },
-//   { label: "Association - Pakmen Volleyball Club", value: "Association - Pakmen Volleyball Club" },
-//   { label: "Association - IIM", value: "Association - IIM" },
-//   { label: "Association - CTAO", value: "Association - CTAO" },
-//   { label: "Association - CASAL", value: "Association - CASAL" },
-//   { label: "Association - PAO", value: "Association - PAO" },
-//   { label: "Charger Logistic Inc.", value: "Charging Logistic Inc." },
-//   { label: "Cheerleading Clubs", value: "Cheerleading Clubs" },
-//   { label: "HRAI", value: "HRAI" },
-//   { label: "MobileLive", value: "MobileLive" },
-// ];
-
 const quoteOptions = {
-  // "Auto Insurance": [
-  //   "Automobile Insurance",
-  //   "Commercial Automobile Insurance",
-  //   "Motorcycle Insurance",
-  //   "Bundle Insurance (Home+Auto)",
-  //   "Classic Car Insurance",
-  //   "Boat Insurance",
-  //   "RV Insurance",
-  //   "Private Client Insurance",
-  //   "Snowmobile Insurance",
-  // ],
   "Home Insurance": [
     "Home Insurance",
     "Rental Property Insurance",
     "Tenant Insurance",
     "Condo Insurance",
     "Cottage Insurance",
-    // "Bundle Insurance (Home+Auto)",
   ],
-  // "Bundle Insurance (Home+Auto)": [
-  //   "Auto + Home Insurance",
-  //   "Auto + Condo Insurance",
-  //   "Auto + Tenant Insurance",
-  // ],
   "Business Insurance": [
     "Account Receivable Insurance",
     "Commercial Automobile Insurance",
@@ -76,7 +42,6 @@ const quoteOptions = {
     "Specialty Insurance",
     "Garage Insurance",
     "Builder’s Risk Insurance",
-    "Garage Insurance",
   ],
   "Life & Financial": [
     "Life Insurance",
@@ -93,12 +58,7 @@ const quoteOptions = {
     "Super Visa Insurance",
     "Visitor Visa Insurance",
   ],
-  "Investments":[
-    "Aggregated Funds",
-    "TFSA",
-    "RESP",
-    "FHSA",
-  ],
+  Investments: ["Aggregated Funds", "TFSA", "RESP", "FHSA"],
 };
 
 const schema = yup.object().shape({
@@ -122,10 +82,6 @@ const schema = yup.object().shape({
     .matches(/^\d{10}$/, "Phone must be 10 digits")
     .required("Phone is required")
     .transform((value) => validator.escape(value)),
-  // businessName: yup
-  //   .string()
-  //   .required("Business name is required")
-  //   .transform((value) => validator.escape(value)),
   dateToContact: yup
     .string()
     .required("Please select a date")
@@ -134,10 +90,6 @@ const schema = yup.object().shape({
     .string()
     .required("Please select a time")
     .transform((value) => validator.escape(value)),
-  // groupName: yup
-  //   .string()
-  //   .nullable()
-  //   .transform((value) => (value ? validator.escape(value) : null)),
   notes: yup
     .string()
     .nullable()
@@ -146,9 +98,11 @@ const schema = yup.object().shape({
 
 const QuoteForm = () => {
   const [selectedQuote, setSelectedQuote] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); // Loader state
-  const [successMessage, setSuccessMessage] = useState(""); // Success message state
-  const [errorMessage, setErrorMessage] = useState(""); // Error message state
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [formattedDate, setFormattedDate] = useState(""); // State for formatted date
+
   const {
     register,
     handleSubmit,
@@ -162,9 +116,9 @@ const QuoteForm = () => {
   const sheetUrl = process.env.NEXT_PUBLIC_SHEET_URL;
 
   const onSubmit = async (data) => {
-    setIsLoading(true); // Start loader
-    setSuccessMessage(""); // Clear previous success message
-    setErrorMessage(""); // Clear previous error message
+    setIsLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
     try {
       const responseForMail = await fetch("/api/send-quote", {
@@ -179,7 +133,7 @@ const QuoteForm = () => {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
-        mode: "no-cors", // Add this to avoid CORS issues (Apps Script handles it)
+        mode: "no-cors",
       });
 
       if (responseForMail.ok) {
@@ -192,11 +146,19 @@ const QuoteForm = () => {
       console.error("Error submitting form:", error);
       setErrorMessage("An error occurred. Please try again later.");
     } finally {
-      setIsLoading(false); // Stop loader
+      setIsLoading(false);
     }
   };
 
   const today = new Date().toISOString().split("T")[0];
+
+  const handleDateChange = (e) => {
+    const inputDate = e.target.value; // Get the input value in YYYY-MM-DD format
+    const [year, month, day] = inputDate.split("-"); // Split the date into parts
+    const formatted = `${month}/${day}/${year}`; // Format the date as MM/DD/YYYY
+    setFormattedDate(formatted); // Update the state with the formatted date
+    setValue("dateToContact", formatted); // Update the form value with the formatted date
+  };
 
   return (
     <div className="max-w-7xl mx-auto p-6 mt-32 md:my-4 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center md:items-center md:gap-12 h-full">
@@ -333,10 +295,13 @@ const QuoteForm = () => {
               Date to Contact *
             </label>
             <input
-              type="date"
-              {...register("dateToContact")}
+              type="text"
+              placeholder="MM/DD/YYYY" // Custom placeholder
+              onChange={(e) => {
+                const inputDate = e.target.value; // Get the input value
+                setValue("dateToContact", inputDate); // Update the form value
+              }}
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
-              min={today}
             />
             {errors.dateToContact && (
               <p className="text-red-500 text-sm">
@@ -363,6 +328,7 @@ const QuoteForm = () => {
             )}
           </div>
 
+          {/* Notes */}
           <div>
             <label className="font-semibold text-gray-700">Notes</label>
             <textarea

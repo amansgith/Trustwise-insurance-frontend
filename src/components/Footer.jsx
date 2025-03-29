@@ -153,8 +153,7 @@ const Footer = () => {
                 </a>
               </p>
               <p className="text-gray-600">
-                <strong>Location:</strong> 123 Trustwise Street, Edmonton, AB,
-                Canada
+                <strong>Location:</strong> #106 5305 Magasin Ave Beaumont, AB T4X 1V8, Canada
               </p>
             </div>
           </div>
