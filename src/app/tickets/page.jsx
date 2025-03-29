@@ -94,7 +94,7 @@ const TravelBookingForm = () => {
         {/* Content and Logo */}
         <div className="md:w-1/2 p-4">
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex flex-row items-center mb-4">
+            <div className="flex flex-col md:flex-row items-center mb-4">
             <Image
               src={logo}
               alt="Wings Travels Logo"
