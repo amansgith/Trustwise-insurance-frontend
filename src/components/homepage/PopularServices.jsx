@@ -46,14 +46,14 @@ const services = [
   //   icon: "📦",
   //   href: "/auto/bundle-insurance",
   // },
-  {
-    title: "Group insurance",
-    description: "Get the advantage of group power. Unlock discounts and facilities.",
-    image:
-      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    icon: "👥",
-    href: "/groups",
-  },
+  // {
+  //   title: "Group insurance",
+  //   description: "Get the advantage of group power. Unlock discounts and facilities.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   icon: "👥",
+  //   href: "/groups",
+  // },
   {
     title: "Travel insurance",
     description: "Travel with peace of mind. Make your heart leap around the world.",
@@ -70,6 +70,14 @@ const services = [
     icon: "🦽",
     href: "/life-financial/disability-insurance",
   },
+  {
+    title: "Critical illness insurance",
+    description: "Fastest Claims during critical times. We are here to help you.",
+    image:
+      "https://www.aaxel.ca/wp-content/uploads/2023/03/accuray-5sDRGl2PrNM-unsplash.jpg",
+    icon: "🩺",
+    href: "/life-financial/critical-illness-insurance",
+  }
 ];
 
 const PopularServices = () => {

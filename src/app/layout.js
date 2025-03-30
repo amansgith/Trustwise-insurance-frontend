@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SideBanner from "@/components/CommonComponents/SideBanner";
 import ChatbotComponent from "@/components/CommonComponents/Chatbot";
 import ScrollToTop from "@/components/CommonComponents/ScrolltoTop";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       <body className={`antialiased ${montserrat.className}`}>
         <Navbar />
         {children}
+        <SideBanner/>
         <Footer />
         <ChatbotComponent />
         <ScrollToTop />

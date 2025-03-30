@@ -4,7 +4,7 @@ import ContactOptions from "./widget/ContactOptions";
 const config = {
   botName: "TrustwiseBot",
   initialMessages: [
-    createChatBotMessage("Hi! How can I assist you today?"),
+    createChatBotMessage("Hi! welcome to Trustwise Insurance How can I assist you today?"),
   ],
   widgets: [
     {
@@ -12,6 +12,7 @@ const config = {
       widgetFunc: (props) => <ContactOptions {...props} />,
     },
   ],
+  botAvatar: "/Navlogo.png",
 };
 
 export default config;
