@@ -3,29 +3,12 @@ import nodemailer from 'nodemailer';
 import sanitizeHtml from 'sanitize-html';
 
 // Rate limiting (basic in-memory example)
-const rateLimit = new Map();
+// const rateLimit = new Map();
 
 export async function POST(req) {
   try {
-    // Rate limiting
-    // const ip = req.headers.get('x-forwarded-for') || 'unknown';
-    // const now = Date.now();
-    // const limit = rateLimit.get(ip) || { count: 0, lastRequest: now };
-
-    // if (now - limit.lastRequest > 60 * 60 * 1000) {
-    //   limit.count = 0; // Reset after 1 hour
-    // }
-    // if (limit.count >= 5) {
-    //   return new Response(JSON.stringify({ message: 'Too many requests' }), { status: 429 });
-    // }
-    // limit.count += 1;
-    // limit.lastRequest = now;
-    // rateLimit.set(ip, limit);
-
-    // Parse the form data
     const data = await req.json();
 
-    // Destructure with default values to avoid undefined
     const {
       quoteFor = 'N/A',
       subQuote = 'N/A',
@@ -38,12 +21,10 @@ export async function POST(req) {
       notes = 'N/A',
     } = data;
 
-    // Validate email
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new Response(JSON.stringify({ message: 'Invalid email address' }), { status: 400 });
     }
 
-    // Sanitize inputs to prevent HTML injection
     const sanitize = (input) => sanitizeHtml(input, { allowedTags: [], allowedAttributes: {} });
     const sanitizedData = {
       quoteFor: sanitize(quoteFor),
@@ -57,7 +38,6 @@ export async function POST(req) {
       notes: sanitize(notes),
     };
 
-    // Configure the transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -66,7 +46,6 @@ export async function POST(req) {
       },
     });
 
-    // Fetch the logo file over HTTP
     const logoUrl = 'https://trustwiseinsurance.com/Navlogo.png';
     let logoBuffer;
     try {
@@ -80,7 +59,6 @@ export async function POST(req) {
       return new Response(JSON.stringify({ message: 'Failed to fetch logo' }), { status: 500 });
     }
 
-    // Email to the owner
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -128,7 +106,6 @@ export async function POST(req) {
       `,
     };
 
-    // Email to the user
     const mailToUser = {
       from: process.env.EMAIL_USER,
       to: sanitizedData.email,
@@ -149,34 +126,17 @@ export async function POST(req) {
       attachments: [
         {
           filename: 'logo.png',
-          content: logoBuffer, // Attach the buffer directly
+          content: logoBuffer,
           cid: 'logo',
         },
       ],
     };
 
-    // Send emails and track their status
-    const [ownerEmailResult, userEmailResult] = await Promise.all([
-      transporter.sendMail(mailOptions).catch(err => ({ error: err.message })),
-      transporter.sendMail(mailToUser).catch(err => ({ error: err.message })),
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(mailOptions),
+      transporter.sendMail(mailToUser),
     ]);
-
-    // Check for errors in sending emails
-    if (ownerEmailResult?.error || userEmailResult?.error) {
-      const errorMessage = `Owner email error: ${ownerEmailResult?.error || 'Success'}, User email error: ${userEmailResult?.error || 'Success'}`;
-      console.error('Email sending errors:', errorMessage);
-      return new Response(JSON.stringify({ message: 'Partial failure in sending emails', details: errorMessage }), { status: 500 });
-    }
-
-    // Update the owner's email with user email status
-    const updatedMailOptions = {
-      ...mailOptions,
-      html: mailOptions.html.replace(
-        '</table>',
-        `<tr><td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">User Confirmation Email:</td><td style="padding: 8px; border: 1px solid #ddd;">${userEmailResult.error ? 'Failed' : 'Sent'}</td></tr></table>`
-      ),
-    };
-    await transporter.sendMail(updatedMailOptions);
 
     return new Response(JSON.stringify({ message: 'Emails sent successfully!' }), { status: 200 });
   } catch (error) {
