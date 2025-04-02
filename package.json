@@ -34,6 +34,7 @@
     "react-intersection-observer": "^9.16.0",
     "react-modal": "^3.16.3",
     "react-select": "^5.10.0",
+    "sanitize-html": "^2.15.0",
     "swiper": "^11.2.4",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
