@@ -246,7 +246,7 @@ const navItems = [
   { name: "Travel", submenu: travel },
   { name: "Tickets", href: "/tickets" },
   { name: "Claims", href: "/claims" },
-  { name: "Blog", href: "/blogs" },
+  // { name: "Blog", href: "/blogs" },
 ];
 
 const Navbar = () => {
