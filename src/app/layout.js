@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SideBanner from "@/components/CommonComponents/SideBanner";
 import ChatbotComponent from "@/components/CommonComponents/Chatbot";
 import ScrollToTop from "@/components/CommonComponents/ScrolltoTop";
+import { Analytics } from "@vercel/analytics/react"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <head>
       </head>
       <body className={`antialiased ${montserrat.className}`}>
+        <Analytics/>
         <Navbar />
         {children}
         <SideBanner/>
