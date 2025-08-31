@@ -470,7 +470,7 @@ const MobileNavbar = () => {
     // { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
     { title: "Investments", links: investments },
-    { title: "Travel", links: travel },
+    { title: "Super Visa", links: travel },
   ];
 
   return (
