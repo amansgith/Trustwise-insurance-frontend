@@ -67,9 +67,21 @@ const Partners = () => {
       </p>
       <div className="relative my-12">
         {/* Fog effect left */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-20" style={{background: "linear-gradient(to right,rgba(255,255,255,0.95) 70%,rgba(255,255,255,0))"}} />
+        <div
+          className="pointer-events-none absolute left-0 top-0 h-full w-8 sm:w-16 z-20"
+          style={{
+            background:
+              "linear-gradient(to right,rgba(255,255,255,0.95) 70%,rgba(255,255,255,0))",
+          }}
+        />
         {/* Fog effect right */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-20" style={{background: "linear-gradient(to left,rgba(255,255,255,0.95) 70%,rgba(255,255,255,0))"}} />
+        <div
+          className="pointer-events-none absolute right-0 top-0 h-full w-8 sm:w-16 z-20"
+          style={{
+            background:
+              "linear-gradient(to left,rgba(255,255,255,0.95) 70%,rgba(255,255,255,0))",
+          }}
+        />
         <AutoScrollPartners />
       </div>
       <div className="mt-6">
