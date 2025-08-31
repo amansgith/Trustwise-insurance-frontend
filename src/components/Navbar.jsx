@@ -244,7 +244,7 @@ const navItems = [
   // { name: "Groups", submenu: groups },
   { name: "Life", submenu: life },
   { name: "Investments", submenu: investments },
-  { name: "Travel", submenu: travel },
+  { name: "Super Visa", submenu: travel },
   { name: "Tickets", href: "/tickets" },
   { name: "Claims", href: "/claims" },
   // { name: "Blog", href: "/blogs" },
