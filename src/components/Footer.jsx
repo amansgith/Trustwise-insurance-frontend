@@ -25,10 +25,10 @@ const footerLinks = [
   {
     title: "Menu",
     sublinks: [
-      // { url: "/auto", text: "Auto Insurance" },
-      { url: "/Home", text: "Home Insurance" },
+      { url: "/auto", text: "Auto Insurance" },
+      // { url: "/Home", text: "Home Insurance" },
       // { url: "/auto/bundle-insurance", text: "Bundle Insurance" },
-      { url: "/business", text: "Business Insurance" },
+      // { url: "/business", text: "Business Insurance" },
       { url: "/life-financial", text: "Life & Financial" },
       { url: "/travel", text: "Travel Insurance" },
       { url: "/tickets", text: "Book Tickets" },
@@ -37,7 +37,7 @@ const footerLinks = [
   {
     title: "Resources",
     sublinks: [
-      { url: "/blogs", text: "Blog" },
+      // { url: "/blogs", text: "Blog" },
       { url: "/call-back-request", text: "Get A Quote" },
       { url: "/claims", text: "Claim" },
       { url: "/policy-payments", text: "Policy Payments" },
@@ -51,12 +51,6 @@ const footerLinks = [
 
 const Footer = () => {
   const [email, setEmail] = useState("");
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    alert(`Subscribed with: ${email}`); // Replace this with actual API call
-    setEmail(""); // Clear input field after submission
-  };
 
   return (
     <footer className="relative bg-white text-gray-800 py-10">
