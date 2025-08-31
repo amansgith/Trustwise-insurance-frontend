@@ -18,133 +18,133 @@ import Image from "next/image";
 import Link from "next/link";
 import Search from "@/components/Search";
 
-// const auto = [
-//   { name: "Auto Insurance", href: "/auto" },
-//   {
-//     name: "Bundle Insurance",
-//     href: "/auto/bundle-insurance",
-//   },
-//   { name: "Boat Insurance", href: "/auto/boat-insurance" },
-//   {
-//     name: "Classic Car Insurance",
-//     href: "/auto/classic-car-insurance",
-//   },
-//   {
-//     name: "Private Client Insurance",
-//     href: "/auto/private-client-insurance",
-//   },
-//   {
-//     name: "Motorcycle Insurance",
-//     href: "/auto/motorcycle-insurance",
-//   },
-//   { name: "RV Insurance", href: "/auto/rv-insurance" },
-//   {
-//     name: "Snowmobile Insurance",
-//     href: "/auto/snowmobile-insurance",
-//   },
-//   {
-//     name: "Commercial Automobile Insurance",
-//     href: "/auto/commercial-automobile-insurance",
-//   },
-// ];
-
-const home = [
-  { name: "Home Insurance", href: "/Home" },
-  { name: "Condo Insurance", href: "/Home/condo-insurance" },
+const auto = [
+  { name: "Auto Insurance", href: "/auto" },
   {
-    name: "Tenant Insurance",
-    href: "/Home/tenant-insurance",
+    name: "Bundle Insurance",
+    href: "/auto/bundle-insurance",
   },
+  { name: "Boat Insurance", href: "/auto/boat-insurance" },
   {
-    name: "Cottage Insurance",
-    href: "/Home/cottage-insurance",
-  },
-  {
-    name: "Rental Property Insurance",
-    href: "/Home/rental-property-insurance",
-  },
-  { name: "Pet Insurance", href: "/Home/pet-insurance" },
-];
-
-const business = [
-  { name: "Business Insurance", href: "/business" },
-  {
-    name: "Home-Based Business Insurance",
-    href: "/business/home-business-insurance",
-  },
-  {
-    name: "Small Medium Business Insurance",
-    href: "/business/smb-insurance",
-  },
-  {
-    name: "Corporate Insurance",
-    href: "/business/corporate-insurance",
-  },
-  {
-    name: "Contractors Insurance",
-    href: "/business/contractors-insurance",
-  },
-  {
-    name: "General Liability Insurance",
-    href: "/business/general-liability-insurance",
-  },
-  {
-    name: "Commercial Property Insurance",
-    href: "/business/commercial-property-insurance",
-  },
-  {
-    name: "Account Receivable Insurance",
-    href: "/business/account-receivable-insurance",
-  },
-  {
-    name: "Builder’s Risk Insurance",
-    href: "/business/builders-risk-insurance",
-  },
-  {
-    name: "Commercial Automobile Insurance",
-    href: "/auto/commercial-automobile-insurance",
-  },
-  {
-    name: "Cyber Liability Insurance",
-    href: "/business/cyber-liability-insurance",
-  },
-  {
-    name: "Employee Liability Insurance",
-    href: "/business/employee-liability-insurance",
-  },
-  {
-    name: "Garage Insurance",
-    href: "/business/garage-insurance",
-  },
-  {
-    name: "Product Liability Insurance",
-    href: "/business/product-liability-insurance",
-  },
-  {
-    name: "Environmental Impairment Liability Insurance",
-    href: "/business/environmental-liability-insurance",
-  },
-  {
-    name: "Professional Liability Insurance",
-    href: "/business/professional-liability-insurance",
-  },
-  {
-    name: "Legal Expense Insurance",
-    href: "/business/legal-expense-insurance",
-  },
-  {
-    name: "Malpractice Insurance",
-    href: "/business/malpractice-insurance",
+    name: "Classic Car Insurance",
+    href: "/auto/classic-car-insurance",
   },
   {
     name: "Private Client Insurance",
     href: "/auto/private-client-insurance",
   },
   {
-    name: "Speciality Insurance",
-    href: "/business/speciality-insurance",
+    name: "Motorcycle Insurance",
+    href: "/auto/motorcycle-insurance",
+  },
+  { name: "RV Insurance", href: "/auto/rv-insurance" },
+  {
+    name: "Snowmobile Insurance",
+    href: "/auto/snowmobile-insurance",
+  },
+  {
+    name: "Commercial Automobile Insurance",
+    href: "/auto/commercial-automobile-insurance",
   },
 ];
+
+// const home = [
+//   { name: "Home Insurance", href: "/Home" },
+//   { name: "Condo Insurance", href: "/Home/condo-insurance" },
+//   {
+//     name: "Tenant Insurance",
+//     href: "/Home/tenant-insurance",
+//   },
+//   {
+//     name: "Cottage Insurance",
+//     href: "/Home/cottage-insurance",
+//   },
+//   {
+//     name: "Rental Property Insurance",
+//     href: "/Home/rental-property-insurance",
+//   },
+//   { name: "Pet Insurance", href: "/Home/pet-insurance" },
+// ];
+
+// const business = [
+//   { name: "Business Insurance", href: "/business" },
+//   {
+//     name: "Home-Based Business Insurance",
+//     href: "/business/home-business-insurance",
+//   },
+//   {
+//     name: "Small Medium Business Insurance",
+//     href: "/business/smb-insurance",
+//   },
+//   {
+//     name: "Corporate Insurance",
+//     href: "/business/corporate-insurance",
+//   },
+//   {
+//     name: "Contractors Insurance",
+//     href: "/business/contractors-insurance",
+//   },
+//   {
+//     name: "General Liability Insurance",
+//     href: "/business/general-liability-insurance",
+//   },
+//   {
+//     name: "Commercial Property Insurance",
+//     href: "/business/commercial-property-insurance",
+//   },
+//   {
+//     name: "Account Receivable Insurance",
+//     href: "/business/account-receivable-insurance",
+//   },
+//   {
+//     name: "Builder’s Risk Insurance",
+//     href: "/business/builders-risk-insurance",
+//   },
+//   {
+//     name: "Commercial Automobile Insurance",
+//     href: "/auto/commercial-automobile-insurance",
+//   },
+//   {
+//     name: "Cyber Liability Insurance",
+//     href: "/business/cyber-liability-insurance",
+//   },
+//   {
+//     name: "Employee Liability Insurance",
+//     href: "/business/employee-liability-insurance",
+//   },
+//   {
+//     name: "Garage Insurance",
+//     href: "/business/garage-insurance",
+//   },
+//   {
+//     name: "Product Liability Insurance",
+//     href: "/business/product-liability-insurance",
+//   },
+//   {
+//     name: "Environmental Impairment Liability Insurance",
+//     href: "/business/environmental-liability-insurance",
+//   },
+//   {
+//     name: "Professional Liability Insurance",
+//     href: "/business/professional-liability-insurance",
+//   },
+//   {
+//     name: "Legal Expense Insurance",
+//     href: "/business/legal-expense-insurance",
+//   },
+//   {
+//     name: "Malpractice Insurance",
+//     href: "/business/malpractice-insurance",
+//   },
+//   {
+//     name: "Private Client Insurance",
+//     href: "/auto/private-client-insurance",
+//   },
+//   {
+//     name: "Speciality Insurance",
+//     href: "/business/speciality-insurance",
+//   },
+// ];
 // const groups = [
 //   { name: "Group Insurance", href: "/groups" },
 //   {
@@ -232,14 +232,15 @@ const investments = [
 
 const travel = [
   { name: "Travel Insurance", href: "/travel/travel-insurance" },
+  { name: "Student International Insurance", href: "/travel/student-international-insurance" },
   { name: "Super Visa", href: "/travel/super-visa" },
   { name: "Visitor Visa", href: "/travel/visitor-visa" },
 ];
 
 const navItems = [
-  // { name: "Auto", submenu: auto },
-  { name: "Home", submenu: home },
-  { name: "Business", submenu: business },
+  { name: "Auto", submenu: auto },
+  // { name: "Home", submenu: home },
+  // { name: "Business", submenu: business },
   // { name: "Groups", submenu: groups },
   { name: "Life", submenu: life },
   { name: "Investments", submenu: investments },
@@ -463,10 +464,10 @@ const MobileNavbar = () => {
   };
 
   const menuItems = [
-    // { title: "AUTO", links: auto },
-    { title: "HOME", links: home },
+    { title: "AUTO", links: auto },
+    // { title: "HOME", links: home },
     // { title: "GROUPS", links: groups },
-    { title: "BUSINESS", links: business },
+    // { title: "BUSINESS", links: business },
     { title: "LIFE & FINANCIAL", links: life },
     { title: "Investments", links: investments },
     { title: "Travel", links: travel },
